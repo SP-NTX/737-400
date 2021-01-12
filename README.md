@@ -1,4 +1,4 @@
-Boeing 737-400 Improved version
+Boeing 737-400
 =================================================
 It is a Boeing 737-400, based on 737-300
 Orginal 733: https://github.com/YV3399/737-300-CHT
