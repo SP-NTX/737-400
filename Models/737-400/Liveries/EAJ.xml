@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <sim>
+  <model>
+   <livery>
+    <name type="string">Easy Jet</name>
+    <texture>EasyJet.png</texture>
+   </livery>
+  </model>
+ </sim>
+</PropertyList>

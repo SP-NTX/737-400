@@ -1,0 +1,224 @@
+<?xml version="1.0"?> 
+<PropertyList>   
+  <name>lightcontrol</name>
+  <layout>vbox</layout>   
+
+        <text>
+		<label>733 Light Controller</label>
+	</text>
+
+  <group>
+    <layout>table</layout>
+    <text>
+      <label>Lights</label>
+      <row>0</row>
+      <col>0</col>
+    </text>
+    <button>
+      <row>0</row>
+      <col>3</col>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <legend>x</legend>
+      <default>1</default>
+      <keynum>27</keynum>
+      <border>2</border>
+      <binding>
+	<command>dialog-close</command>
+      </binding>
+    </button>
+  </group>
+
+  <hrule/>   
+
+  <group>
+    <layout>hbox</layout>
+
+    <group>
+      <layout>vbox</layout>
+      <halign>center</halign> 
+      <valign>top</valign>
+
+      <text>
+	<halign>left</halign>
+	<label>Landing Lights - Fixed</label>
+      </text>
+
+      <checkbox>
+	<halign>left</halign>
+	<label>Left</label> 
+	<property>/controls/lighting/landing-lights-fixed-left</property> 
+	<binding> 	
+	  <command>property-toggle</command>
+	  <property>/controls/lighting/landing-lights-fixed-left</property>
+	</binding>
+	<binding> 	
+	  <command>property-toggle</command> 	
+	  <property>/sim/sound/switch</property> 	
+	</binding>
+	<live>true</live> 		
+      </checkbox>
+
+      <checkbox>
+	<halign>left</halign>
+	<label>Right</label> 
+	<property>/controls/lighting/landing-lights-fixed-right</property> 
+	<binding> 	
+	  <command>property-toggle</command>
+	  <property>/controls/lighting/landing-lights-fixed-right</property>
+	</binding>
+	<binding> 	
+	  <command>property-toggle</command> 	
+	  <property>/sim/sound/switch</property> 	
+	</binding>
+	<live>true</live> 		
+      </checkbox>
+
+      <text>
+	<halign>left</halign>
+	<label>Landing Lights - Retractable</label>
+      </text>
+
+      <checkbox>
+	<halign>left</halign>
+	<label>Left</label> 
+	<property>/controls/lighting/landing-lights-retract-left</property> 
+	<binding> 	
+	  <command>property-toggle</command>
+	  <property>/controls/lighting/landing-lights-retract-left</property>
+	</binding>
+	<binding> 	
+	  <command>property-toggle</command> 	
+	  <property>/sim/sound/switch</property> 	
+	</binding>
+	<live>true</live> 		
+      </checkbox>
+
+      <checkbox>
+	<halign>left</halign>
+	<label>Right</label> 
+	<property>/controls/lighting/landing-lights-retract-right</property> 
+	<binding> 	
+	  <command>property-toggle</command>
+	  <property>/controls/lighting/landing-lights-retract-right</property>
+	</binding>
+	<binding> 	
+	  <command>property-toggle</command> 	
+	  <property>/sim/sound/switch</property> 	
+	</binding>
+	<live>true</live> 		
+      </checkbox>
+    </group>
+
+
+
+    <group>
+      <layout>vbox</layout>
+
+      <checkbox>
+	<halign>left</halign>
+	<label>Beacon</label>
+	<property>controls/lighting/beacon</property>
+	<binding>
+	  <command>property-toggle</command>
+	  <property>controls/lighting/beacon</property>
+	</binding>
+	<binding>
+	  <command>property-toggle</command>
+	  <property>/sim/sound/switch</property>
+	</binding>
+	<live>true</live>
+      </checkbox>
+
+<!-- 		    <checkbox> 	
+		<halign>left</halign> 
+		      <label>Taxi lights</label> 	
+		<property>controls/lighting/taxi-lights</property>
+		      <binding> 		      
+	    <command>property-toggle</command> 		       
+	    <property>controls/lighting/taxi-lights</property>
+		      </binding> 	
+		<binding> 		      
+			<command>property-toggle</command> 	
+		  <property>/sim/sound/switch</property>
+		      </binding> 		  
+		  </checkbox>  -->		
+
+		  <checkbox>
+		    <halign>left</halign>
+		    <label>Strobe</label>
+		    <property>controls/lighting/strobe</property>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>controls/lighting/strobe</property>
+		    </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch</property>
+		    </binding>
+		    <live>true</live>
+		  </checkbox>
+
+		  <checkbox>
+		    <halign>left</halign>
+		    <label>Navigation lights</label>
+		    <property>controls/lighting/nav-lights</property>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>controls/lighting/nav-lights</property>
+		    </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch</property>
+		    </binding>
+		    <live>true</live>
+		  </checkbox> 
+
+		  <checkbox>
+		    <halign>left</halign>
+		    <label>Logo lights</label>
+		    <property>/controls/lighting/logo-lights</property>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/controls/lighting/logo-lights</property>
+		    </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch</property>
+		    </binding>
+		    <live>true</live>
+		  </checkbox>
+
+		  <checkbox>
+		    <halign>left</halign>
+		    <label>Wing lights</label>
+		    <property>/controls/lighting/wing-lights</property>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/controls/lighting/wing-lights</property>
+		    </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch</property>
+		    </binding>
+		    <live>true</live>
+		  </checkbox>
+
+		  <checkbox>
+		    <halign>left</halign>
+		    <label>Cabin lights</label>
+		    <property>/controls/lighting/cabin-lights</property>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/controls/lighting/cabin-lights</property>
+		    </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch</property>
+		    </binding>
+		    <live>true</live>
+		  </checkbox>
+		</group>
+	      </group>
+
+	    </PropertyList> 

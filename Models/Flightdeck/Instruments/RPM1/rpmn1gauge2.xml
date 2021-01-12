@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>rpmgauge.ac</path>
+  
+  <animation>
+    <type>material</type>
+    <object-name>Plane.171</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <red>   0.6 </red>
+      <green> 0.6 </green>
+      <blue>  0.6 </blue>
+    </emission>
+  <condition>
+    <property>systems/electrical/on</property>
+  </condition>
+  </animation>
+
+
+<animation>
+        <type>rotate</type>
+        <object-name>needle</object-name>
+        <property>engines/engine[1]/n1</property>
+        <interpolation>
+            <entry><ind>0</ind><dep>0</dep></entry>
+            <entry><ind>100</ind><dep>233</dep></entry>
+        </interpolation>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+</animation>
+
+</PropertyList>
+

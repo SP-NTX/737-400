@@ -1,0 +1,1764 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Overhead Panel -->
+
+<PropertyList>
+
+  <path>oh-panel.ac</path>
+
+  <!-- Batt Switch Cover -->
+  <animation>
+    <type>rotate</type>
+    <object-name>BattSwitchCover</object-name>
+    <property>/controls/electric/battswitchcover</property>
+    <factor>-80</factor>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.00299</x-m>
+      <y-m> -0.46566</y-m>
+      <z-m> 0.49062</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>BattSwitchCover</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/battswitchcover</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Batt Switch -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>BattSwitch</object-name>
+    <property>/controls/electric/battery-switch</property>
+    <factor>40</factor>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.00189</x-m>
+      <y-m> -0.46451</y-m>
+      <z-m> 0.47184</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>BattSwitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/battery-switch</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>
+          electrical.set_elec()
+        </script>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Bus Tran Switch Cover -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>BusTranSwitchCover</object-name>
+    <property>/controls/electric/bustranswitchcover</property>
+    <factor>-80</factor>
+    <axis>
+      <x> 0</x>
+      <y> 0</y>
+      <z> 1</z>
+    </axis>
+    <center>
+      <x-m> -0.00222</x-m>
+      <y-m> -0.45211</y-m>
+      <z-m> 0.24503</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>BusTranSwitchCover</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/bustranswitchcover</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Bus Tran Switch -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>BusTranSwitch</object-name>
+    <property>/controls/electric/bus-tran-switch</property>
+    <factor>40</factor>
+    <axis>
+      <x> 0</x>
+      <y> 0</y>
+      <z> 1</z>
+    </axis>
+    <center>
+      <x-m> -0.00112</x-m>
+      <y-m> -0.43333</y-m>
+      <z-m> 0.24618</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>BusTranSwitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/bus-tran-switch</property>
+      </binding>
+    </action>
+  </animation>
+
+<!--No Smoking-->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>nosmoking</object-name>
+    <action>
+      <name>No Smoking Switch</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/nosmoking-sign</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>nosmoking</object-name>
+    <property>controls/switches/nosmoking-sign</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00313</x-m>
+      <y-m>-0.33951</y-m>
+      <z-m>0.26336</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!--Seatbelts-->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>seatbelt</object-name>
+    <action>
+      <name>Seatbelt Switch</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/seatbelt-sign</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>seatbelt</object-name>
+    <property>controls/switches/seatbelt-sign</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00268</x-m>
+      <y-m>-0.30854</y-m>
+      <z-m>0.26386</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Landing Light Fixed Left  -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>landinglightfixedleft</object-name>
+    <action>
+      <name>Landing Light Fixed Left</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/landing-lights-fixed-left</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>landinglightfixedleft</object-name>
+    <property>/controls/lighting/landing-lights-fixed-left</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00245</x-m>
+      <y-m>-0.52099</y-m>
+      <z-m>0.05544</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Landing Light Fixed Right  -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>landinglightfixedright</object-name>
+    <action>
+      <name>Landing Light Fixed Right</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/landing-lights-fixed-right</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>landinglightfixedright</object-name>
+    <property>/controls/lighting/landing-lights-fixed-right</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00245</x-m>
+      <y-m>-0.50177</y-m>
+      <z-m>0.05512</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Landing Light Retractable Right  -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>landinglightretractright</object-name>
+    <action>
+      <name>Landing Light Retract Right</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/landing-lights-retract-right</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>landinglightretractright</object-name>
+    <property>/controls/lighting/landing-lights-retract-right</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00245</x-m>
+      <y-m>-0.54764</y-m>
+      <z-m>0.05544</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Landing Light Retractable Left  -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>landinglightretractleft</object-name>
+    <action>
+      <name>Landing Light Retract Left</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/landing-lights-retract-left</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>landinglightretractleft</object-name>
+    <property>/controls/lighting/landing-lights-retract-left</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00245</x-m>
+      <y-m>-0.57365</y-m>
+      <z-m>0.05544</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Navigation -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>lightslogo</object-name>
+    <action>
+      <name>Logo Lights</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/logo-lights</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>lightslogo</object-name>
+    <property>/controls/lighting/logo-lights</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00245</x-m>
+      <y-m>-0.17131</y-m>
+      <z-m>0.05384</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Strobes (Position Lights) -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>lightsstrobe</object-name>
+    <action>
+      <name>Strobes</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/strobe</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>lightsstrobe</object-name>
+    <property>/controls/lighting/strobe</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00245</x-m>
+      <y-m>-0.13792</y-m>
+      <z-m>0.05416</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Beacons -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>lightsanticol</object-name>
+    <action>
+      <name>Beacons</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/beacon</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>lightsanticol</object-name>
+    <property>/controls/lighting/beacon</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00245</x-m>
+      <y-m>-0.10420</y-m>
+      <z-m>0.05416</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Wing -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>lightswing</object-name>
+    <action>
+      <name>Wing Lights</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/wing-lights</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>lightswing</object-name>
+    <property>/controls/lighting/wing-lights</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00245</x-m>
+      <y-m>-0.08076</y-m>
+      <z-m>0.05416</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Navigation -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>lightsnav</object-name>
+    <action>
+      <name>Navigation</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/nav-lights</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>lightsnav</object-name>
+    <property>/controls/lighting/nav-lights</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00245</x-m>
+      <y-m>-0.05636</y-m>
+      <z-m>0.05416</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+  <!-- Engine Start 1 -->  
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>enginestart1</object-name>
+    <action>
+      <name>Engine Start 1</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <condition>
+          <and>
+            <property>sim/input/selected/engine[0]</property>
+            <property>systems/electrical/on</property>
+          </and>      
+        </condition>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[0]/starter</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>enginestart1</object-name>
+    <property>controls/engines/engine[0]/starter</property>
+    <factor>20</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>0.00422</x-m>
+      <y-m>-0.34798</y-m>
+      <z-m>0.04670</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!-- Engine Start 2 -->  
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>enginestart2</object-name>
+    <action>
+      <name>Engine Start 2</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <condition>
+          <and>
+            <property>sim/input/selected/engine[1]</property>
+            <property>systems/electrical/on</property>
+          </and>      
+        </condition>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/starter</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>enginestart2</object-name>
+    <property>controls/engines/engine[1]/starter</property>
+    <factor>20</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>0.00330</x-m>
+      <y-m>-0.23896</y-m>
+      <z-m>0.04674</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!-- IGN Select Switch -->
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>EngineIGNLeft</object-name>
+    <action>
+      <name>Select Engine IGN 1 only</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-assign</command>
+        <property>/sim/input/selected/engine[0]</property>
+        <value type="bool">true</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/sim/input/selected/engine[1]</property>
+        <value type="bool">false</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>EngineIGNRight</object-name>
+    <action>
+      <name>Select Engine IGN 2 only</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-assign</command>
+        <property>/sim/input/selected/engine[0]</property>
+        <value type="bool">false</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/sim/input/selected/engine[1]</property>
+        <value type="bool">true</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>EngineIGNBoth</object-name>
+    <action>
+      <name>Select Engine IGN Both</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-assign</command>
+        <property>/sim/input/selected/engine[0]</property>
+        <value type="bool">true</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/sim/input/selected/engine[1]</property>
+        <value type="bool">true</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>enginestart</object-name>
+    <condition>
+      <and>
+        <property>/sim/input/selected/engine[0]</property>
+        <property>/sim/input/selected/engine[1]</property>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>enginestartleftonly</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>/sim/input/selected/engine[0]</property>
+          <value type="bool">true</value>
+        </equals>
+        <equals>
+          <property>/sim/input/selected/engine[1]</property>
+          <value type="bool">false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>enginestartrightonly</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>/sim/input/selected/engine[0]</property>
+          <value type="bool">false</value>
+        </equals>
+        <equals>
+          <property>/sim/input/selected/engine[1]</property>
+          <value type="bool">true</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>
+
+
+<!-- APU Gen 1  -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>apu1</object-name>
+    <action>
+      <name>AP Gen 1</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/apugen1</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>
+          electrical.set_elec()
+        </script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>apu1</object-name>
+    <property>/controls/electric/apugen1</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00245</x-m>
+      <y-m>-0.48090</y-m>
+      <z-m>0.19095</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!-- APU Gen 2  -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>apu4</object-name>
+    <action>
+      <name>AP Gen 2</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/apugen2</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>
+          electrical.set_elec()
+        </script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>apu4</object-name>
+    <property>/controls/electric/apugen2</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00245</x-m>
+      <y-m>-0.38649</y-m>
+      <z-m>0.19063</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+<!-- Ground Power  -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>grdpwr</object-name>
+    <action>
+      <name>Ground Power</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <condition>
+          <property>/controls/groundservice/gpu</property>
+        </condition>
+        <command>property-toggle</command>
+        <property>/controls/electric/external-power</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>
+          electrical.set_elec()
+        </script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>grdpwr</object-name>
+    <property>/controls/electric/external-power</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00245</x-m>
+      <y-m>-0.43530</y-m>
+      <z-m>0.28246</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Fuel Pump Tank 1 (left) Aft  -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>fuelpump1aft</object-name>
+    <action>
+      <name>Fuel Pump 1 Aft</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/fuel/tank[0]/pump-aft</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>fuelpump1aft</object-name>
+    <property>/controls/fuel/tank[0]/pump-aft</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00245</x-m>
+      <y-m>-0.62315</y-m>
+      <z-m>0.12769</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Fuel Pump Tank 1 (left) Fwd  -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>fuelpump1fwd</object-name>
+    <action>
+      <name>Fuel Pump 1 Fwd</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/fuel/tank[0]/pump-fwd</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>fuelpump1fwd</object-name>
+    <property>/controls/fuel/tank[0]/pump-fwd</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00245</x-m>
+      <y-m>-0.59874</y-m>
+      <z-m>0.12705</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Fuel Pump Tank 2 (right) Aft  -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>fuelpump2aft</object-name>
+    <action>
+      <name>Fuel Pump 2 Aft</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/fuel/tank[1]/pump-aft</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>fuelpump2aft</object-name>
+    <property>/controls/fuel/tank[1]/pump-aft</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00245</x-m>
+      <y-m>-0.53195</y-m>
+      <z-m>0.12576</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Fuel Pump Tank 2 (right) Fwd  -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>fuelpump2fwd</object-name>
+    <action>
+      <name>Fuel Pump 2 Fwd</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/fuel/tank[1]/pump-fwd</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>fuelpump2fwd</object-name>
+    <property>/controls/fuel/tank[1]/pump-fwd</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00245</x-m>
+      <y-m>-0.55668</y-m>
+      <z-m>0.12576</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Fuel Pump Center Tank Left  -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>fuelpumpcleft</object-name>
+    <action>
+      <name>Fuel Pump C Left</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/fuel/tank[2]/pump-left</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>fuelpumpcleft</object-name>
+    <property>/controls/fuel/tank[2]/pump-left</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00245</x-m>
+      <y-m>-0.59007</y-m>
+      <z-m>0.18164</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Fuel Pump Center Tank Right  -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>fuelpumpcright</object-name>
+    <action>
+      <name>Fuel Pump C Right</name>
+      <button>0</button>
+      <repeatable>false</repeatable> 
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/fuel/tank[2]/pump-right</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>fuelpumpcright</object-name>
+    <property>/controls/fuel/tank[2]/pump-right</property>
+    <factor>30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-0.00245</x-m>
+      <y-m>-0.56471</y-m>
+      <z-m>0.18131</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!-- Stby Rud A Switch Cover -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>StbyRudASwitchCover</object-name>
+    <property>/controls/electric/stbyrudaswitchcover</property>
+    <factor>-80</factor>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.00252</x-m>
+      <y-m> -0.61398</y-m>
+      <z-m> 0.68563</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>StbyRudASwitchCover</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/stbyrudaswitchcover</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Stby Rud A Switch -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>StbyRudASwitch</object-name>
+    <property>/controls/electric/stbyrudaswitch</property>
+    <factor>40</factor>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.00142</x-m>
+      <y-m> -0.61283</y-m>
+      <z-m> 0.66685</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>StbyRudASwitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/stbyrudaswitch</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Stby Rud B Switch Cover -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>StbyRudBSwitchCover</object-name>
+    <property>/controls/electric/stbyrudbswitchcover</property>
+    <factor>-80</factor>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.00252</x-m>
+      <y-m> -0.58677</y-m>
+      <z-m> 0.68536</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>StbyRudBSwitchCover</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/stbyrudbswitchcover</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Stby Rud B Switch -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>StbyRudBSwitch</object-name>
+    <property>/controls/electric/stbyrudbswitch</property>
+    <factor>40</factor>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.00142</x-m>
+      <y-m> -0.58561</y-m>
+      <z-m> 0.66685</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>StbyRudBSwitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/stbyrudbswitch</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Alt Flaps Switch Cover -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>AltFlapsSwitchCover</object-name>
+    <property>/controls/electric/altflapsswitchcover</property>
+    <factor>-80</factor>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.00245</x-m>
+      <y-m> -0.55615</y-m>
+      <z-m> 0.63017</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>AltFlapsSwitchCover</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/altflapsswitchcover</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Alt Flaps Switch -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>AltFlapsSwitch</object-name>
+    <property>/controls/electric/altflapsswitch</property>
+    <factor>40</factor>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.00355</x-m>
+      <y-m> -0.55500</y-m>
+      <z-m> 0.61139</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>AltFlapsSwitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/altflapsswitch</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Spoiler A Switch Cover -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>SpoilerASwitchCover</object-name>
+    <property>/controls/electric/spoileraswitchcover</property>
+    <factor>-80</factor>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.00252</x-m>
+      <y-m> -0.60949</y-m>
+      <z-m> 0.59869</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>SpoilerASwitchCover</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/spoileraswitchcover</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Spoiler A Switch -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>SpoilerASwitch</object-name>
+    <property>/controls/electric/spoileraswitch</property>
+    <factor>40</factor>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.00142</x-m>
+      <y-m> -0.60834</y-m>
+      <z-m> 0.57991</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>SpoilerASwitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/spoileraswitch</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Spoiler B Switch Cover -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>SpoilerBSwitchCover</object-name>
+    <property>/controls/electric/spoilerbswitchcover</property>
+    <factor>-80</factor>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.00299</x-m>
+      <y-m> -0.58705</y-m>
+      <z-m> 0.59869</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>SpoilerBSwitchCover</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/spoilerbswitchcover</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Spoiler B Switch -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>SpoilerBSwitch</object-name>
+    <property>/controls/electric/spoilerbswitch</property>
+    <factor>40</factor>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.00189</x-m>
+      <y-m> -0.658589</y-m>
+      <z-m> 0.57991</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>SpoilerBSwitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/spoilerbswitch</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Stby Power Disconnect 1 Switch Cover -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>StbyPwrDis1SwitchCover</object-name>
+    <property>/controls/electric/stbypwrdis1switchcover</property>
+    <factor>-80</factor>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.00232</x-m>
+      <y-m> -0.47090</y-m>
+      <z-m> 0.39452</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>StbyPwrDis1SwitchCover</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/stbypwrdis1switchcover</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Stby Power Disconnect 1 Switch -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>StbyPwrDis1Switch</object-name>
+    <property>/controls/electric/stbypwrdis1switch</property>
+    <factor>40</factor>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.00122</x-m>
+      <y-m> -0.46975</y-m>
+      <z-m> 0.37574</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>StbyPwrDis1Switch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/stbypwrdis1switch</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Stby Power Disconnect 2 Switch Cover -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>StbyPwrDis2SwitchCover</object-name>
+    <property>/controls/electric/stbypwrdis2switchcover</property>
+    <factor>-80</factor>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.00232</x-m>
+      <y-m> -0.39017</y-m>
+      <z-m> 0.39413</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>StbyPwrDis2SwitchCover</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/stbypwrdis2switchcover</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Stby Power Disconnect 2 Switch -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>StbyPwrDis2Switch</object-name>
+    <property>/controls/electric/stbypwrdis2switch</property>
+    <factor>40</factor>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.00122</x-m>
+      <y-m> -0.38902</y-m>
+      <z-m> 0.37535</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>StbyPwrDis2Switch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/stbypwrdis2switch</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Stby Power Switch Cover -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>StbyPwrSwitchCover</object-name>
+    <property>/controls/electric/stbypwrswitchcover</property>
+    <factor>-80</factor>
+    <axis>
+      <x> 0</x>
+      <y> 0</y>
+      <z> 1</z>
+    </axis>
+    <center>
+      <x-m> -0.00222</x-m>
+      <y-m> -0.44957</y-m>
+      <z-m> 0.39502</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>StbyPwrSwitchCover</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/stbypwrswitchcover</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Stby Power Switch -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>StbyPwrSwitch</object-name>
+    <property>/controls/electric/stbypwrswitch</property>
+    <factor>40</factor>
+    <axis>
+      <x> 0</x>
+      <y> 0</y>
+      <z> 1</z>
+    </axis>
+    <center>
+      <x-m> -0.00112</x-m>
+      <y-m> -0.43079</y-m>
+      <z-m> 0.39617</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>StbyPwrSwitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/stbypwerswitch</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Emergency Exit Light Switch Cover -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ExitLightSwitchCover</object-name>
+    <property>/controls/electric/exitlightswitchcover</property>
+    <factor>-80</factor>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.00158</x-m>
+      <y-m> -0.32152</y-m>
+      <z-m> 0.35461</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>ExitLightSwitchCover</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/exitlightswitchcover</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Emergency Exit Light Switch -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ExitLightSwitch</object-name>
+    <property>/controls/electric/exitlightswitch</property>
+    <factor>40</factor>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.00048</x-m>
+      <y-m> -0.32037</y-m>
+      <z-m> 0.33583</z-m>
+    </center>  
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>ExitLightSwitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/exitlightswitch</property>
+      </binding>
+    </action>
+  </animation>
+
+
+  <animation>
+    <type>material</type>
+    <object-name>grdpwrindlight</object-name>
+    <ambient>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </ambient>
+    <emission>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission>
+    <condition>
+      <property>/controls/groundservice/gpu</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>grdpwrindlight</object-name>
+    <ambient>
+      <red>   0.1 </red>
+      <green> 0.1 </green>
+      <blue>  0.1 </blue>
+    </ambient>
+    <emission>
+      <red>   0.1 </red>
+      <green> 0.1 </green>
+      <blue>  0.1 </blue>
+    </emission>
+    <condition>
+      <not>
+        <property>/controls/groundservice/gpu</property>
+      </not>
+    </condition>
+  </animation>
+
+
+</PropertyList>

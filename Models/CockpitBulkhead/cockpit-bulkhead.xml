@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<!-- Cockpit Bulkhead and Door -->
+
+	 <model>
+     <name>Cockpit Bulkhead</name>
+       <path>Aircraft/737-400/Models/CockpitBulkhead/cockpit-bulkhead.ac</path>
+       <offsets>
+         <x-m>0.0</x-m>
+         <y-m>0.0</y-m>
+         <z-m>-0.00</z-m>
+         <pitch-deg>0</pitch-deg>
+       </offsets>
+   </model> 
+
+  <animation>
+  <type>pick</type>
+  <visible>true</visible>
+  <object-name>Doorknob</object-name>
+  <action>
+    <name>Cockpit Door</name>
+   <button>0</button>
+   <repeatable>false</repeatable> 
+   <binding>
+    <command>nasal</command>
+    <script>doors.openclosedoor("/controls/groundservice/cockpitdoor");</script>
+   </binding>
+  </action>
+ </animation>
+
+	  <animation>
+   <type>rotate</type>
+   <object-name>CockpitDoor</object-name>
+   <object-name>Doorknob</object-name>
+   <property>/controls/groundservice/cockpitdoor</property>
+   <factor>90</factor>
+	 <offset-deg>0</offset-deg>
+   <center>
+	   <x-m>-5.26</x-m>
+     <y-m>0.245</y-m>
+     <z-m>0.00</z-m>
+   </center>
+   <axis>
+     <z>1</z>
+   </axis>
+ </animation>
+
+
+	 
+</PropertyList>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Estelar</name>
+        <texture>Liveries/YV625T.png</texture>
+      </livery>
+<Boeing-737-400>
+<removalkit>true</removalkit>
+<eyebrowwindow>false</eyebrowwindow>
+</Boeing-737-400>
+    </model>
+  </sim>
+</PropertyList>

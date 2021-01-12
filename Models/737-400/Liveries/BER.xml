@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- author Basset Laurent, lolalilo [at] gmail [dot] com, 2010-->
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Air Berlin</name>
+        <texture>Air_Berlin.png</texture>
+      </livery>
+<Boeing-737-300>
+<removalkit>true</removalkit>
+<eyebrowwindow>false</eyebrowwindow>
+</Boeing-737-300>
+    </model>
+  </sim>
+</PropertyList>

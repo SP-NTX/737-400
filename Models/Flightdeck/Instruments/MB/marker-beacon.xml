@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>marker-beacon.ac</path>
+
+<animation>
+  <type>material</type>
+  <object-name>LampWhiteON</object-name>
+  <emission>
+    <red>   0.8 </red>
+    <green> 0.8</green>
+    <blue>  0.5 </blue>
+  </emission>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>LampAmberON</object-name>
+  <emission>
+    <red>   1.0 </red>
+    <green> 0.8 </green>
+    <blue>  0.4 </blue>
+  </emission>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>LampBlueON</object-name>
+  <emission>
+    <red>   0.5 </red>
+    <green> 1.0 </green>
+    <blue>  1.0 </blue>
+  </emission>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>LampBlueON</object-name>
+  <condition>
+    <or>
+      <property>instrumentation/marker-beacon/outer</property>
+      <property>instrumentation/marker-beacon/test</property>
+    </or>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>LampBlue</object-name>
+  <condition>
+    <and>
+      <not><property>instrumentation/marker-beacon/outer</property></not>
+      <not><property>instrumentation/marker-beacon/test</property></not>
+    </and>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>LampAmberON</object-name>
+  <condition>
+    <or>
+      <property>instrumentation/marker-beacon/middle</property>
+      <property>instrumentation/marker-beacon/test</property>
+    </or>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>LampAmber</object-name>
+  <condition>
+    <and>
+      <not><property>instrumentation/marker-beacon/middle</property></not>
+      <not><property>instrumentation/marker-beacon/test</property></not>
+    </and>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>LampWhiteON</object-name>
+  <condition>
+    <or>
+      <property>instrumentation/marker-beacon/inner</property>
+      <property>instrumentation/marker-beacon/test</property>
+    </or>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>LampWhite</object-name>
+  <condition>
+    <and>
+      <not><property>instrumentation/marker-beacon/inner</property></not>
+      <not><property>instrumentation/marker-beacon/test</property></not>
+    </and>
+  </condition>
+</animation>
+
+</PropertyList>
+

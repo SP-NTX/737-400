@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+  <path>right-gear-green.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>button</object-name>
+    <ambient>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </ambient>
+    <emission>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission>
+    <condition>
+      <and>
+	<equals>
+	  <property>/fdm/jsbsim/gear/gear-pos-norm</property>
+	  <value>1</value>
+	</equals>
+    <property>systems/electrical/on</property>
+      </and>
+    </condition>
+  </animation>
+
+</PropertyList>

@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <path>beacon2.ac</path>
+
+    <animation>
+        <type>noshadow</type>
+        <object-name>strobe10000</object-name>
+	 <object-name>strobe10000.001</object-name>
+    </animation>
+
+    <animation>
+        <type>alpha-test</type>
+        <alpha-factor>0.01</alpha-factor>
+    </animation>
+
+
+<animation>
+  <type>select</type>
+  <object-name>strobe10000</object-name>
+  <object-name>BLANK</object-name>
+  <condition>
+	  <and>
+      <property>/sim/model/Boeing-737-400/lighting/beacon/state</property>
+      <property>/controls/lighting/beacon</property>
+      <property>systems/electrical/on</property>
+    </and>
+  </condition>
+</animation>	 
+
+	 
+    <animation>
+	  <type>range</type>
+	  <min-m>0</min-m>
+	  <max-m>10000</max-m>
+    </animation>
+
+    <animation>
+        <type>billboard</type>
+        <object-name>strobe10000</object-name>
+	 <object-name>strobe10000.001</object-name>
+        <spherical type="bool">true</spherical>
+    </animation>
+
+  <animation>
+    <type>dist-scale</type>
+    <object-name>strobe10000</object-name>
+     <object-name>strobe10000.001</object-name>
+    <interpolation>
+      <entry>
+        <ind>0</ind>
+        <dep>0.2</dep>
+      </entry>
+      <entry>
+        <ind>300</ind>
+        <dep>0.4</dep>
+      </entry>
+      <entry>
+        <ind>1500</ind>
+        <dep>1</dep>
+      </entry>
+      <entry>
+        <ind>4000</ind>
+        <dep>3</dep>
+      </entry>
+      <entry>
+        <ind>10000</ind>
+        <dep>5</dep>
+      </entry>
+    </interpolation>
+  </animation>
+
+</PropertyList>

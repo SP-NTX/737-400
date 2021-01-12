@@ -1,0 +1,771 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <name>radios</name>
+  <width>520</width>
+  <modal>false</modal>
+  <layout>vbox</layout>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>1</stretch></empty>
+
+    <text>
+      <label>Radio Stack</label>
+    </text>
+
+    <empty><stretch>1</stretch></empty>
+
+    <button>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <legend></legend>
+      <keynum>27</keynum>
+      <border>2</border>
+      <binding>
+	<command>dialog-close</command>
+      </binding>
+    </button>
+  </group>
+
+  <hrule/>
+
+  <group>
+    <layout>table</layout>
+
+    <!-- headers -->
+    <text>
+      <row>0</row>
+      <col>1</col>
+      <label>Active</label>
+    </text>
+
+    <text>
+      <row>0</row>
+      <col>4</col>
+      <label>Standby</label>
+    </text>
+
+    <text>
+      <row>0</row>
+      <col>6</col>
+      <label>Radial</label>
+    </text>
+
+    <text>
+      <row>0</row>
+      <col>7</col>
+      <label>Volume</label>
+    </text>
+
+    <!-- Dummy label to stretch table, as layout manager doesn't handle labels well 
+  <text>
+   <row>0</row>
+   <col>8</col>
+   <label></label>
+  </text> -->
+
+  <text>
+    <row>1</row>
+    <col>0</col>
+    <halign>right</halign>
+    <label>COM1</label>
+  </text>
+
+  <input>
+    <name>com1-selected</name>
+    <row>1</row>
+    <col>1</col>
+    <pref-width>55</pref-width>
+    <height>25</height>
+    <label>MHz</label>
+    <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+    <live>true</live>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </input>
+
+  <button>
+    <row>1</row>
+    <col>3</col>
+    <width>35</width>
+    <height>26</height>
+    <border>1</border>
+    <legend>&lt;-&gt;</legend>
+    <binding>
+      <command>dialog-apply</command>
+      <object-name>com1-selected</object-name>
+    </binding>
+    <binding>
+      <command>dialog-apply</command>
+      <object-name>com1-standby</object-name>
+    </binding>
+    <binding>
+      <command>property-swap</command>
+      <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+      <property>/instrumentation/comm[0]/frequencies/standby-mhz</property>
+    </binding>
+    <binding>
+      <command>dialog-update</command>
+      <object-name>com1-selected</object-name>
+    </binding>
+    <binding>
+      <command>dialog-update</command>
+      <object-name>com1-standby</object-name>
+    </binding>
+  </button>
+
+  <input>
+    <name>com1-standby</name>
+    <row>1</row>
+    <col>4</col>
+    <pref-width>55</pref-width>
+    <height>25</height>
+    <label>MHz</label>
+    <property>/instrumentation/comm[0]/frequencies/standby-mhz</property>
+    <live>true</live>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </input>
+
+  <slider>
+    <name>Com1 Volume</name>
+    <row>1</row>
+    <col>7</col>
+    <pref-width>60</pref-width>
+    <property>/instrumentation/comm[0]/volume</property>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </slider>
+
+  <text>
+    <row>2</row>
+    <col>0</col>
+    <halign>right</halign>
+    <label>COM2</label>
+  </text>
+
+  <input>
+    <name>com2-selected</name>
+    <row>2</row>
+    <col>1</col>
+    <pref-width>55</pref-width>
+    <height>25</height>
+    <label>MHz</label>
+    <property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
+    <live>true</live>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </input>
+
+  <button>
+    <row>2</row>
+    <col>3</col>
+    <width>35</width>
+    <height>26</height>
+    <border>1</border>
+    <legend>&lt;-&gt;</legend>
+    <binding>
+      <command>dialog-apply</command>
+      <object-name>com2-selected</object-name>
+    </binding>
+    <binding>
+      <command>dialog-apply</command>
+      <object-name>com2-standby</object-name>
+    </binding>
+    <binding>
+      <command>property-swap</command>
+      <property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
+      <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+    </binding>
+    <binding>
+      <command>dialog-update</command>
+      <object-name>com2-selected</object-name>
+    </binding>
+    <binding>
+      <command>dialog-update</command>
+      <object-name>com2-standby</object-name>
+    </binding>
+  </button>
+
+  <input>
+    <name>com2-standby</name>
+    <row>2</row>
+    <col>4</col>
+    <pref-width>55</pref-width>
+    <height>25</height>
+    <label>MHz</label>
+    <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+    <live>true</live>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </input>
+
+  <slider>
+    <name>Com2 Volume</name>
+    <row>2</row>
+    <col>7</col>
+    <pref-width>60</pref-width>
+    <property>/instrumentation/comm[1]/volume</property>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </slider>
+
+  <text>
+    <row>3</row>
+    <col>0</col>
+    <halign>right</halign>
+    <label>NAV1</label>
+  </text>
+
+  <input>
+    <name>nav1-selected</name>
+    <row>3</row>
+    <col>1</col>
+    <pref-width>55</pref-width>
+    <height>25</height>
+    <label>MHz</label>
+    <property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
+    <live>true</live>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </input>
+
+  <button>
+    <row>3</row>
+    <col>3</col>
+    <width>35</width>
+    <height>26</height>
+    <border>1</border>
+    <legend>&lt;-&gt;</legend>
+    <binding>
+      <command>dialog-apply</command>
+      <object-name>nav1-selected</object-name>
+    </binding>
+    <binding>
+      <command>dialog-apply</command>
+      <object-name>nav1-standby</object-name>
+    </binding>
+    <binding>
+      <command>property-swap</command>
+      <property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
+      <property>/instrumentation/nav[0]/frequencies/standby-mhz</property>
+    </binding>
+    <binding>
+      <command>dialog-update</command>
+      <object-name>nav1-selected</object-name>
+    </binding>
+    <binding>
+      <command>dialog-update</command>
+      <object-name>nav1-standby</object-name>
+    </binding>
+  </button>
+
+  <input>
+    <name>nav1-standby</name>
+    <row>3</row>
+    <col>4</col>
+    <pref-width>55</pref-width>
+    <height>25</height>
+    <label>MHz</label>
+    <property>/instrumentation/nav[0]/frequencies/standby-mhz</property>
+    <live>true</live>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </input>
+
+  <input>
+    <name>nav1-radial</name>
+    <row>3</row>
+    <col>6</col>
+    <pref-width>55</pref-width>
+    <height>25</height>
+    <label>deg</label>
+    <property>/instrumentation/nav[0]/radials/selected-deg</property>
+    <live>true</live>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </input>
+
+  <slider>
+    <name>Nav1 Volume</name>
+    <row>3</row>
+    <col>7</col>
+    <pref-width>60</pref-width>
+    <property>/instrumentation/nav/volume</property>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </slider>
+
+  <text>
+    <row>4</row>
+    <col>0</col>
+    <halign>right</halign>
+    <label>NAV2</label>
+  </text>
+
+  <input>
+    <name>nav2-selected</name>
+    <row>4</row>
+    <col>1</col>
+    <pref-width>55</pref-width>
+    <height>25</height>
+    <label>MHz</label>
+    <property>/instrumentation/nav[1]/frequencies/selected-mhz</property>
+    <live>true</live>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </input>
+
+  <button>
+    <row>4</row>
+    <col>3</col>
+    <width>35</width>
+    <height>26</height>
+    <border>1</border>
+    <legend>&lt;-&gt;</legend>
+    <binding>
+      <command>dialog-apply</command>
+      <object-name>nav2-selected</object-name>
+    </binding>
+    <binding>
+      <command>dialog-apply</command>
+      <object-name>nav2-standby</object-name>
+    </binding>
+    <binding>
+      <command>property-swap</command>
+      <property>/instrumentation/nav[1]/frequencies/selected-mhz</property>
+      <property>/instrumentation/nav[1]/frequencies/standby-mhz</property>
+    </binding>
+    <binding>
+      <command>dialog-update</command>
+      <object-name>nav2-selected</object-name>
+    </binding>
+    <binding>
+      <command>dialog-update</command>
+      <object-name>nav2-standby</object-name>
+    </binding>
+  </button>
+
+  <input>
+    <name>nav2-standby</name>
+    <row>4</row>
+    <col>4</col>
+    <pref-width>55</pref-width>
+    <height>25</height>
+    <label>MHz</label>
+    <property>/instrumentation/nav[1]/frequencies/standby-mhz</property>
+    <live>true</live>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </input>
+
+  <input>
+    <name>nav2-radial</name>
+    <row>4</row>
+    <col>6</col>
+    <pref-width>55</pref-width>
+    <height>25</height>
+    <label>deg</label>
+    <property>/instrumentation/nav[1]/radials/selected-deg</property>
+    <live>true</live>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </input>
+
+  <slider>
+    <name>Nav2 Volume</name>
+    <row>4</row>
+    <col>7</col>
+    <pref-width>60</pref-width>
+    <property>/instrumentation/nav[1]/volume</property>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </slider>
+
+  <text>
+    <row>5</row>
+    <col>0</col>
+    <halign>right</halign>
+    <label>ADF1</label>
+  </text>
+
+  <input>
+    <name>adf1-selected</name>
+    <row>5</row>
+    <col>1</col>
+    <pref-width>55</pref-width>
+    <height>25</height>
+    <label>kHz</label>
+    <property>/instrumentation/adf/frequencies/selected-khz</property>
+    <live>true</live>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </input>
+
+  <button>
+    <row>5</row>
+    <col>3</col>
+    <width>35</width>
+    <height>26</height>
+    <border>1</border>
+    <legend>&lt;-&gt;</legend>
+    <binding>
+      <command>dialog-apply</command>
+      <object-name>adf1-selected</object-name>
+    </binding>
+    <binding>
+      <command>dialog-apply</command>
+      <object-name>adf1-standby</object-name>
+    </binding>
+    <binding>
+      <command>property-swap</command>
+      <property>/instrumentation/adf/frequencies/selected-khz</property>
+      <property>/instrumentation/adf/frequencies/standby-khz</property>
+    </binding>
+    <binding>
+      <command>dialog-update</command>
+      <object-name>adf1-selected</object-name>
+    </binding>
+    <binding>
+      <command>dialog-update</command>
+      <object-name>adf1-standby</object-name>
+    </binding>
+  </button>
+
+  <input>
+    <name>adf1-standby</name>
+    <row>5</row>
+    <col>4</col>
+    <pref-width>55</pref-width>
+    <height>25</height>
+    <label>kHz</label>
+    <property>/instrumentation/adf/frequencies/standby-khz</property>
+    <live>true</live>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </input>
+
+  <input>
+    <name>adf1-radial</name>
+    <row>5</row>
+    <col>6</col>
+    <pref-width>55</pref-width>
+    <height>25</height>
+    <label>deg</label>
+    <property>/instrumentation/adf/rotation-deg</property>
+    <live>true</live>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </input>
+
+  <slider>
+    <name>ADF1 Volume</name>
+    <row>5</row>
+    <col>7</col>
+    <pref-width>60</pref-width>
+    <property>/instrumentation/adf/volume-norm</property>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </slider>
+
+  <text>
+    <row>6</row>
+    <col>0</col>
+    <halign>right</halign>
+    <label>ADF2</label>
+  </text>
+
+  <input>
+    <name>adf2-selected</name>
+    <row>6</row>
+    <col>1</col>
+    <pref-width>55</pref-width>
+    <height>25</height>
+    <label>kHz</label>
+    <property>/instrumentation/adf[1]/frequencies/selected-khz</property>
+    <live>true</live>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </input>
+
+  <button>
+    <row>6</row>
+    <col>3</col>
+    <width>35</width>
+    <height>26</height>
+    <border>1</border>
+    <legend>&lt;-&gt;</legend>
+    <binding>
+      <command>dialog-apply</command>
+      <object-name>adf2-selected</object-name>
+    </binding>
+    <binding>
+      <command>dialog-apply</command>
+      <object-name>adf2-standby</object-name>
+    </binding>
+    <binding>
+      <command>property-swap</command>
+      <property>/instrumentation/adf[1]/frequencies/selected-khz</property>
+      <property>/instrumentation/adf[1]/frequencies/standby-khz</property>
+    </binding>
+    <binding>
+      <command>dialog-update</command>
+      <object-name>adf2-selected</object-name>
+    </binding>
+    <binding>
+      <command>dialog-update</command>
+      <object-name>adf2-standby</object-name>
+    </binding>
+  </button>
+
+  <input>
+    <name>adf2-standby</name>
+    <row>6</row>
+    <col>4</col>
+    <pref-width>55</pref-width>
+    <height>25</height>
+    <label>kHz</label>
+    <property>/instrumentation/adf[1]/frequencies/standby-khz</property>
+    <live>true</live>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </input>
+
+  <input>
+    <name>adf2-radial</name>
+    <row>6</row>
+    <col>6</col>
+    <pref-width>55</pref-width>
+    <height>25</height>
+    <label>deg</label>
+    <property>/instrumentation/adf[1]/rotation-deg</property>
+    <live>true</live>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </input>
+
+  <slider>
+    <name>ADF2 Volume</name>
+    <row>6</row>
+    <col>7</col>
+    <pref-width>60</pref-width>
+    <property>/instrumentation/adf[1]/volume-norm</property>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </slider>
+
+<!--  <text>
+   <row>6</row>
+   <col>0</col>
+   <halign>right</halign>
+   <label>DME</label>
+  </text>
+
+  <input>
+   <name>dme-selected</name>
+   <row>6</row>
+   <col>1</col>
+   pref-width>55</pref-width>
+   <height>25</height>
+   <label>MHz</label>
+   <property>/instrumentation/dme/frequencies/selected-mhz</property>
+  </input> -->
+
+
+</group>
+
+<hrule/>
+<group>
+
+  <layout>hbox</layout>
+
+  <text>
+    <label>TACAN</label>
+  </text>
+
+
+  <combo>
+    <pref-width>45</pref-width>
+    <pref-height>25</pref-height>
+    <property>/instrumentation/tacan/frequencies/selected-channel[1]</property>
+    <value>0</value>
+    <value>1</value>
+    <value>2</value>
+    <value>3</value>
+    <value>4</value>
+    <value>5</value>
+    <value>6</value>
+    <value>7</value>
+    <value>8</value>
+    <value>9</value>
+  </combo>
+
+  <combo>
+    <pref-width>45</pref-width>
+    <pref-height>25</pref-height>
+    <property>/instrumentation/tacan/frequencies/selected-channel[2]</property>
+    <value>0</value>
+    <value>1</value>
+    <value>2</value>
+    <value>3</value>
+    <value>4</value>
+    <value>5</value>
+    <value>6</value>
+    <value>7</value>
+    <value>8</value>
+    <value>9</value>
+  </combo>
+
+  <combo>
+    <pref-width>45</pref-width>
+    <pref-height>25</pref-height>
+    <property>/instrumentation/tacan/frequencies/selected-channel[3]</property>
+    <value>0</value>
+    <value>1</value>
+    <value>2</value>
+    <value>3</value>
+    <value>4</value>
+    <value>5</value>
+    <value>6</value>
+    <value>7</value>
+    <value>8</value>
+    <value>9</value>
+  </combo>
+
+  <combo>
+    <pref-width>45</pref-width>
+    <pref-height>25</pref-height>
+    <property>/instrumentation/tacan/frequencies/selected-channel[4]</property>
+    <value>X</value>
+    <value>Y</value>
+  </combo>
+
+  <vrule/>
+
+<!--  <empty>
+    <stretch>true</stretch>
+  </empty> -->
+
+  <text>
+    <label>Xpdr</label>
+  </text>
+
+  <input>
+    <name>transponder</name>
+    <pref-width>55</pref-width>
+    <height>25</height>
+    <property>/instrumentation/transponder/id-code</property>
+    <live>true</live>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </input>
+
+  <button>
+    <name>transponder</name>
+    <legend>Stby</legend>
+    <border>1</border>
+    <binding>
+      <command>property-assign</command>
+      <property>/instrumentation/transponder/id-code</property>
+      <value>0000</value>
+    </binding>
+    <binding>
+      <command>dialog-update</command>
+      <object-name>transponder</object-name>
+    </binding>
+  </button>
+
+  <vrule/>
+
+<!--  <empty>
+    <stretch>true</stretch>
+  </empty> -->
+
+  <button>
+    <legend>ATC</legend>
+    <binding>
+      <command>ATC-freq-search</command>
+    </binding>
+  </button>
+
+</group>
+<hrule/>
+
+<group>
+  <layout>hbox</layout>
+  <default-padding>6</default-padding>
+  <empty>
+    <stretch>true</stretch>
+  </empty>
+
+  <button>
+    <legend>OK</legend>
+    <default>true</default>
+    <equal>true</equal>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>dialogs.radio.toggle()</script>
+    </binding>
+  </button>
+
+  <button>
+    <legend>Apply</legend>
+    <equal>true</equal>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </button>
+
+  <button>
+    <legend>Reset</legend>
+    <equal>true</equal>
+    <binding>
+      <command>dialog-update</command>
+    </binding>
+  </button>
+
+  <button>
+    <legend>Cancel</legend>
+    <equal>true</equal>
+    <key>Esc</key>
+    <binding>
+      <command>nasal</command>
+      <script>dialogs.radio.toggle()</script>
+    </binding>
+  </button>
+
+  <empty>
+    <stretch>true</stretch>
+  </empty>
+</group>
+
+
+</PropertyList>

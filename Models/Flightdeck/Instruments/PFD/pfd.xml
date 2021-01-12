@@ -1,0 +1,696 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>pfd.ac</path>
+
+
+ <animation>
+  <type>select</type>
+    <object-name>AI</object-name> 
+    <object-name>AIroll</object-name> 
+    <object-name>altlabel</object-name> 
+    <object-name>apalt1</object-name> 
+    <object-name>apalt2</object-name> 
+    <object-name>apalt3</object-name> 
+    <object-name>apalt4</object-name> 
+    <object-name>apalt5</object-name> 
+    <object-name>apspd1</object-name> 
+    <object-name>apspd2</object-name> 
+    <object-name>apspd3</object-name> 
+    <object-name>asi1</object-name> 
+    <object-name>asi2</object-name>
+    <object-name>asi3</object-name>
+    <object-name>ASIribbon.001</object-name> 
+    <object-name>asitape1</object-name>
+    <object-name>asitape2</object-name>
+<!--     <object-name>box</object-name>  -->
+    <object-name>dmetxt</object-name>
+    <object-name>dmetxt.001</object-name>
+    <object-name>dmetxt.002</object-name>
+    <object-name>dmetxt.003</object-name>
+    <object-name>dmetxt.004</object-name>
+    <object-name>FDbars</object-name>
+    <object-name>gslabel</object-name>
+    <object-name>GSneedle</object-name>
+    <object-name>GSscale</object-name>
+    <object-name>hdgsellabel</object-name>
+    <object-name>hdgsellabel</object-name>
+    <object-name>Imarker</object-name>
+    <object-name>lnavlabel</object-name>
+    <object-name>loclabel</object-name>
+    <object-name>LOCneedle</object-name>
+    <object-name>LOCscale</object-name>
+    <object-name>mach</object-name>
+    <object-name>Mmarker</object-name>
+    <object-name>Omarker</object-name>
+    <object-name>rect</object-name>
+    <object-name>rollarrow</object-name>
+    <object-name>rollptr</object-name>
+    <object-name>spdlabel</object-name>
+    <object-name>lnavlabel</object-name>
+    <object-name>slipindback</object-name>
+    
+  <condition>
+    <property>systems/electrical/on</property>
+  </condition>
+
+</animation>
+
+
+ 
+<animation>
+   <type>select</type>
+   <object-name>FDbars</object-name>
+   <condition>
+   <property>/instrumentation/flightdirector/fd-on</property>
+   <value>1</value>
+   </condition>
+ </animation>
+ 
+ <animation>
+   <type>select</type>
+   <object-name>GSscale</object-name>
+   <object-name>GSneedle</object-name>
+   <condition>
+      <property>/instrumentation/nav/has-gs</property>
+      <property>/instrumentation/nav/in-range</property>
+   </condition>
+ </animation>
+ 
+ 
+ <animation>
+   <type>translate</type>
+   <object-name>GSneedle</object-name>
+   <property>/instrumentation/nav/gs-needle-deflection</property>
+<interpolation>
+     <entry>
+       <ind> -10.0</ind>
+       <dep>-0.0308</dep>
+     </entry>
+     <entry>
+       <ind> 0.0</ind>
+       <dep>0.0</dep>
+     </entry>
+     <entry>
+       <ind> 10.0</ind>
+       <dep>0.0308</dep>
+     </entry>
+</interpolation>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+
+ <animation>
+   <type>select</type>
+   <object-name>Omarker</object-name>
+   <condition>
+       <property>/instrumentation/marker-beacon/outer</property>
+       <value>true</value>
+   </condition>
+ </animation>
+ 
+ <animation>
+   <type>select</type>
+   <object-name>Mmarker</object-name>
+   <condition>
+       <property>/instrumentation/marker-beacon/middle</property>
+       <value>true</value>
+   </condition>
+ </animation>
+ 
+ <animation>
+   <type>select</type>
+   <object-name>Imarker</object-name>
+   <condition>
+         <property>/instrumentation/marker-beacon/inner</property>
+       <value>true</value>
+   </condition>
+ </animation>
+ 
+ <animation>
+   <type>select</type>
+   <object-name>LOCscale</object-name>
+   <condition>
+         <property>/instrumentation/nav/nav-loc</property>
+         <property>/instrumentation/nav/in-range</property>
+   </condition>
+ </animation>
+ 
+ <animation>
+   <type>select</type>
+   <object-name>LOCneedle</object-name>
+   <condition>
+   <property>/instrumentation/nav/nav-loc</property>
+   <property>/instrumentation/nav/in-range</property>
+   </condition>
+ </animation>
+ 
+ <animation>
+   <type>translate</type>
+   <object-name>LOCneedle</object-name>
+   <property>/instrumentation/nav/heading-needle-deflection</property>
+<interpolation>
+     <entry>
+       <ind> -10.0</ind>
+       <dep>-0.0253</dep>
+     </entry>
+     <entry>
+       <ind> 0.0</ind>
+       <dep>0.0</dep>
+     </entry>
+     <entry>
+       <ind> 10.0</ind>
+       <dep>0.0253</dep>
+     </entry>
+</interpolation> 
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+   <type>rotate</type>
+   <object-name>FDbars</object-name>
+   <property>/instrumentation/flightdirector/vbar-roll</property>
+   <axis>
+     <x>1.0</x>
+     <y>0.0</y>
+     <z>0.0</z>
+   </axis>
+   <center>
+     <x-m>0.007</x-m>
+     <y-m>-0.014</y-m>
+     <z-m>0.005</z-m>
+   </center>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>FDbars</object-name>
+   <property>/instrumentation/flightdirector/vbar-pitch</property>
+<factor>0.0014</factor>
+<axis>
+     <x>0.0</x>
+     <y>0.0</y>
+     <z>1.0</z>
+   </axis>
+   <center>
+     <x-m>0.007</x-m>
+     <y-m>-0.014</y-m>
+     <z-m>0.005</z-m>
+   </center>
+ </animation>
+
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rollarrow</object-name>
+  <property>/orientation/roll-deg</property>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>-0.003</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+   <type>rotate</type>
+   <object-name>rollptr</object-name>
+   <property>/orientation/roll-deg</property>
+   <axis>
+     <x>1.0</x>
+     <y>0.0</y>
+     <z>0.0</z>
+   </axis>
+   <center>
+     <x-m>0.0</x-m>
+     <y-m>-0.014</y-m>
+     <z-m>0.005</z-m>
+   </center>
+ </animation>
+ 
+ <animation>
+   <type>texmultiple</type>
+   <object-name>AI</object-name>
+   <transform>
+     <property>/orientation/pitch-deg</property>
+     <subtype>textranslate</subtype>
+     <factor>0.00314</factor>
+     <axis>
+       <x>0</x>
+       <y>1</y>
+       <z>0</z>
+     </axis>
+   </transform>
+   <transform>
+     <property>/orientation/roll-deg</property>
+     <subtype>texrotate</subtype>
+     <center>
+       <x>0.25</x>
+       <y>0.50</y>
+     </center>
+     <axis>
+       <x>0</x>
+       <y>0</y>
+       <z>-1</z>
+     </axis>
+   </transform>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>asi1</object-name>
+  <property>/velocities/airspeed-kt</property>
+  <factor>0.10</factor>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>asi2</object-name>
+  <property>/velocities/airspeed-kt</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <scroll>1</scroll>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>asi3</object-name>
+  <property>/velocities/airspeed-kt</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <scroll>1</scroll>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>select</type>
+  <object-name>asitape1</object-name>
+  <condition>
+   <less-than>
+    <property>/velocities/airspeed-kt</property>
+    <value>480.01</value>
+   </less-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>asitape2</object-name>
+  <condition>
+   <greater-than>
+    <property>/velocities/airspeed-kt</property>
+    <value>479.99</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>asitape1</object-name>
+  <property>/velocities/airspeed-kt</property>
+  <factor>0.001665</factor>
+  <min>0.0499</min>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>asitape2</object-name>
+  <property>/velocities/airspeed-kt</property>
+  <factor>0.001665</factor>
+  <min>0.0499</min>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>select</type>
+  <object-name>loclabel</object-name>
+  <condition>
+        <and>
+          <equals>
+            <property>/autopilot/internal/CMDA</property>
+            <value>true</value>
+          </equals>
+          <equals>
+            <property>/autopilot/internal/LNAV</property>
+            <value>true</value>
+          </equals>
+          <equals>
+            <property>/autopilot/internal/LNAV-NAV1</property>
+            <value>true</value>
+          </equals>
+			  </and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>lnavlabel</object-name>
+  <condition>
+    <and>
+      <equals>
+        <property>/autopilot/internal/CMDA</property>
+        <value>true</value>
+      </equals>
+      <equals>
+        <property>/autopilot/internal/LNAV</property>
+        <value>true</value>
+      </equals>
+      <equals>
+        <property>/autopilot/internal/LNAV-FMS</property>
+        <value>true</value>
+      </equals>
+    </and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>gslabel</object-name>
+  <condition>
+    <and>
+      <equals>
+        <property>/autopilot/internal/CMDA</property>
+        <value>true</value>
+      </equals>
+      <equals>
+        <property>/autopilot/internal/VNAV</property>
+        <value>true</value>
+      </equals>
+      <equals>
+        <property>/autopilot/internal/VNAV-GS</property>
+        <value>true</value>
+      </equals> 
+      <equals>
+        <property>/instrumentation/nav/gs-in-range</property>
+        <value>true</value>
+      </equals>
+      <less-than>
+        <property>/instrumentation/nav/gs-needle-deflection</property>
+         <value>0.5</value>
+      </less-than>
+      <greater-than>
+        <property>/instrumentation/nav/gs-needle-deflection</property>
+        <value>-0.5</value>
+      </greater-than>
+     </and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>spdlabel</object-name>
+  <condition>
+        <and>
+          <equals>
+            <property>/autopilot/internal/CMDA</property>
+            <value>true</value>
+          </equals>
+          <equals>
+            <property>/autopilot/internal/SPD</property>
+            <value>true</value>
+          </equals>
+          <or>
+            <equals>
+              <property>/autopilot/internal/SPD-N1</property>
+              <value>true</value>
+            </equals>
+            <equals>
+              <property>/autopilot/internal/SPD-SPEED</property>
+              <value>true</value>
+            </equals>
+            <equals>
+              <property>/autopilot/internal/SPD-LVLCHG</property>
+              <value>true</value>
+            </equals>
+          </or>
+          <equals>
+            <property>/autopilot/internal/SPD-IAS</property>
+            <value>true</value>
+          </equals>
+			  </and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>hdgsellabel</object-name>
+  <condition>
+        <and>
+          <equals>
+            <property>/autopilot/internal/CMDA</property>
+            <value>true</value>
+          </equals>
+          <equals>
+            <property>/autopilot/internal/LNAV</property>
+            <value>true</value>
+          </equals>
+          <equals>
+            <property>/autopilot/internal/LNAV-HDG/</property>
+            <value>true</value>
+          </equals>
+        </and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>altlabel</object-name>
+  <condition>
+        <and>
+          <equals>
+            <property>/autopilot/internal/CMDA</property>
+            <value>true</value>
+          </equals>
+          <equals>
+            <property>/autopilot/internal/VNAV</property>
+            <value>true</value>
+          </equals>
+          <equals>
+            <property>/autopilot/internal/VNAV-ALT</property>
+            <value>true</value>
+          </equals>
+			  </and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>apspd1</object-name>
+  <property>/autopilot/settings/target-speed-kt</property>
+  <factor>0.10</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>apspd2</object-name>
+  <property>/autopilot/settings/target-speed-kt</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>apspd3</object-name>
+  <property>/autopilot/settings/target-speed-kt</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>apalt1</object-name>
+  <property>/autopilot/settings/target-altitude-ft</property>
+  <factor>0.10</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>apalt2</object-name>
+  <property>/autopilot/settings/target-altitude-ft</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>apalt3</object-name>
+  <property>/autopilot/settings/target-altitude-ft</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>apalt4</object-name>
+  <property>/autopilot/settings/target-altitude-ft</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>apalt5</object-name>
+  <property>/autopilot/settings/target-altitude-ft</property>
+  <factor>0.00001</factor>
+  <step>10000</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>dmetxt.001</object-name>
+   <property>/instrumentation/dme/indicated-distance-nm</property>
+   <factor>0.001</factor>
+   <step>100.0</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>dmetxt.002</object-name>
+   <property>/instrumentation/dme/indicated-distance-nm</property>
+   <factor>0.01</factor>
+   <step>10.0</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>dmetxt.003</object-name>
+   <property>/instrumentation/dme/indicated-distance-nm</property>
+   <factor>0.1</factor>
+   <step>1.0</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>dmetxt.004</object-name>
+   <property>/instrumentation/dme/indicated-distance-nm</property>
+   <factor>1.0</factor>
+   <step>0.1</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+ 
+     <animation>
+        <type>translate</type>
+        <object-name>slipball</object-name>
+        <property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+        <min>-1.0</min>
+        <max>1.0</max>
+        <interpolation>
+            <entry><ind>-1.0</ind><dep>-0.02</dep></entry>
+            <entry><ind>1.0</ind><dep>0.02</dep></entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.095</z-m>
+        </center>
+    </animation>
+
+
+</PropertyList>

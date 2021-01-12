@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>alt.ac</path>
+
+<!-- Turn on light with light switch -->
+
+ <animation>
+  <type>material</type>
+    <object-name>AltFace.002</object-name> 
+    <object-name>altdig1</object-name>
+    <object-name>altdig2</object-name>
+    <object-name>altdig20s</object-name>
+    <object-name>altdig3</object-name>
+    <object-name>inhg1</object-name>
+    <object-name>inhg2</object-name>
+    <object-name>inhg3</object-name>
+    <object-name>inhg4</object-name>
+    <object-name>mb1</object-name>
+    <object-name>mb2</object-name>
+    <object-name>mb3</object-name>
+    <object-name>mb4</object-name>
+    <object-name>needle</object-name>
+  <emission>
+    <red>0.6</red>
+    <green>0.6</green>
+    <blue>0.6</blue>
+<!--	<factor-prop>controls/lighting/instruments-norm</factor-prop> -->
+  </emission>
+  <condition>
+      <property>systems/electrical/on</property>
+  </condition>
+
+</animation>
+
+ <animation>
+  <type>material</type>
+    <object-name>Altimeter</object-name>
+    <object-name>baroknob</object-name>
+    <object-name>bugknob</object-name>
+  <emission>
+    <red>0.07</red>
+    <green>.06</green>
+    <blue>0.05</blue>
+	<factor-prop>controls/lighting/dome-norm</factor-prop>
+  </emission>
+</animation>
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>needle</object-name>
+  <property>instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.36</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>altdig1</object-name>
+  <property>instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.00001</factor>
+  <step>10000</step>
+  <scroll>20</scroll>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>textranslate</type>
+  <object-name>altdig2</object-name>
+  <property>instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <scroll>50</scroll>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>textranslate</type>
+  <object-name>altdig3</object-name>
+  <property>instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <scroll>20</scroll>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>textranslate</type>
+  <object-name>altdig20s</object-name>
+  <property>instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.010</factor>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!--  Animation for inHg subscale -->
+
+<animation>
+  <type>textranslate</type>
+  <object-name>inhg4</object-name>
+  <property>instrumentation/altimeter/setting-inhg</property>
+  <factor>10.0</factor>
+  <step>0.01</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>inhg3</object-name>
+  <property>instrumentation/altimeter/setting-inhg</property>
+  <factor>1.0</factor>
+  <step>0.1</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>inhg2</object-name>
+  <property>instrumentation/altimeter/setting-inhg</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>inhg1</object-name>
+  <property>instrumentation/altimeter/setting-inhg</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!-- Settings for mb subscale -->
+
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>mb4</object-name>
+		<property>instrumentation/altimeter/setting-inhg</property>
+		<factor>3.38639</factor>
+	<!--<step>0.33863886667</step>  -->
+	<!--	<scroll></scroll>  -->
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>textranslate</type>
+		<object-name>mb3</object-name>
+		<property>instrumentation/altimeter/setting-inhg</property>
+		<factor>0.338639</factor>
+		<step>0.2952998</step>
+	<!--	<scroll>0.033863886667</scroll>   -->
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>mb2</object-name>
+		<property>instrumentation/altimeter/setting-inhg</property>
+		<factor>0.033863886</factor>
+		<step>2.9529983</step> 
+<!--		<scroll></scroll>  -->
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+		
+	<animation>
+		<type>textranslate</type>
+		<object-name>mb1</object-name>
+		<property>instrumentation/altimeter/setting-inhg</property>
+		<factor>0.0033863886</factor>
+		<step>29.5329983</step> 
+<!--		<scroll>1.0</scroll>   -->
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+<!-- Rotate the baro setting knob for amusement -->
+	<animation>
+		<type>texrotate</type>
+		<object-name>baroknob</object-name>
+		<property>instrumentation/altimeter/setting-inhg</property>
+		<factor>1600</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x>0.5</x>
+			<y>0.5</y>
+		</center>
+	</animation>
+
+<!-- Pick animation for adjusting the baro datum -->
+<animation>
+	<type>pick</type>
+	<object-name>baroknob</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/altimeter/setting-inhg</property>
+			<step>0.01</step>
+			<min>25.00</min>
+			<max>35.00</max>
+			<wrap>false</wrap>
+		</binding>	
+	</action>
+	<action>
+		<button>1</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/altimeter/setting-inhg</property>
+			<step>-0.01</step>
+			<min>25.00</min>
+			<max>35.00</max>
+			<wrap>false</wrap>
+		</binding>		
+	</action>
+	<action>
+		<button>3</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/altimeter/setting-inhg</property>
+			<step>0.09</step>
+			<min>25.00</min>
+			<max>35.00</max>
+			<wrap>false</wrap>
+		</binding>	
+	</action>
+	<action>
+		<button>4</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/altimeter/setting-inhg</property>
+			<step>-0.09</step>
+			<min>25.00</min>
+			<max>35.00</max>
+			<wrap>false</wrap>
+		</binding>	
+	</action>
+</animation>
+
+
+</PropertyList>

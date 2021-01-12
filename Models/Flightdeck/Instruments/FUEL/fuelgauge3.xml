@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+	<path>fuelgauges.ac</path>
+
+<!-- Lighting!  -->
+
+ <animation>
+  <type>material</type>
+    <object-name>face</object-name> 
+    <object-name>disk</object-name>
+    <object-name>rect</object-name>
+    <object-name>digits</object-name>
+  <emission>
+    <red>0.5</red>
+    <green>0.5</green>
+    <blue>0.5</blue>
+
+  </emission>
+  <condition>
+    <property>systems/electrical/on</property>
+  </condition>
+  
+</animation>
+ <animation>
+  <type>material</type>
+    <object-name>body</object-name>
+  <emission>
+    <red>0.1</red>
+    <green>0.1</green>
+    <blue>0.1</blue>
+
+  </emission>
+</animation>
+
+ <animation>
+  <type>select</type>
+    <object-name>digit1</object-name>
+    <object-name>digit2</object-name>
+    <object-name>digit3</object-name>
+    <object-name>digit4</object-name>
+  <condition>
+    <property>systems/electrical/on</property>
+  </condition>
+</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>needle</object-name>
+		<property>consumables/fuel/tank[1]/level-lbs</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>2204.6</ind><dep>28.4</dep></entry>
+			<entry><ind>4409.2</ind><dep>61.9</dep></entry>
+			<entry><ind>6613.8</ind><dep>94.8</dep></entry>
+			<entry><ind>8818.3</ind><dep>128.7</dep></entry>
+			<entry><ind>11022.9</ind><dep>223.3</dep></entry>
+		</interpolation> 
+
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+
+	</animation>
+
+	<!-- Digital Display -->
+	<animation>
+		<type>textranslate</type>
+		<object-name>digit1</object-name>
+		<property>consumables/fuel/tank[1]/level-lbs[0]</property>
+		<factor>0.0001</factor>
+		<step>1000</step>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>digit2</object-name>
+		<property>consumables/fuel/tank[1]/level-lbs[0]</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>digit3</object-name>
+		<property>consumables/fuel/tank[1]/level-lbs[0]</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>digit4</object-name>
+		<property>consumables/fuel/tank[1]/level-lbs[0]</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!-- LoD -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>30</max-m>
+	</animation>
+
+</PropertyList>
+

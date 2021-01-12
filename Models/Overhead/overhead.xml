@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<!-- Overhead Bins and Ceiling -->
+
+	 <model>
+     <name>Overhead Bins</name>
+       <path>Aircraft/737-400/Models/Overhead/overhead.ac</path>
+       <offsets>
+         <x-m>0.0</x-m>
+         <y-m>0.0</y-m>
+         <z-m>-0.00</z-m>
+         <pitch-deg>0</pitch-deg>
+       </offsets>
+   </model> 
+
+
+	 
+</PropertyList>

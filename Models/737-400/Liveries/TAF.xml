@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <sim>
+  <model>
+   <livery>
+    <name type="string">TAF</name>
+    <texture>733taf.png</texture>
+   </livery>
+  </model>
+ </sim>
+</PropertyList>

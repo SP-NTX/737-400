@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>flap.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>Circle</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <red>   0.6 </red>
+      <green> 0.6 </green>
+      <blue>  0.6 </blue>
+    </emission>
+  <condition>
+    <property>systems/electrical/on</property>
+  </condition>
+  </animation>
+  
+  <animation>
+        <type>rotate</type>
+        <object-name>needle</object-name>
+        <property>surface-positions/flap-pos-norm</property>
+        <interpolation>
+            <entry><ind>0</ind><dep>-134</dep></entry>
+            <entry><ind>0.125</ind><dep>-100</dep></entry>
+            <entry><ind>0.250</ind><dep>-67</dep></entry>
+            <entry><ind>0.375</ind><dep>-32</dep></entry>
+            <entry><ind>0.5</ind><dep>14</dep></entry>
+            <entry><ind>0.625</ind><dep>46</dep></entry>
+            <entry><ind>0.750</ind><dep>78</dep></entry>
+            <entry><ind>0.875</ind><dep>112</dep></entry>
+            <entry><ind>1</ind><dep>145</dep></entry>
+        </interpolation>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+</animation>
+
+
+</PropertyList>
+

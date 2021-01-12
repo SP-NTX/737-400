@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<label>
+		<width>1</width>
+		<height>1</height>
+		<format>T</format>
+		<halign>center</halign>
+		<y>6</y>
+	</label>
+
+	<tape>
+		<name>Gyrocompass</name>
+		<x>-100</x>
+		<y>4</y>
+		<width>200</width>
+		<height>24</height>
+
+		<input>
+			<property>/orientation/heading-deg</property>
+		</input>
+		<display-span>25.0</display-span>
+		<modulo>360</modulo>
+
+		<option>top</option>
+
+		<major-divisions>5</major-divisions>
+		<minor-divisions>1</minor-divisions>
+		<tick-bottom>false</tick-bottom>
+		<tick-top>false</tick-top>
+		<tick-right>true</tick-right>
+		<tick-left>true</tick-left>
+		<cap-bottom>true</cap-bottom>
+		<cap-top>false</cap-top>
+		<cap-right>false</cap-right>
+		<cap-left>false</cap-left>
+		<marker-offset>0.0</marker-offset>
+		<enable-pointer>true</enable-pointer>
+		<pointer-type>fixed</pointer-type>
+		<tick-type>line</tick-type>
+		<tick-length>variable</tick-length>
+	</tape>
+	<tape>
+		<name>Magnetic Compass</name>
+		<x>-100</x>
+		<y>-18</y>
+		<width>200</width>
+		<height>18</height>
+
+		<input>
+			<property>/orientation/heading-magnetic-deg</property>
+		</input>
+		<display-span>25.0</display-span>
+		<modulo>360</modulo>
+
+		<option>bottom</option>
+
+		<major-divisions>5</major-divisions>
+		<minor-divisions>1</minor-divisions>
+		<tick-bottom>false</tick-bottom>
+		<tick-top>false</tick-top>
+		<tick-right>true</tick-right>
+		<tick-left>true</tick-left>
+		<cap-bottom>false</cap-bottom>
+		<cap-top>true</cap-top>
+		<cap-right>false</cap-right>
+		<cap-left>false</cap-left>
+		<marker-offset>0.0</marker-offset>
+		<enable-pointer>true</enable-pointer>
+		<pointer-type>fixed</pointer-type>
+		<tick-type>line</tick-type>
+		<tick-length>variable</tick-length>
+	</tape>
+</PropertyList>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>asi.ac</path>
+
+  
+
+ 
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <object-name>vmo-mark</object-name>
+    <object-name>rouek100</object-name>
+    <object-name>rouek10</object-name>
+    <object-name>rouek1</object-name>
+    <object-name>rouem1</object-name>
+    <object-name>rouem01</object-name>
+    <object-name>bug-man</object-name>
+    <object-name>bug-auto</object-name>
+    
+    <emission>
+      <red>   0.5 </red>
+      <green> 0.5 </green>
+      <blue>  0.5 </blue>
+    </emission>
+  <condition>
+    <property>systems/electrical/on</property>
+  </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>bug-auto</object-name>
+ 		  <condition>
+            <property>instrumentation/airspeed-indicator/speed-bug-pushed</property>
+      </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>bug-man</object-name>
+ 		  <condition>
+          <equals>
+            <property>instrumentation/airspeed-indicator/speed-bug-pushed</property>
+            <value>false</value>
+          </equals>
+      </condition>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>vmo-mark</object-name>
+  <property>instrumentation/altimeter/indicated-altitude-ft</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 4000 </ind><dep>   10 </dep></entry>
+      <entry><ind> 8000 </ind><dep>  15 </dep></entry>
+      <entry><ind> 12000 </ind><dep> 20 </dep></entry>
+      <entry><ind> 16000 </ind><dep> 25 </dep></entry>
+      <entry><ind> 20000 </ind><dep> 30 </dep></entry>
+      <entry><ind> 24000 </ind><dep> 33 </dep></entry>
+      <entry><ind> 28000 </ind><dep> 36 </dep></entry>
+      <entry><ind> 32000 </ind><dep> 39 </dep></entry>
+      <entry><ind> 36000 </ind><dep> 42 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>  -9 </dep></entry>
+      <entry><ind>  60 </ind><dep>   0 </dep></entry>
+      <entry><ind> 100 </ind><dep>  61 </dep></entry>
+      <entry><ind> 120 </ind><dep>  91 </dep></entry>
+      <entry><ind> 140 </ind><dep> 120 </dep></entry>
+      <entry><ind> 160 </ind><dep> 149 </dep></entry>
+      <entry><ind> 180 </ind><dep> 166 </dep></entry>
+      <entry><ind> 200 </ind><dep> 183 </dep></entry>
+      <entry><ind> 250 </ind><dep> 229 </dep></entry>
+      <entry><ind> 300 </ind><dep> 256 </dep></entry>
+      <entry><ind> 350 </ind><dep> 283 </dep></entry>
+      <entry><ind> 400 </ind><dep> 309 </dep></entry>
+      <entry><ind> 450 </ind><dep> 335 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>bug-auto</object-name>
+    <property>/autopilot/settings/target-speed-kt</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>  -9 </dep></entry>
+      <entry><ind>  60 </ind><dep>   0 </dep></entry>
+      <entry><ind> 100 </ind><dep>  61 </dep></entry>
+      <entry><ind> 120 </ind><dep>  91 </dep></entry>
+      <entry><ind> 140 </ind><dep> 120 </dep></entry>
+      <entry><ind> 160 </ind><dep> 149 </dep></entry>
+      <entry><ind> 180 </ind><dep> 166 </dep></entry>
+      <entry><ind> 200 </ind><dep> 183 </dep></entry>
+      <entry><ind> 250 </ind><dep> 229 </dep></entry>
+      <entry><ind> 300 </ind><dep> 256 </dep></entry>
+      <entry><ind> 350 </ind><dep> 283 </dep></entry>
+      <entry><ind> 400 </ind><dep> 309 </dep></entry>
+      <entry><ind> 450 </ind><dep> 335 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>bug-man</object-name>
+      <condition>
+        <equals>
+          <property>/instrumentation/airspeed-indicator/speed-bug-pushed</property>
+          <value>false</value>
+        </equals>
+      </condition>
+    <property>/instrumentation/airspeed-indicator/speed-bug</property>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+ <animation>
+   <type>pick</type>
+     <object-name>Cylinder</object-name>
+     <action>
+       <button>0</button>
+       <repeatable>false</repeatable>
+       <binding>
+         <command>property-toggle</command>
+           <property>/instrumentation/airspeed-indicator/speed-bug-pushed</property>
+       </binding>  
+     </action>
+ </animation>
+ 
+ <animation>
+   <type>translate</type>
+     <object-name>Cylinder</object-name>
+        <property>/instrumentation/airspeed-indicator/speed-bug-pushed</property>
+        <factor>.005</factor>
+        <axis>
+          <x>-1</x>
+        </axis>
+ </animation>
+
+ <animation>
+   <type>pick</type>
+   <visible>false</visible>   
+     <object-name>bug-inc</object-name>
+      <condition>
+        <equals>
+          <property>/instrumentation/airspeed-indicator/speed-bug-pushed</property>
+          <value>false</value>
+        </equals>
+      </condition>
+     <action>
+       <button>0</button>
+       <repeatable>true</repeatable>
+       <interval-sec>0.05</interval-sec>
+       <binding>
+         <command>property-adjust</command>
+           <property>/instrumentation/airspeed-indicator/speed-bug</property>
+           <step>1</step>
+           <min>0</min>
+           <max>280</max>
+       </binding>  
+     </action>
+ </animation>
+ 
+ <animation>
+   <type>pick</type>
+   <visible>false</visible>
+     <object-name>bug-dec</object-name>
+      <condition>
+        <equals>
+          <property>/instrumentation/airspeed-indicator/speed-bug-pushed</property>
+          <value>false</value>
+        </equals>
+      </condition>
+     <action>
+       <button>0</button>
+       <repeatable>true</repeatable>
+       <interval-sec>0.05</interval-sec>
+       <binding>
+         <command>property-adjust</command>
+           <property>/instrumentation/airspeed-indicator/speed-bug</property>
+           <step>-1</step>
+           <min>0</min>
+           <max>280</max>
+       </binding>  
+     </action>
+ </animation>
+
+  <!-- Speed indicator -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>rouek1</object-name>
+    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+		<factor>.1</factor>
+    <center>
+      <x-m> -0.016 </x-m>
+      <y-m>  0.010 </y-m>
+      <z-m> -0.017 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>rouek10</object-name>
+    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+		<factor>.01</factor>
+		<step>10</step>
+		<scroll>2</scroll>
+    <center>
+      <x-m> -0.016 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.017 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>rouek100</object-name>
+    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+		<factor>.001</factor>
+    <step>100</step>
+    <scroll>3</scroll>
+    <center>
+      <x-m> -0.016 </x-m>
+      <y-m> -0.009 </y-m>
+      <z-m> -0.017 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Mach indicator -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>rouem01</object-name>
+    <property>/instrumentation/airspeed-indicator/indicated-mach</property>
+    <factor>10</factor>
+		<step>.01</step>
+		<scroll>.01</scroll>
+    <center>
+      <x-m> -0.016 </x-m>
+      <y-m>  0.005 </y-m>
+      <z-m>  0.017 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>rouem1</object-name>
+    <property>/instrumentation/airspeed-indicator/indicated-mach</property>
+    <factor>1</factor>
+		<step>.10</step>
+		<scroll></scroll>
+    <center>
+      <x-m> -0.016 </x-m>
+      <y-m> -0.005 </y-m>
+      <z-m>  0.017 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

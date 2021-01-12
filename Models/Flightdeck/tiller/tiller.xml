@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+  <path>tiller.ac</path>
+  
+	<animation>
+		<type>material</type>
+		<object-name>Tiller</object-name>
+		<emission>
+		  <red>0.3</red>
+		  <green>0.3</green>
+		  <blue>0.3</blue>
+		</emission>
+	</animation>
+
+  <animation>
+    <type>rotate</type>
+		<object-name>Tiller</object-name>
+		<condition>
+			<property>/controls/gear/gear-down</property>
+		</condition>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> -40 </factor>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x> 0 </x> 
+      <y> 1 </y> 
+      <z> 0 </z> 
+    </axis>
+  </animation>
+	
+  
+<!--  <animation>
+      <type>pick</type>
+			<object-name>Tiller</object-name>
+      <action>
+          <button>0</button>
+          <binding>
+							<command>nasal</command>
+							<script>interpolate("/controls/flight/rudder", 0, 1);</script>
+          </binding>
+      </action>
+      <action>
+          <button>0</button>
+          <binding>
+              <command>property-adjust</command>
+              <property>/controls/flight/rudder</property>
+              <step>0.05</step>
+              <min>-1</min>
+              <max> 1</max>
+              <wrap>0</wrap>
+          </binding>
+      </action>
+      <action>
+          <button>2</button>
+          <binding>
+              <command>property-adjust</command>
+              <property>/controls/flight/rudder</property>
+              <step>-0.05</step>
+              <min>-1</min>
+              <max> 1</max>
+              <wrap>0</wrap>
+          </binding>
+      </action>
+  </animation>
+-->  
+</PropertyList>

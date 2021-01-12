@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Gol</name>
+        <texture>Liveries/GLO.png</texture>
+      </livery>
+	<Boeing-737-400>
+	  <removalkit>false</removalkit>
+	  <eyebrowwindow>true</eyebrowwindow>
+	</Boeing-737-400>
+    </model>
+  </sim>
+</PropertyList>

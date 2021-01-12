@@ -1,0 +1,3266 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+  <path>radio.ac</path>
+  <params>
+    <Com1A>instrumentation/comm[0]/frequencies/selected-mhz</Com1A>
+    <Com1S>instrumentation/comm[0]/frequencies/standby-mhz</Com1S>
+    <Com2A>instrumentation/comm[1]/frequencies/selected-mhz</Com2A>
+    <Com2S>instrumentation/comm[1]/frequencies/standby-mhz</Com2S>
+    <Nav1A>instrumentation/nav[0]/frequencies/selected-mhz</Nav1A>
+    <Nav1S>instrumentation/nav[0]/frequencies/standby-mhz</Nav1S>
+    <Nav2A>instrumentation/nav[1]/frequencies/selected-mhz</Nav2A>
+    <Nav2S>instrumentation/nav[1]/frequencies/standby-mhz</Nav2S>
+    <ADF1A>instrumentation/adf[0]/frequencies/selected-khz</ADF1A>
+    <ADF1S>instrumentation/adf[0]/frequencies/standby-khz</ADF1S>
+    <ADF2A>instrumentation/adf[1]/frequencies/selected-khz</ADF2A>
+    <ADF2S>instrumentation/adf[1]/frequencies/standby-khz</ADF2S>
+    <Trim-Rudder>controls/flight/rudder-trim</Trim-Rudder>
+  </params>
+  <!-- RADIO STACK -->
+  <animation>
+    <type>select</type>
+    <object-name>NavActive.01Left</object-name>
+    <object-name>NavActive.01Right</object-name>
+    <object-name>NavActive.1Left</object-name>
+    <object-name>NavActive.1Right</object-name>
+    <object-name>NavActive100Left</object-name>
+    <object-name>NavActive100Right</object-name>
+    <object-name>NavActive10Left</object-name>
+    <object-name>NavActive10Right</object-name>
+    <object-name>NavActive1Left</object-name>
+    <object-name>NavActive1Right</object-name>
+    <object-name>NavStandby.01Left</object-name>
+    <object-name>NavStandby.01Right</object-name>
+    <object-name>NavStandby.1Left</object-name>
+    <object-name>NavStandby.1Right</object-name>
+    <object-name>NavStandby100Left</object-name>
+    <object-name>NavStandby100Right</object-name>
+    <object-name>NavStandby10Left</object-name>
+    <object-name>NavStandby10Right</object-name>
+    <object-name>NavStandby1Left</object-name>
+    <object-name>NavStandby1Right</object-name>
+    <object-name>VHFActive.01Left</object-name>
+    <object-name>VHFActive.01Right</object-name>
+    <object-name>VHFActive.1Left</object-name>
+    <object-name>VHFActive.1Right</object-name>
+    <object-name>VHFActive100Left</object-name>
+    <object-name>VHFActive100Right</object-name>
+    <object-name>VHFActive10Left</object-name>
+    <object-name>VHFActive10Right</object-name>
+    <object-name>VHFActive1Left</object-name>
+    <object-name>VHFActive1Right</object-name>
+    <object-name>VHFStandby.01Left</object-name>
+    <object-name>VHFStandby.01Right</object-name>
+    <object-name>VHFStandby.1Left</object-name>
+    <object-name>VHFStandby.1Right</object-name>
+    <object-name>VHFStandby100Left</object-name>
+    <object-name>VHFStandby100Right</object-name>
+    <object-name>VHFStandby10Left</object-name>
+    <object-name>VHFStandby10Right</object-name>
+    <object-name>VHFStandby1Left</object-name>
+    <object-name>VHFStandby1Right</object-name>
+    <object-name>ADF1Active1000</object-name>
+    <object-name>ADF1Active100</object-name>
+    <object-name>ADF1Active10</object-name>
+    <object-name>ADF1Active1</object-name>
+    <object-name>ADF2Active1000</object-name>
+    <object-name>ADF2Active100</object-name>
+    <object-name>ADF2Active10</object-name>
+    <object-name>ADF2Active1</object-name>
+    <object-name>ADF1Stby1000</object-name>
+    <object-name>ADF1Stby100</object-name>
+    <object-name>ADF1Stby10</object-name>
+    <object-name>ADF1Stby1</object-name>
+    <object-name>ADF2Stby1000</object-name>
+    <object-name>ADF2Stby100</object-name>
+    <object-name>ADF2Stby10</object-name>
+    <object-name>ADF2Stby1</object-name>
+    <object-name>xpdr-1</object-name>
+    <object-name>xpdr-10</object-name>
+    <object-name>xpdr-100</object-name>
+    <object-name>xpdr-1000</object-name>
+    <condition>
+    <property>systems/electrical/on</property>
+    </condition>
+  </animation>
+  <animation>
+    <type>material</type>
+    <object-name>Com1A-10</object-name>
+    <object-name>Com1S-10</object-name>
+    <object-name>Com2A-10</object-name>
+    <object-name>Com2S-10</object-name>
+    <object-name>Nav1S-10</object-name>
+    <object-name>Nav2S-10</object-name>
+    <object-name>ADF1A-10</object-name>
+    <object-name>ADF1S-10</object-name>
+    <object-name>ADF2A-10</object-name>
+    <object-name>ADF2S-10</object-name>
+    <emission>
+      <red>   0.0 </red>
+      <green> 0.0 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Trim-Rudder-Indicator</object-name>
+    <emission>
+      <red>   0.5 </red>
+      <green> 0.5 </green>
+      <blue>  0.5 </blue>
+    </emission>
+    <condition>
+    <property>systems/electrical/on</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Com1A-01</object-name>
+    <object-name>Com1S-01</object-name>
+    <object-name>Com2A-01</object-name>
+    <object-name>Com2S-01</object-name>
+    <object-name>Nav1S-01</object-name>
+    <object-name>Nav2S-01</object-name>
+    <object-name>ADF1A-01</object-name>
+    <object-name>ADF1S-01</object-name>
+    <object-name>ADF2A-01</object-name>
+    <object-name>ADF2S-01</object-name>
+    <object-name>DimmerFlood</object-name>
+    <object-name>DimmerPanel</object-name>
+    <object-name>Trim-Rudder</object-name>
+    <object-name>StabTrimSwitchCover</object-name>
+    <object-name>radio-panel-top</object-name>
+<!--    <object-name>radio-panel-front</object-name> -->
+    <object-name>Fire-Warn-1</object-name>
+    <object-name>Fire-Warn-APU</object-name>
+    <object-name>Fire-Warn-2</object-name>
+
+    
+    <emission>
+      <red>   0.3 </red>
+      <green> 0.3 </green>
+      <blue>  0.3 </blue>
+    </emission>
+    <condition>
+    <property>systems/electrical/on</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Com1Swap</object-name>
+    <object-name>Com2Swap</object-name>
+    <object-name>Nav1Swap</object-name>
+    <object-name>Nav2Swap</object-name>
+    <object-name>ADF1Swap</object-name>
+    <object-name>ADF2Swap</object-name>
+    <object-name>vol-adf1</object-name>
+    <object-name>vol-adf1.001</object-name>
+    <object-name>vol-adf2</object-name>
+    <object-name>vol-adf2.001</object-name>
+    <object-name>vol-flt</object-name>
+    <object-name>vol-flt.001</object-name>
+    <object-name>vol-hf1</object-name>
+    <object-name>vol-hf1.001</object-name>
+    <object-name>vol-hf2</object-name>
+    <object-name>vol-hf2.001</object-name>
+    <object-name>vol-mkr</object-name>
+    <object-name>vol-mkr.001</object-name>
+    <object-name>vol-nav1</object-name>
+    <object-name>vol-nav1.001</object-name>
+    <object-name>vol-nav2</object-name>
+    <object-name>vol-nav2.001</object-name>
+    <object-name>vol-pa</object-name>
+    <object-name>vol-pa.001</object-name>
+    <object-name>vol-spk</object-name>
+    <object-name>vol-spk.001</object-name>
+    <object-name>vol-svc</object-name>
+    <object-name>vol-svc.001</object-name>
+    <object-name>vol-vhf1</object-name>
+    <object-name>vol-vhf1.001</object-name>
+    <object-name>vol-vhf2</object-name>
+    <object-name>vol-vhf2.001</object-name>
+    <object-name>vol-vhf3</object-name>
+    <object-name>vol-vhf3.001</object-name>
+    <emission>
+      <red>   0.3 </red>
+      <green> 0.3 </green>
+      <blue>  0.3 </blue>
+    </emission>
+    <condition>
+    <property>systems/electrical/on</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>StabTrimSwitch</object-name>
+    <object-name>MicSelect1-rt-ic</object-name>
+    <object-name>MicSelect2-rt-ic</object-name>
+    <object-name>MicSelect1-mask-boom</object-name>
+    <object-name>MicSelect2-mask-boom</object-name>
+    <object-name>MicSelect1-alt-norm</object-name>
+    <object-name>MicSelect2-alt-norm</object-name>
+    <object-name>xpdrAltSrcSwitch</object-name>
+    <object-name>xpdrSelectSwitch</object-name>
+    <shininess>128</shininess>
+  </animation>
+
+  <!-- COM1 Active Display -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFActive100Left</object-name>
+    <property alias="../../params/Com1A"/>
+    <step>100</step>
+    <factor>0.001</factor>
+    <bias>900</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFActive10Left</object-name>
+    <property alias="../../params/Com1A"/>
+    <step>10</step>
+    <factor>.01</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFActive1Left</object-name>
+    <property alias="../../params/Com1A"/>
+    <step>1</step>
+    <factor>0.1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFActive.1Left</object-name>
+    <property alias="../../params/Com1A"/>
+    <step>0.1</step>
+    <factor>1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFActive.01Left</object-name>
+    <property alias="../../params/Com1A"/>
+    <step>0.01</step>
+    <factor>10</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <!-- COM1 Active Knobs -->
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Com1A-10-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com1A"/>
+        <step>-1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com1A"/>
+        <step>1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Com1A-10-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com1A"/>
+        <step>1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com1A"/>
+        <step>-1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Com1A-01-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com1A"/>
+        <step>-0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com1A"/>
+        <step>0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Com1A-01-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com1A"/>
+        <step>0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com1A"/>
+        <step>-0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- COM1 Standby Display -->
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFStandby100Left</object-name>
+    <property alias="../../params/Com1S"/>
+    <step>100</step>
+    <factor>0.001</factor>
+    <bias>900</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFStandby10Left</object-name>
+    <property alias="../../params/Com1S"/>
+    <step>10</step>
+    <factor>.01</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFStandby1Left</object-name>
+    <property alias="../../params/Com1S"/>
+    <step>1</step>
+    <factor>0.1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFStandby.1Left</object-name>
+    <property alias="../../params/Com1S"/>
+    <step>0.1</step>
+    <factor>1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFStandby.01Left</object-name>
+    <property alias="../../params/Com1S"/>
+    <step>0.01</step>
+    <factor>10</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <!-- COM1 Standby Knobs -->
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Com1S-10-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com1S"/>
+        <step>-1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com1S"/>
+        <step>1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Com1S-10-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com1S"/>
+        <step>1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com1S"/>
+        <step>-1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Com1S-01-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com1S"/>
+        <step>-0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com1S"/>
+        <step>0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Com1S-01-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com1S"/>
+        <step>0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com1S"/>
+        <step>-0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- COM2 Active Display -->
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFActive100Right</object-name>
+    <property alias="../../params/Com2A"/>
+    <step>100</step>
+    <factor>0.001</factor>
+    <bias>900</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFActive10Right</object-name>
+    <property alias="../../params/Com2A"/>
+    <step>10</step>
+    <factor>.01</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFActive1Right</object-name>
+    <property alias="../../params/Com2A"/>
+    <step>1</step>
+    <factor>0.1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFActive.1Right</object-name>
+    <property alias="../../params/Com2A"/>
+    <step>0.1</step>
+    <factor>1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFActive.01Right</object-name>
+    <property alias="../../params/Com2A"/>
+    <step>0.01</step>
+    <factor>10</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <!-- COM2 Active Knobs -->
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Com2A-10-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com2A"/>
+        <step>-1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com2A"/>
+        <step>1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Com2A-10-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com2A"/>
+        <step>1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com2A"/>
+        <step>-1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Com2A-01-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com2A"/>
+        <step>-0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com2A"/>
+        <step>0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Com2A-01-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com2A"/>
+        <step>0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com2A"/>
+        <step>-0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- COM2 Standby Display -->
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFStandby100Right</object-name>
+    <property alias="../../params/Com2S"/>
+    <step>100</step>
+    <factor>0.001</factor>
+    <bias>900</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFStandby10Right</object-name>
+    <property alias="../../params/Com2S"/>
+    <step>10</step>
+    <factor>.01</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFStandby1Right</object-name>
+    <property alias="../../params/Com2S"/>
+    <step>1</step>
+    <factor>0.1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFStandby.1Right</object-name>
+    <property alias="../../params/Com2S"/>
+    <step>0.1</step>
+    <factor>1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFStandby.01Right</object-name>
+    <property alias="../../params/Com2S"/>
+    <step>0.01</step>
+    <factor>10</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <!-- COM2 Standby Knobs -->
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Com2S-10-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com2S"/>
+        <step>-1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com2S"/>
+        <step>1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Com2S-10-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com2S"/>
+        <step>1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com2S"/>
+        <step>-1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Com2S-01-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com2S"/>
+        <step>-0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com2S"/>
+        <step>0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Com2S-01-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com2S"/>
+        <step>0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Com2S"/>
+        <step>-0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- NAV1 Active Display -->
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavActive100Left</object-name>
+    <property alias="../../params/Nav1A"/>
+    <step>100</step>
+    <factor>.001</factor>
+    <bias>900</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavActive10Left</object-name>
+    <property alias="../../params/Nav1A"/>
+    <step>10</step>
+    <factor>.01</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavActive1Left</object-name>
+    <property alias="../../params/Nav1A"/>
+    <step>1</step>
+    <factor>0.1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavActive.1Left</object-name>
+    <property alias="../../params/Nav1A"/>
+    <step>0.1</step>
+    <factor>1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavActive.01Left</object-name>
+    <property alias="../../params/Nav1A"/>
+    <step>0.01</step>
+    <factor>10</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <!-- NAV1 Standby Display -->
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavStandby100Left</object-name>
+    <property alias="../../params/Nav1S"/>
+    <step>100</step>
+    <factor>.001</factor>
+    <bias>900</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavStandby10Left</object-name>
+    <property alias="../../params/Nav1S"/>
+    <step>10</step>
+    <factor>.01</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavStandby1Left</object-name>
+    <property alias="../../params/Nav1S"/>
+    <step>1</step>
+    <factor>0.1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavStandby.1Left</object-name>
+    <property alias="../../params/Nav1S"/>
+    <step>0.1</step>
+    <factor>1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavStandby.01Left</object-name>
+    <property alias="../../params/Nav1S"/>
+    <step>0.01</step>
+    <factor>10</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <!-- Nav1 Standby Knobs -->
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Nav1S-10-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Nav1S"/>
+        <step>-1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Nav1S"/>
+        <step>1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Nav1S-10-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Nav1S"/>
+        <step>1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Nav1S"/>
+        <step>-1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Nav1S-01-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Nav1S"/>
+        <step>-0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Nav1S"/>
+        <step>0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Nav1S-01-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Nav1S"/>
+        <step>0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Nav1S"/>
+        <step>-0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- NAV2 Active Display -->
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavActive100Right</object-name>
+    <property alias="../../params/Nav2A"/>
+    <step>100</step>
+    <factor>.001</factor>
+    <bias>900</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavActive10Right</object-name>
+    <property alias="../../params/Nav2A"/>
+    <step>10</step>
+    <factor>.01</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavActive1Right</object-name>
+    <property alias="../../params/Nav2A"/>
+    <step>1</step>
+    <factor>0.1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavActive.1Right</object-name>
+    <property alias="../../params/Nav2A"/>
+    <step>0.1</step>
+    <factor>1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavActive.01Right</object-name>
+    <property alias="../../params/Nav2A"/>
+    <step>0.01</step>
+    <factor>10</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <!-- NAV2 Standby Display -->
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavStandby100Right</object-name>
+    <property alias="../../params/Nav2S"/>
+    <step>100</step>
+    <factor>.001</factor>
+    <bias>900</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavStandby10Right</object-name>
+    <property alias="../../params/Nav2S"/>
+    <step>10</step>
+    <factor>.01</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavStandby1Right</object-name>
+    <property alias="../../params/Nav2S"/>
+    <step>1</step>
+    <factor>0.1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavStandby.1Right</object-name>
+    <property alias="../../params/Nav2S"/>
+    <step>0.1</step>
+    <factor>1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>NavStandby.01Right</object-name>
+    <property alias="../../params/Nav2S"/>
+    <step>0.01</step>
+    <factor>10</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <!-- Nav2 Standby Knobs -->
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Nav2S-10-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Nav2S"/>
+        <step>-1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Nav2S"/>
+        <step>1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Nav2S-10-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Nav2S"/>
+        <step>1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Nav2S"/>
+        <step>-1</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Nav2S-01-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Nav2S"/>
+        <step>-0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Nav2S"/>
+        <step>0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Nav2S-01-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Nav2S"/>
+        <step>0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Nav2S"/>
+        <step>-0.05</step>
+        <min>30</min>
+        <max>300</max>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- ADF1 Active Display -->
+
+  <!-- 190kHz to 1750kHz -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>ADF1Active1000</object-name>
+    <property alias="../../params/ADF1A"/>
+    <step>1000</step>
+    <factor>.0001</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>ADF1Active100</object-name>
+    <property alias="../../params/ADF1A"/>
+    <step>100</step>
+    <factor>.001</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>ADF1Active10</object-name>
+    <property alias="../../params/ADF1A"/>
+    <step>10</step>
+    <factor>.01</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>ADF1Active1</object-name>
+    <property alias="../../params/ADF1A"/>
+    <step>1</step>
+    <factor>0.1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <!-- ADF1 Active Knobs -->
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>ADF1A-10-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF1A"/>
+        <step>-10</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF1A"/>
+        <step>10</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>ADF1A-10-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF1A"/>
+        <step>10</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF1A"/>
+        <step>-10</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>ADF1A-01-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF1A"/>
+        <step>-1</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF1A"/>
+        <step>1</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>ADF1A-01-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF1A"/>
+        <step>1</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF1A"/>
+        <step>-1</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- ADF1 Standby Display -->
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>ADF1Stby1000</object-name>
+    <property alias="../../params/ADF1S"/>
+    <step>1000</step>
+    <factor>.0001</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>ADF1Stby100</object-name>
+    <property alias="../../params/ADF1S"/>
+    <step>100</step>
+    <factor>.001</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>ADF1Stby10</object-name>
+    <property alias="../../params/ADF1S"/>
+    <step>10</step>
+    <factor>.01</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>ADF1Stby1</object-name>
+    <property alias="../../params/ADF1S"/>
+    <step>1</step>
+    <factor>0.1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <!-- ADF1 Standby Knobs -->
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>ADF1S-10-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF1S"/>
+        <step>-10</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF1S"/>
+        <step>10</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>ADF1S-10-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF1S"/>
+        <step>10</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF1S"/>
+        <step>-10</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>ADF1S-01-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF1S"/>
+        <step>-1</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF1S"/>
+        <step>1</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>ADF1S-01-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF1S"/>
+        <step>1</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF1S"/>
+        <step>-1</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- ADF2 Active Display -->
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>ADF2Active1000</object-name>
+    <property alias="../../params/ADF2A"/>
+    <step>1000</step>
+    <factor>.0001</factor>
+    <bias>0.0001</bias>
+    <step>1000</step>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>ADF2Active100</object-name>
+    <property alias="../../params/ADF2A"/>
+    <step>100</step>
+    <factor>.001</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>ADF2Active10</object-name>
+    <property alias="../../params/ADF2A"/>
+    <step>10</step>
+    <factor>.01</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>ADF2Active1</object-name>
+    <property alias="../../params/ADF2A"/>
+    <step>1</step>
+    <factor>0.1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <!-- ADF2 Active Knobs -->
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>ADF2A-10-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF2A"/>
+        <step>-10</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF2A"/>
+        <step>10</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>ADF2A-10-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF2A"/>
+        <step>10</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF2A"/>
+        <step>-10</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>ADF2A-01-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF2A"/>
+        <step>-1</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF2A"/>
+        <step>1</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>ADF2A-01-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF2A"/>
+        <step>1</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF2A"/>
+        <step>-1</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- ADF2 Standby Display-->
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>ADF2Stby1000</object-name>
+    <property alias="../../params/ADF2S"/>
+    <step>1000</step>
+    <factor>.0001</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>ADF2Stby100</object-name>
+    <property alias="../../params/ADF2S"/>
+    <step>100</step>
+    <factor>.001</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>ADF2Stby10</object-name>
+    <property alias="../../params/ADF2S"/>
+    <step>10</step>
+    <factor>.01</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>ADF2Stby1</object-name>
+    <property alias="../../params/ADF2S"/>
+    <step>1</step>
+    <factor>0.1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <!-- ADF2 Standby Knobs -->
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>ADF2S-10-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF2S"/>
+        <step>-10</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF2S"/>
+        <step>10</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>ADF2S-10-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF2S"/>
+        <step>10</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF2S"/>
+        <step>-10</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>ADF2S-01-dn</object-name>
+    <action>
+      <button>0</button>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF2S"/>
+        <step>-1</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF2S"/>
+        <step>1</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>ADF2S-01-up</object-name>
+    <action>
+      <button>0</button>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF2S"/>
+        <step>1</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/ADF2S"/>
+        <step>-1</step>
+        <min>190</min>
+        <max>1750</max>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- XPDR -->
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>xpdr-1000</object-name>
+    <property>/instrumentation/transponder/id-code</property>
+    <factor>.0001</factor>
+    <step>1000</step>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>xpdr-100</object-name>
+    <property>/instrumentation/transponder/id-code</property>
+    <!--  <bias>900</bias> -->
+    <factor>.001</factor>
+    <step>100</step>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>xpdr-10</object-name>
+    <property>/instrumentation/transponder/id-code</property>
+    <factor>.01</factor>
+    <step>10</step>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>xpdr-1</object-name>
+    <property>/instrumentation/transponder/id-code</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+
+  <!-- Frequency Swap Buttons -->
+  <!-- Com1 Swap -->
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>Com1Swap</object-name>
+    <action>
+      <name>Comm 1 Swap</name>
+      <repeatable>false</repeatable>
+      <button>0</button>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+        <property>/instrumentation/comm[0]/frequencies/standby-mhz</property>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+          <property>instrumentation/comm[0]/frequencies/swap-button</property>
+          <value>1</value>
+       </binding>
+       <mod-up>
+       <binding>
+        <command>property-assign</command>
+          <property>instrumentation/comm[0]/frequencies/swap-button</property>
+          <value>0</value>
+       </binding>
+       </mod-up>
+     </action>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>Com1Swap</object-name>
+    <property>instrumentation/comm[0]/frequencies/swap-button</property>
+    <factor>-0.0015</factor>
+    <axis>
+      <x>0</x>
+      <y></y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <!-- Com2 Swap -->
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>Com2Swap</object-name>
+    <action>
+      <name>Comm 2 Swap</name>
+      <repeatable>false</repeatable>
+      <button>0</button>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
+        <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+          <property>instrumentation/comm[1]/frequencies/swap-button</property>
+          <value>1</value>
+       </binding>
+       <mod-up>
+       <binding>
+        <command>property-assign</command>
+          <property>instrumentation/comm[1]/frequencies/swap-button</property>
+          <value>0</value>
+       </binding>
+       </mod-up>
+     </action>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>Com2Swap</object-name>
+    <property>instrumentation/comm[1]/frequencies/swap-button</property>
+    <factor>-0.0015</factor>
+    <axis>
+      <x>0</x>
+      <y></y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+    <!-- Nav1 Swap -->
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>Nav1Swap</object-name>
+    <action>
+      <name>Nav 1 Swap</name>
+      <repeatable>false</repeatable>
+      <button>0</button>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
+        <property>/instrumentation/nav[0]/frequencies/standby-mhz</property>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+          <property>instrumentation/nav[0]/frequencies/swap-button</property>
+          <value>1</value>
+       </binding>
+       <mod-up>
+       <binding>
+        <command>property-assign</command>
+          <property>instrumentation/nav[0]/frequencies/swap-button</property>
+          <value>0</value>
+       </binding>
+       </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>Nav1Swap</object-name>
+    <property>instrumentation/nav[0]/frequencies/swap-button</property>
+    <factor>-0.0015</factor>
+    <axis>
+      <x>0</x>
+      <y></y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  
+
+  <!-- Nav2 Swap -->
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>Nav2Swap</object-name>
+    <action>
+      <name>Nav 2 Swap</name>
+      <repeatable>false</repeatable>
+      <button>0</button>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/nav[1]/frequencies/selected-mhz</property>
+        <property>/instrumentation/nav[1]/frequencies/standby-mhz</property>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+          <property>instrumentation/nav[1]/frequencies/swap-button</property>
+          <value>1</value>
+       </binding>
+       <mod-up>
+       <binding>
+        <command>property-assign</command>
+          <property>instrumentation/nav[1]/frequencies/swap-button</property>
+          <value>0</value>
+       </binding>
+       </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>Nav2Swap</object-name>
+    <property>instrumentation/nav[1]/frequencies/swap-button</property>
+    <factor>-0.0015</factor>
+    <axis>
+      <x>0</x>
+      <y></y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <!-- ADF1 Swap -->
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>ADF1Swap</object-name>
+    <action>
+      <name>ADF 1 Swap</name>
+      <repeatable>false</repeatable>
+      <button>0</button>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+        <property>/instrumentation/adf[0]/frequencies/standby-khz</property>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+          <property>instrumentation/adf[0]/frequencies/swap-button</property>
+          <value>1</value>
+       </binding>
+       <mod-up>
+       <binding>
+        <command>property-assign</command>
+          <property>instrumentation/adf[0]/frequencies/swap-button</property>
+          <value>0</value>
+       </binding>
+       </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>ADF1Swap</object-name>
+    <property>instrumentation/adf[0]/frequencies/swap-button</property>
+    <factor>-0.0015</factor>
+    <axis>
+      <x>0</x>
+      <y></y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  
+  <!-- ADF2 Swap -->
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>ADF2Swap</object-name>
+    <action>
+      <name>ADF 2 Swap</name>
+      <repeatable>false</repeatable>
+      <button>0</button>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/adf[1]/frequencies/selected-khz</property>
+        <property>/instrumentation/adf[1]/frequencies/standby-khz</property>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+          <property>instrumentation/adf[1]/frequencies/swap-button</property>
+          <value>1</value>
+       </binding>
+       <mod-up>
+       <binding>
+        <command>property-assign</command>
+          <property>instrumentation/adf[1]/frequencies/swap-button</property>
+          <value>0</value>
+       </binding>
+       </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>ADF2Swap</object-name>
+    <property>instrumentation/adf[1]/frequencies/swap-button</property>
+    <factor>-0.0015</factor>
+    <axis>
+      <x>0</x>
+      <y></y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <!-- Rudder Trim -->
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Trim-Rudder-Left</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Trim-Rudder"/>
+        <step>-0.01</step>
+        <min>-0.15</min>
+        <max>0.15</max>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Trim-Rudder-Right</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/Trim-Rudder"/>
+        <step>0.01</step>
+        <min>-0.15</min>
+        <max>0.15</max>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>Trim-Rudder-Center</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property alias="../../../../params/Trim-Rudder"/>
+        <value>0.0</value>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>translate</type>
+    <object-name>Trim-Rudder-Indicator</object-name>
+    <property>controls/flight/rudder-trim</property>
+    <factor>0.2</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!-- Stab Trim Switch Cover -->
+  <animation>
+    <type>rotate</type>
+    <object-name>StabTrimSwitchCover</object-name>
+    <property>/controls/electric/stabtrimswitchcover</property>
+    <factor>-80</factor>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> 0.14443</x-m>
+      <y-m> 0.06472</y-m>
+      <z-m> 0.47316</z-m>
+    </center>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>StabTrimSwitchCover</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/stabtrimswitchcover</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Stab Trim Switch -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>StabTrimSwitch</object-name>
+    <property>/controls/electric/stabtrim-switch</property>
+    <factor>-40</factor>
+    <offset-deg>20</offset-deg>
+    <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> 0.15879</x-m>
+      <y-m> 0.06989</y-m>
+      <z-m> 0.47371</z-m>
+    </center>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>StabTrimSwitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/stabtrim-switch</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- xpdr Select Switch -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>xpdrSelectSwitch</object-name>
+    <property>/instrumentation/transponder/xpdr-select</property>
+    <factor>-40</factor>
+    <offset-deg>20</offset-deg>
+    <axis>
+      <x> 1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.05735</x-m>
+      <y-m> -0.07285</y-m>
+      <z-m> 0.47323</z-m>
+    </center>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>xpdrSelectSwitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/instrumentation/transponder/xpdr-select</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- xpdr Alt Source Switch -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>xpdrAltSrcSwitch</object-name>
+    <property>/instrumentation/transponder/alt-source</property>
+    <factor>-40</factor>
+    <offset-deg>20</offset-deg>
+    <axis>
+      <x> 1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+    <center>
+      <x-m> -0.03182</x-m>
+      <y-m> -0.07295</y-m>
+      <z-m> 0.47337</z-m>
+    </center>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>xpdrAltSrcSwitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/instrumentation/transponder/alt-source</property>
+      </binding>
+    </action>
+  </animation>
+  
+
+
+  <!-- ADF1 Volume -->
+	<animation>
+		<type>texrotate</type>
+		<object-name>vol-adf1</object-name>
+		<object-name>vol-adf1.001</object-name>
+		<property>instrumentation/adf/volume-norm</property>
+		<factor>270</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x>0.5</x>
+			<y>0.5</y>
+		</center>
+	</animation>
+
+
+<!-- ADF1 Volume -->
+<animation>
+	<type>pick</type>
+	<object-name>vol-adf1</object-name>
+	<object-name>vol-adf1.001</object-name>
+  <visible>true</visible>
+	<action>
+		<button>0</button>
+    <button>3</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/adf/volume-norm</property>
+			<step>0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>	
+	</action>
+	<action>
+		<button>1</button>
+		<button>4</button>
+  	<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/adf/volume-norm</property>
+			<step>-0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>		
+	</action>
+</animation>
+
+  <!-- ADF2 Volume -->
+	<animation>
+		<type>texrotate</type>
+		<object-name>vol-adf2</object-name>
+		<object-name>vol-adf2.001</object-name>
+		<property>instrumentation/adf[1]/volume-norm</property>
+		<factor>270</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x>0.5</x>
+			<y>0.5</y>
+		</center>
+	</animation>
+
+<!-- ADF2 Volume -->
+<animation>
+	<type>pick</type>
+	<object-name>vol-adf2</object-name>
+	<object-name>vol-adf2.001</object-name>
+  <visible>true</visible>
+	<action>
+		<button>0</button>
+    <button>3</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/adf[1]/volume-norm</property>
+			<step>0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>	
+	</action>
+	<action>
+		<button>1</button>
+    <button>4</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/adf[1]/volume-norm</property>
+			<step>-0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>		
+	</action>
+</animation>
+
+  <!-- VHF1 Volume -->
+	<animation>
+		<type>texrotate</type>
+		<object-name>vol-vhf1</object-name>
+		<object-name>vol-vhf1.001</object-name>
+		<property>instrumentation/comm/volume</property>
+		<factor>270</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x>0.5</x>
+			<y>0.5</y>
+		</center>
+	</animation>
+
+<!-- VHF1 Volume -->
+<animation>
+	<type>pick</type>
+	<object-name>vol-vhf1</object-name>
+	<object-name>vol-vhf1.001</object-name>
+  <visible>true</visible>
+	<action>
+		<button>0</button>
+    <button>3</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/comm/volume</property>
+			<step>0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>	
+	</action>
+	<action>
+		<button>1</button>
+    <button>4</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/comm/volume</property>
+			<step>-0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>		
+	</action>
+</animation>
+
+
+  <!-- VHF2 Volume -->
+	<animation>
+		<type>texrotate</type>
+		<object-name>vol-vhf2</object-name>
+		<object-name>vol-vhf2.001</object-name>
+		<property>instrumentation/comm[1]/volume</property>
+		<factor>270</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x>0.5</x>
+			<y>0.5</y>
+		</center>
+	</animation>
+
+<!-- VHF2 Volume -->
+<animation>
+	<type>pick</type>
+	<object-name>vol-vhf2</object-name>
+	<object-name>vol-vhf2.001</object-name>
+  <visible>true</visible>
+	<action>
+		<button>0</button>
+    <button>3</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/comm[1]/volume</property>
+			<step>0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>	
+	</action>
+	<action>
+		<button>1</button>
+    <button>4</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/comm[1]/volume</property>
+			<step>-0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>		
+	</action>
+</animation>
+  
+  <!-- NAV1 Volume -->
+	<animation>
+		<type>texrotate</type>
+		<object-name>vol-nav1</object-name>
+		<object-name>vol-nav1.001</object-name>
+		<property>instrumentation/nav/volume</property>
+		<factor>270</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x>0.5</x>
+			<y>0.5</y>
+		</center>
+	</animation>
+
+<!-- NAV1 Volume -->
+<animation>
+	<type>pick</type>
+	<object-name>vol-nav1</object-name>
+	<object-name>vol-nav1.001</object-name>
+  <visible>true</visible>
+	<action>
+		<button>0</button>
+    <button>3</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/nav/volume</property>
+			<step>0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>	
+	</action>
+	<action>
+		<button>1</button>
+    <button>4</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/nav/volume</property>
+			<step>-0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>		
+	</action>
+</animation>
+
+  <!-- NAV2 Volume -->
+	<animation>
+		<type>texrotate</type>
+		<object-name>vol-nav2</object-name>
+		<object-name>vol-nav2.001</object-name>
+		<property>instrumentation/nav[1]/volume</property>
+		<factor>270</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x>0.5</x>
+			<y>0.5</y>
+		</center>
+	</animation>
+
+<!-- NAV2 Volume -->
+<animation>
+	<type>pick</type>
+	<object-name>vol-nav2</object-name>
+	<object-name>vol-nav2.001</object-name>
+  <visible>true</visible>
+	<action>
+		<button>0</button>
+    <button>3</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/nav[1]/volume</property>
+			<step>0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>	
+	</action>
+	<action>
+		<button>1</button>
+    <button>4</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/nav[1]/volume</property>
+			<step>-0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>		
+	</action>
+</animation>
+
+
+  <!-- HF1 Volume -->
+	<animation>
+		<type>texrotate</type>
+		<object-name>vol-hf1</object-name>
+		<object-name>vol-hf1.001</object-name>
+		<property>instrumentation/hf/volume</property>
+		<factor>270</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x>0.5</x>
+			<y>0.5</y>
+		</center>
+	</animation>
+
+<!-- HF1 Volume -->
+<animation>
+	<type>pick</type>
+	<object-name>vol-hf1</object-name>
+	<object-name>vol-hf1.001</object-name>
+  <visible>true</visible>
+	<action>
+		<button>0</button>
+    <button>3</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/hf/volume</property>
+			<step>0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>	
+	</action>
+	<action>
+		<button>1</button>
+    <button>4</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/hf/volume</property>
+			<step>-0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>		
+	</action>
+</animation>
+
+
+  <!-- HF2 Volume -->
+	<animation>
+		<type>texrotate</type>
+		<object-name>vol-hf2</object-name>
+		<object-name>vol-hf2.001</object-name>
+		<property>instrumentation/hf[1]/volume</property>
+		<factor>270</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x>0.5</x>
+			<y>0.5</y>
+		</center>
+	</animation>
+
+<!-- HF2 Volume -->
+<animation>
+	<type>pick</type>
+	<object-name>vol-hf2</object-name>
+	<object-name>vol-hf2.001</object-name>
+  <visible>true</visible>
+	<action>
+		<button>0</button>
+    <button>3</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/hf[1]/volume</property>
+			<step>0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>	
+	</action>
+	<action>
+		<button>1</button>
+    <button>4</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/hf[1]/volume</property>
+			<step>-0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>		
+	</action>
+</animation>
+
+  <!-- FLT Volume -->
+	<animation>
+		<type>texrotate</type>
+		<object-name>vol-flt</object-name>
+		<object-name>vol-flt.001</object-name>
+		<property>instrumentation/flt/volume</property>
+		<factor>270</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x>0.5</x>
+			<y>0.5</y>
+		</center>
+	</animation>
+
+<!-- FLT Volume -->
+<animation>
+	<type>pick</type>
+	<object-name>vol-flt</object-name>
+	<object-name>vol-flt.001</object-name>
+  <visible>true</visible>
+	<action>
+		<button>0</button>
+    <button>3</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/flt/volume</property>
+			<step>0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>	
+	</action>
+	<action>
+		<button>1</button>
+    <button>4</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/flt/volume</property>
+			<step>-0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>		
+	</action>
+</animation>
+
+  <!-- SVC Volume -->
+	<animation>
+		<type>texrotate</type>
+		<object-name>vol-svc</object-name>
+		<object-name>vol-svc.001</object-name>
+		<property>instrumentation/svc/volume</property>
+		<factor>270</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x>0.5</x>
+			<y>0.5</y>
+		</center>
+	</animation>
+
+<!-- SVC Volume -->
+<animation>
+	<type>pick</type>
+	<object-name>vol-svc</object-name>
+	<object-name>vol-svc.001</object-name>
+  <visible>true</visible>
+	<action>
+		<button>0</button>
+    <button>3</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/svc/volume</property>
+			<step>0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>	
+	</action>
+	<action>
+		<button>1</button>
+    <button>4</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/svc/volume</property>
+			<step>-0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>		
+	</action>
+</animation>
+
+  <!-- PA Volume -->
+	<animation>
+		<type>texrotate</type>
+		<object-name>vol-pa</object-name>
+		<object-name>vol-pa.001</object-name>
+		<property>instrumentation/pa/volume</property>
+		<factor>270</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x>0.5</x>
+			<y>0.5</y>
+		</center>
+	</animation>
+
+<!-- PA Volume -->
+<animation>
+	<type>pick</type>
+	<object-name>vol-pa</object-name>
+	<object-name>vol-pa.001</object-name>
+  <visible>true</visible>
+	<action>
+		<button>0</button>
+    <button>3</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/pa/volume</property>
+			<step>0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>	
+	</action>
+	<action>
+		<button>1</button>
+    <button>4</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/pa/volume</property>
+			<step>-0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>		
+	</action>
+</animation>
+
+  <!-- MKR Volume -->
+	<animation>
+		<type>texrotate</type>
+		<object-name>vol-mkr</object-name>
+		<object-name>vol-mkr.001</object-name>
+		<property>instrumentation/mkr/volume</property>
+		<factor>270</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x>0.5</x>
+			<y>0.5</y>
+		</center>
+	</animation>
+
+<!-- MKR Volume -->
+<animation>
+	<type>pick</type>
+	<object-name>vol-mkr</object-name>
+	<object-name>vol-mkr.001</object-name>
+  <visible>true</visible>
+	<action>
+		<button>0</button>
+    <button>3</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/mkr/volume</property>
+			<step>0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>	
+	</action>
+	<action>
+		<button>1</button>
+    <button>4</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/mkr/volume</property>
+			<step>-0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>		
+	</action>
+</animation>
+
+  <!-- SPK Volume -->
+	<animation>
+		<type>texrotate</type>
+		<object-name>vol-spk</object-name>
+		<object-name>vol-spk.001</object-name>
+		<property>instrumentation/spk/volume</property>
+		<factor>270</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x>0.5</x>
+			<y>0.5</y>
+		</center>
+	</animation>
+
+<!-- SPK Volume -->
+<animation>
+	<type>pick</type>
+	<object-name>vol-spk</object-name>
+	<object-name>vol-spk.001</object-name>
+  <visible>true</visible>
+	<action>
+		<button>0</button>
+    <button>3</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/spk/volume</property>
+			<step>0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>	
+	</action>
+	<action>
+		<button>1</button>
+    <button>4</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/spk/volume</property>
+			<step>-0.03</step>
+			<min>0.00</min>
+			<max>1.00</max>
+			<wrap>false</wrap>
+		</binding>		
+	</action>
+</animation>
+  
+</PropertyList>

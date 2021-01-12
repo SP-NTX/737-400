@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<!--
+737 2d panel - prevents default 2d panel.
+-->
+
+<PropertyList>
+ <name>733 2d Panel</name>
+ <background>background.png</background>
+ <w>0</w>
+ <h>0</h>
+ <y-offset>0</y-offset>
+ <view-height>0</view-height>
+
+</PropertyList>

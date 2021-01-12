@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <name>Airport Operations</name>
+  <layout>vbox</layout>
+
+        <text>
+		<label>737-400 Light Controller</label>
+	</text>
+
+  <group>
+    <layout>table</layout>
+    <text>
+      <label>Doors</label>
+      <row>0</row>
+      <col>0</col>
+    </text>
+    <button>
+      <row>0</row>
+      <col>3</col>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <legend>x</legend>
+      <default>1</default>
+      <keynum>27</keynum>
+      <border>2</border>
+      <binding>
+	<command>dialog-close</command>
+      </binding>
+    </button>
+  </group>
+
+  <hrule/>
+
+  <group>
+<!-- Pass LF -->	
+    <layout>table</layout>
+    <text>
+      <label>Left Front</label>
+      <halign>right</halign>
+      <row>0</row>
+      <col>0</col>
+    </text>
+    <button>
+      <row>0</row>
+      <col>1</col>
+      <legend>Move</legend>
+      <default>true</default>
+      <binding>
+	<command>nasal</command>
+	<script>
+	  doors.openclosedoor("/controls/groundservice/passengerdoor1");
+	</script>
+      </binding>
+    </button>
+    <checkbox>
+      <row>0</row>
+      <col>2</col>
+      <property>controls/groundservice/passengerdoor1</property>
+      <live>true</live>
+    </checkbox>
+    <!-- Pass RF -->		
+    <text>
+      <label>Right Front</label>
+      <halign>right</halign>
+      <row>1</row>
+      <col>0</col>
+    </text>
+    <button>
+      <row>1</row>
+      <col>1</col>
+      <legend>Move</legend>
+      <default>true</default>
+      <binding>
+	<command>nasal</command>
+	<script>
+	  doors.openclosedoor("/controls/groundservice/passengerdoor2");
+	</script>
+      </binding>
+    </button>
+    <checkbox>
+      <row>1</row>
+      <col>2</col>
+      <property>controls/groundservice/passengerdoor2</property>
+      <live>true</live>
+    </checkbox>
+    <!-- Pass LR -->		
+    <text>
+      <label>Left Rear</label>
+      <halign>right</halign>
+      <row>2</row>
+      <col>0</col>
+    </text>
+    <button>
+      <row>2</row>
+      <col>1</col>
+      <legend>Move</legend>
+      <default>true</default>
+      <binding>
+	<command>nasal</command>
+	<script>
+	  doors.openclosedoor("/controls/groundservice/passengerdoor3");
+	</script>
+      </binding>
+    </button>
+    <checkbox>
+      <row>2</row>
+      <col>2</col>
+      <property>controls/groundservice/passengerdoor3</property>
+      <live>true</live>
+    </checkbox>
+    <!-- Pass RR -->		
+    <text>
+      <label>Right Rear</label>
+      <halign>right</halign>
+      <row>3</row>
+      <col>0</col>
+    </text>
+    <button>
+      <row>3</row>
+      <col>1</col>
+      <legend>Move</legend>
+      <default>true</default>
+      <binding>
+	<command>nasal</command>
+	<script>
+	  doors.openclosedoor("/controls/groundservice/passengerdoor4");
+	</script>
+      </binding>
+    </button>
+    <checkbox>
+      <row>3</row>
+      <col>2</col>
+      <property>controls/groundservice/passengerdoor4</property>
+      <live>true</live>
+    </checkbox>
+
+    <!-- Cockpit -->		
+    <text>
+      <label>Cockpit</label>
+      <halign>right</halign>
+      <row>4</row>
+      <col>0</col>
+    </text>
+    <button>
+      <row>4</row>
+      <col>1</col>
+      <legend>Move</legend>
+      <default>true</default>
+      <binding>
+	<command>nasal</command>
+	<script>
+	  doors.openclosedoor("/controls/groundservice/cockpitdoor");
+	</script>
+      </binding>
+    </button>
+    <checkbox>
+      <row>4</row>
+      <col>2</col>
+      <property>controls/groundservice/cockpitdoor</property>
+      <live>true</live>
+    </checkbox>
+
+  </group>
+
+</PropertyList>

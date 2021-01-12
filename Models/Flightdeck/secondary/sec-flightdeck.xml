@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Flight Deck Interior - Seats Yokes Center Console -->
+
+<PropertyList>
+
+  <path>sec-flightdeck.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>FLAPSLEVER</object-name>
+    <object-name>FLAPTEETH</object-name>
+    <object-name>GEARLEVER</object-name>
+    <object-name>GRIPS</object-name>
+    <object-name>LEFTTHROTTLE</object-name>
+    <object-name>LEFTTRIM</object-name>
+    <object-name>PARKINGBRAKE</object-name>
+    <object-name>PEDESTAL</object-name>
+    <object-name>RIGHTTHROTTLE</object-name>
+    <object-name>RIGHTTRIM</object-name>
+    <object-name>SEATS</object-name>
+    <object-name>SPEEDBRAKE</object-name>
+    <object-name>idle-cutoff-left</object-name>
+    <object-name>idle-cutoff-right</object-name>
+
+    <emission>
+
+      <red>   0.2 </red>
+      <green> 0.2 </green>
+      <blue>  0.2 </blue>
+    </emission>
+    <condition>
+    <property>systems/electrical/on</property>
+    </condition>
+  </animation>
+
+
+  <offsets>
+    <x-m>.45</x-m>
+    <y-m>-0.01</y-m> 
+    <z-m>0.13</z-m>
+  </offsets>
+
+  <animation>
+    <name>Hide yokes</name>
+    <type>select</type>
+    <object-name>YOKEBASES</object-name>
+    <condition>
+      <property>sim/model/yokes</property>
+    </condition>
+  </animation>
+
+
+<!-- CAPTAIN -->
+
+<animation>
+  <type>rotate</type>
+  <object-name>YOKEBASES</object-name>
+  <property>controls/flight/elevator</property>
+  <factor>15</factor>
+  <offset-deg>5</offset-deg>
+  <center>
+    <x-m>-6.58</x-m>
+    <y-m>-0.01</y-m>
+    <z-m>-0.03</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>-1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+
+<animation>
+  <type>rotate</type>
+  <object-name>LEFTTHROTTLE</object-name>
+  <property>controls/engines/engine[0]/throttle</property>
+  <factor>40</factor>
+  <offset-deg>-15</offset-deg>
+  <center>
+    <x-m>-6.78</x-m>
+    <y-m>-0.01</y-m>
+    <z-m>0.42</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>-1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>RIGHTTHROTTLE</object-name>
+  <property>controls/engines/engine[1]/throttle</property>
+  <factor>40</factor>
+  <offset-deg>-15</offset-deg>
+  <center>
+    <x-m>-6.78</x-m>
+    <y-m>0.01</y-m>
+    <z-m>0.42</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>-1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>GEARLEVER</object-name>
+  <property>controls/gear/gear-down</property>
+  <factor>65</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+    <x-m>-7.15</x-m>
+    <y-m>-0.0</y-m>
+    <z-m>0.69</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <visible>true</visible>
+  <object-name>GEARLEVER</object-name>
+  <action>
+    <name>Gear Lever</name>
+    <button>0</button>
+    <repeatable>false</repeatable> 
+    <binding>
+      <condition>
+        <not>
+          <property>/fdm/jsbsim/gear/wow</property>
+        </not>
+      </condition>    
+      <command>property-toggle</command>
+      <property>controls/gear/gear-down</property>
+      <step>1</step>
+      <min>0></min>
+      <max>1</max>
+      <wrap>true</wrap>
+    </binding>
+  </action>
+</animation>
+
+
+<animation>
+  <type>rotate</type>
+  <object-name>RIGHTTRIM</object-name>
+  <property>controls/flight/elevator-trim</property>
+  <factor>14400</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+    <x-m>-6.80940</x-m>
+    <y-m>-0.09893</y-m>
+    <z-m>0.47337</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>-1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+
+<animation>
+  <type>rotate</type>
+  <object-name>LEFTTRIM</object-name>
+  <property>controls/flight/elevator-trim</property>
+  <factor>14400</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+    <x-m>-6.80940</x-m>
+    <y-m>-0.09865</y-m>
+    <z-m>0.47337</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>-1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+
+<animation>
+  <type>rotate</type>
+  <object-name>PARKINGBRAKE</object-name>
+  <property>controls/gear/brake-parking</property>
+  <factor>50</factor>
+  <offset-deg>-40</offset-deg>
+  <center>
+    <x-m>-6.75958</x-m>
+    <y-m>-0.06259</y-m>
+    <z-m>0.47371</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <visible>true</visible>
+  <object-name>PARKINGBRAKE</object-name> 
+  <action>
+    <name>Parking Brake</name>
+    <repeatable>false</repeatable>
+    <button>0</button>
+    <binding>
+      <command>property-toggle</command>
+      <property>/controls/gear/brake-parking</property>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+        var setting = getprop ("/controls/gear/brake-parking");
+        var names = ["Off", "On"];
+        if (getprop("sim/co-pilot")) {
+        setprop ("/sim/messages/copilot", "Parking Brake is " ~ names[setting] ~ ".");
+        }
+      </script>
+    </binding>
+  </action>
+</animation>
+
+
+<animation>
+  <type>rotate</type>
+  <object-name>SPEEDBRAKE</object-name>
+  <property>controls/flight/speedbrake</property>
+  <factor>80</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+    <x-m>-6.83583</x-m>
+    <y-m>-0.06381</y-m>
+    <z-m>0.47828</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+
+<animation>
+  <type>pick</type>
+  <visible>true</visible>
+  <object-name>SPEEDBRAKE</object-name> 
+  <action>
+    <name>Speed Brake</name>
+    <repeatable>false</repeatable>
+    <button>0</button>
+    <binding>
+      <command>property-cycle</command>
+      <property>/controls/flight/speedbrake</property>
+      <value>0</value>
+      <value>0.33</value>
+      <value>0.66</value>
+      <value>1.0</value>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+        var setting = getprop ("/controls/flight/speedbrake");
+        var names = ["Down", "Armed", "Flight", "Up"];
+        if (getprop("sim/co-pilot")) {
+        setprop ("/sim/messages/copilot", "Speedbrakes set to " ~ names[setting * 3.3] ~ ".");
+        }
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>FLAPSLEVER</object-name>
+  <property>controls/flight/flaps</property>
+  <factor>60</factor>
+  <offset-deg>-20</offset-deg>
+  <center>
+    <x-m>-6.82106</x-m>
+    <y-m>0.05170</y-m>
+    <z-m>0.47286</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+
+<animation>
+  <type>pick</type>
+  <visible>true</visible>
+  <object-name>idle-cutoff-left</object-name>
+  <action>
+    <name>Idle Cutoff 1</name>
+    <button>0</button>
+    <repeatable>false</repeatable> 
+    <binding>
+      <command>property-toggle</command>
+      <property>controls/engines/engine[0]/cutoff</property>
+      <step>1</step>
+      <min>0></min>
+      <max>1</max>
+      <wrap>true</wrap>
+    </binding>
+  </action>
+</animation>
+
+
+<animation>
+  <type>rotate</type>
+  <object-name>idle-cutoff-left</object-name>
+  <property>controls/engines/engine[0]/cutoff</property>
+  <factor>22</factor>
+  <offset-deg>-22</offset-deg>
+  <center>
+    <x-m>-6.82106</x-m>
+    <y-m>0.00823</y-m>
+    <z-m>0.47286</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+
+<animation>
+  <type>pick</type>
+  <visible>true</visible>
+  <object-name>idle-cutoff-right</object-name>
+  <action>
+    <name>Idle Cutoff 2</name>
+    <button>0</button>
+    <repeatable>false</repeatable> 
+    <binding>
+      <command>property-toggle</command>
+      <property>controls/engines/engine[1]/cutoff</property>
+      <step>1</step>
+      <min>0></min>
+      <max>1</max>
+      <wrap>true</wrap>
+    </binding>
+  </action>
+</animation>
+
+
+<animation>
+  <type>rotate</type>
+  <object-name>idle-cutoff-right</object-name>
+  <property>controls/engines/engine[1]/cutoff</property>
+  <factor>22</factor>
+  <offset-deg>-22</offset-deg>
+  <center>
+    <x-m>-6.82106</x-m>
+    <y-m>0.00823</y-m>
+    <z-m>0.47286</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+
+</PropertyList>

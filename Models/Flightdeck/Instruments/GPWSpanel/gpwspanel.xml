@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>gpwspanel.ac</path>
+ 
+    <animation>
+    <type>material</type>
+    <object-name>Plane.170</object-name>
+    <object-name>guard</object-name>
+    <object-name>terr</object-name>
+    <object-name>terrovrd</object-name>
+    <object-name>wxr</object-name>
+    
+    <emission>
+      <red>   0.05 </red>
+      <green> 0.05 </green>
+      <blue>  0.05 </blue>
+    </emission>
+  <condition>
+    <property>systems/electrical/on</property>
+  </condition>
+  </animation>
+
+ </PropertyList>

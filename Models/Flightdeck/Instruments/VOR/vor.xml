@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>vor.ac</path>
+
+	<!-- PARAMETERS -->
+	<params>
+		<indicated-heading-deg>orientation/heading-magnetic-deg</indicated-heading-deg>
+		<nav-display n="0">instrumentation/nav-compass[0]/nav-display[0]</nav-display>
+		<nav-display n="1">instrumentation/nav-compass[0]/nav-display[1]</nav-display>
+	</params>
+
+	<!-- ANIMATIONS -->
+	<!-- Lighting -->
+  <animation>
+    <type>material</type>
+    <object-name>Needle1ADF</object-name>
+    <object-name>Needle1VOR</object-name>
+    <object-name>Needle2ADF</object-name>
+    <object-name>Needle2VOR</object-name>
+    <object-name>dme1-1</object-name>
+    <object-name>dme1-2</object-name>
+    <object-name>dme1-3</object-name>
+    <object-name>dme2-1</object-name>
+    <object-name>dme2-2</object-name>
+    <object-name>dme2-3</object-name>
+    <object-name>dme2-4</object-name>
+    <object-name>Face</object-name>
+    <object-name>face</object-name>
+    <object-name>InsideFrame</object-name>
+    
+    <emission>
+      <red>   0.5 </red>
+      <green> 0.5 </green>
+      <blue>  0.5 </blue>
+    </emission>
+  <condition>
+    <property>systems/electrical/on</property>
+  </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>dme1-1</object-name>
+    <object-name>dme1-2</object-name>
+    <object-name>dme1-3</object-name>
+    <object-name>dme2-1</object-name>
+    <object-name>dme2-2</object-name>
+    <object-name>dme2-3</object-name>
+    <object-name>dme2-4</object-name>
+ 		  <condition>
+    <property>systems/electrical/on</property>
+      </condition>
+  </animation>
+
+	<!-- Face and needles -->
+	<animation>
+		<name>Heading rotate</name>
+		<type>rotate</type>
+		<object-name>Face</object-name>
+		<!--object-name>Needle1VOR</object-name>
+		<object-name>Needle2VOR</object-name-->
+		<property>orientation/heading-magnetic-deg</property>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.00339</x-m>
+			<y-m>0.00100</y-m>
+			<z-m>-0.01154</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<name>VOR1 select</name>
+		<type>select</type>
+		<object-name>Needle1VOR</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/nav-compass[0]/nav-display[0]</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+  <animation>
+	        <type>rotate</type>
+	        <object-name>Needle1VOR</object-name>
+	        <property>orientation/heading-deg</property>
+	        <axis>
+			<x>1.0</x>
+			<y>0</y>
+			<z>0.0</z>
+        	</axis>
+ 		<center>
+			<x-m>0.00381</x-m>
+			<y-m>0.00135</y-m>
+			<z-m>-0.01201</z-m>
+		</center>
+
+	</animation>
+	<animation>
+		<name>VOR1 rotate</name>
+		<type>rotate</type>   
+		<object-name>Needle1VOR</object-name>
+		<property>instrumentation/nav[0]/heading-deg</property>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.00381</x-m>
+			<y-m>0.00135</y-m>
+			<z-m>-0.01201</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>ADF1 select</name>
+		<type>select</type>
+		<object-name>Needle1ADF</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/nav-compass[0]/nav-display[0]</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<name>ADF1 rotate</name>
+		<type>rotate</type>   
+		<object-name>Needle1ADF</object-name>
+		<property>instrumentation/adf[0]/indicated-bearing-deg</property>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.00381</x-m>
+			<y-m>0.00135</y-m>
+			<z-m>-0.01201</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<name>VOR2 select</name>
+		<type>select</type>
+		<object-name>Needle2VOR</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/nav-compass[0]/nav-display[1]</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>Needle2VOR</object-name>
+    <property>orientation/heading-deg</property>
+      <axis>
+        <x>1.0</x>
+        <y>0</y>
+        <z>0.0</z>
+      </axis>
+ 		<center>
+			<x-m>0.00381</x-m>
+			<y-m>0.00135</y-m>
+			<z-m>-0.01201</z-m>
+		</center>
+  </animation>
+ 	<animation>
+		<name>VOR2 rotate</name>
+		<type>rotate</type>   
+		<object-name>Needle2VOR</object-name>
+		<property>instrumentation/nav[1]/heading-deg</property>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.00381</x-m>
+			<y-m>0.00135</y-m>
+			<z-m>-0.01201</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>ADF2 select</name>
+		<type>select</type>
+		<object-name>Needle2ADF</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/nav-compass[0]/nav-display[1]</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<name>ADF2 rotate</name>
+		<type>rotate</type>   
+		<object-name>Needle2ADF</object-name>
+		<property>instrumentation/adf[1]/indicated-bearing-deg</property>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.00381</x-m>
+			<y-m>0.00135</y-m>
+			<z-m>-0.01201</z-m>
+		</center>
+	</animation>
+
+	<!-- VOR/ADF switches -->
+	<animation>
+		<name>NAV1 switch pick</name>
+		<type>pick</type>
+		<object-name>NAV1</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-cycle</command>
+				<property>instrumentation/nav-compass[0]/nav-display[0]</property>
+				<value type="int">0</value>
+				<value type="int">1</value>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>NAV1 switch rotate</name>
+		<type>rotate</type>
+		<object-name>NAV1</object-name>
+		<property>instrumentation/nav-compass[0]/nav-display[0]</property>
+		<factor>90</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-0.01481</x-m>
+			<y-m>-0.02865</y-m>
+			<z-m>-0.04135</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<name>NAV2 switch pick</name>
+		<type>pick</type>
+		<object-name>NAV2</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-cycle</command>
+				<property>instrumentation/nav-compass[0]/nav-display[1]</property>
+				<value type="int">0</value>
+				<value type="int">1</value>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>NAV2 switch rotate</name>
+		<type>rotate</type>
+		<object-name>NAV2</object-name>
+		<property>instrumentation/nav-compass[0]/nav-display[1]</property>
+		<factor>90</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.00475</x-m>
+			<y-m>0.03097</y-m>
+			<z-m>-0.04133</z-m>
+		</center>
+	</animation>
+
+<!-- Textranslates for DME Readout -->  
+  
+ <animation>
+  <type>textranslate</type>
+  <object-name>dme1-1</object-name>
+  <property>instrumentation/dme/indicated-distance-nm</property>
+  <factor>0.10</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>textranslate</type>
+  <object-name>dme1-2</object-name>
+  <property>instrumentation/dme/indicated-distance-nm</property>
+  <factor>.01</factor>
+  <step>10</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>textranslate</type>
+  <object-name>dme1-3</object-name>
+  <property>instrumentation/dme/indicated-distance-nm</property>
+  <factor>.001</factor>
+  <step>100</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+  
+ <animation>
+  <type>textranslate</type>
+  <object-name>dme2-1</object-name>
+  <property>instrumentation/dme[1]/indicated-distance-nm</property>
+  <factor>1</factor>
+  <step>.1</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>textranslate</type>
+  <object-name>dme2-2</object-name>
+  <property>instrumentation/dme[1]/indicated-distance-nm</property>
+  <factor>0.10</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>textranslate</type>
+  <object-name>dme2-3</object-name>
+  <property>instrumentation/dme[1]/indicated-distance-nm</property>
+  <factor>.01</factor>
+  <step>10</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>textranslate</type>
+  <object-name>dme2-4</object-name>
+  <property>instrumentation/dme[1]/indicated-distance-nm</property>
+  <factor>.001</factor>
+  <step>100</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+  
+  
+</PropertyList>

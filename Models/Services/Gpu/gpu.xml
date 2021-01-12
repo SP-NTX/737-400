@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>gpu.ac</path>
+
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-property>sim/rendering/static-lod/bare</max-property>
+  </animation>
+	<!--
+  <animation> 
+    <type>textranslate</type> 
+    <object-name>jour</object-name> 
+    <property>/sim/time/sun-angle-rad</property>
+    <step> 1.57 </step>
+    <factor>0.318471338</factor>
+    <center>
+     <x-m> 0 </x-m>
+     <y-m> 0 </y-m>
+     <z-m> 0 </z-m>
+    </center>
+    <axis> 
+      <x> -1 </x> 
+      <y>  0 </y> 
+      <z>  0 </z> 
+    </axis> 
+  </animation>
+-->
+  <animation>
+    <type>material</type>
+    <object-name>cabo</object-name>
+    <object-name>cabo2</object-name>
+    <object-name>boxmain</object-name>
+    <object-name>underbox</object-name>
+    <object-name>suportes</object-name>
+    <object-name>caparoda</object-name>
+    <object-name>roda_FL</object-name>
+    <object-name>roda_FR</object-name>
+    <object-name>roda_BL</object-name>
+    <object-name>roda_BR</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red>   0.35 </red>
+      <green> 0.35 </green>
+      <blue>  0.35 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>cabo</object-name>
+    <object-name>cabo2</object-name>
+    <object-name>boxmain</object-name>
+    <object-name>underbox</object-name>
+    <object-name>suportes</object-name>
+    <object-name>caparoda</object-name>
+    <object-name>roda_FL</object-name>
+    <object-name>roda_FR</object-name>
+    <object-name>roda_BL</object-name>
+    <object-name>roda_BR</object-name>
+    <condition>
+      <less-than-equals>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </less-than-equals>
+    </condition>
+    <emission>
+      <red>   0.0 </red>
+      <green> 0.0 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>lampada_on</object-name>
+    <condition>
+      <and>
+	      <property>/sim/model/lights/strobe/state</property>
+		  <property>controls/electric/external-power</property>
+		  <or>
+			<property>controls/groundservice/cargo/active</property>
+			<property>controls/groundservice/pax/active</property>
+		  </or>
+			<property>controls/gear/brake-parking</property>
+			<property>controls/gear/gear-down</property>
+
+	  </and>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>lampada_off</object-name>
+    <condition>
+      <and>
+			<equals>
+				<property>/sim/model/lights/strobe/state</property>
+				<value>false</value>
+			</equals>
+			<property>controls/electric/external-power</property>
+		  <or>
+			<property>controls/groundservice/cargo/active</property>
+			<property>controls/groundservice/pax/active</property>
+		  </or>
+			<property>controls/gear/brake-parking</property>
+			<property>controls/gear/gear-down</property>
+
+	  </and>
+    </condition>
+  </animation>
+  
+  
+ <animation>
+  <type>select</type>
+    <object-name>cabo</object-name>
+    <object-name>cabo2</object-name>
+    <object-name>boxmain</object-name>
+    <object-name>underbox</object-name>
+    <object-name>suportes</object-name>
+    <object-name>caparoda</object-name>
+    <object-name>roda_FL</object-name>
+    <object-name>roda_FR</object-name>
+    <object-name>roda_BL</object-name>
+    <object-name>roda_BR</object-name>
+  <condition>
+   <and>
+			<property>controls/gear/brake-parking</property>
+			<property>controls/gear/gear-down</property>
+   </and>
+  </condition>
+ </animation>
+
+
+
+</PropertyList>

@@ -1,0 +1,2273 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>737-400.ac</path>
+
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/737-400/Models/737-400/Liveries", 10);
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
+
+     <model>
+	<name>winglets</name>
+	<path>Aircraft/737-400/Models/winglets.ac</path>
+    </model>
+    <animation>
+	<type>select</type>
+	<object-name>winglets</object-name>
+	<condition>
+	    <!--property>sim/model/winglets</property-->
+	    <equals>
+		<property>sim/model/variant</property>
+		<value>1</value>
+	    </equals>
+	</condition>
+    </animation>
+
+      <animation>
+		<name>Winglet illumination</name>
+		<type>material</type>
+               <object-name>WingletL</object-name>
+                  <object-name>WingletR</object-name>
+ 		<emission>
+			<red>0.25</red>
+			<green>0.25</green>
+			<blue>0.25</blue>
+			<factor-prop>controls/lighting/logo-lights</factor-prop>
+		</emission>
+	</animation>
+
+      <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.png</texture>
+        <object-name>engnose</object-name>
+      </animation> 
+
+  <model>
+    <name>flightdeck</name>
+    <path>Aircraft/737-400/Models/Flightdeck/flightdeck.xml</path>
+    <offsets>
+      <x-m>0.3</x-m>
+      <z-m>1.957</z-m>
+      <pitch-deg>-15</pitch-deg>
+    </offsets>
+  </model>
+
+  <offsets>
+    <x-m>8.756</x-m>
+    <z-m>0.0</z-m>
+    <pitch-deg>0</pitch-deg>
+  </offsets>
+
+  <model>
+    <name>Secondary flightdeck model</name>
+    <path>Aircraft/737-400/Models/Flightdeck/secondary/sec-flightdeck.xml</path>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </offsets>
+  </model>	
+
+  <model>
+    <name>Passenger Seating</name>
+    <path>Aircraft/737-400/Models/Seating/passenger-seating.xml</path>
+  </model>	
+
+  <model>
+    <name>Cockpit Bulkhead</name>
+    <path>Aircraft/737-400/Models/CockpitBulkhead/cockpit-bulkhead.xml</path>
+  </model>	
+
+  <model>
+    <name>Overhead Bins</name>
+    <path>Aircraft/737-400/Models/Overhead/overhead.xml</path>
+  </model>	
+
+  <model>
+    <name>Pushback</name>
+    <path>Models\Airport\Pushback\Goldhofert.xml</path>
+    <offsets>
+      <x-m>-5.684</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.460</z-m>
+    </offsets>
+  </model>
+
+  <!-- Shadow -->
+
+  <model>
+    <name>shadowOSG</name>
+    <path>Aircraft/737-400/Models/Shadow/shadow.xml</path>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-1.1</z-m>
+      <pitch-deg>-1</pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Services -->
+
+  <model>
+    <path>Aircraft/737-400/Models/Services/Services.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </offsets>
+  </model> 
+
+
+  <animation>
+    <type>spin</type>
+    <object-name>Blades</object-name>
+    <property>/engines/engine[0]/n1</property>
+    <factor>10</factor>
+    <center>
+      <x-m>2.363</x-m>
+      <y-m>-4.861</y-m>
+      <z-m>-1.324</z-m>
+    </center>
+    <axis>
+      <x>-1.0</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>Blades.001</object-name>
+    <property>/engines/engine[1]/n1</property>
+    <factor>10</factor>
+    <center>
+      <x-m>2.363</x-m>
+      <y-m>4.925</y-m>
+      <z-m>-1.324</z-m>
+    </center> 
+    <axis>
+      <x>-1.0</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>lreverserob</object-name>
+    <object-name>lreverserib</object-name>
+    <property>engines/engine/reverser-pos-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>1</ind>
+	<dep>0.6</dep>
+      </entry>
+    </interpolation>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Cube</object-name>
+    <object-name>noseaxle</object-name>
+    <object-name>tyrern</object-name>
+    <object-name>tyreln</object-name>
+    <object-name>nlowerstrut</object-name>
+    <object-name>nlinkupper</object-name>
+    <object-name>nlinklower</object-name>
+    <object-name>nouterstrut</object-name>
+    <object-name>rhsteercyl</object-name>
+    <object-name>lhsteercyl</object-name>
+    <object-name>collar</object-name>
+    <property>controls/flight/rudder</property>
+    <factor>-45</factor>
+    <offset-deg>0</offset-deg>
+    <axis>
+      <x1-m>-4.652</x1-m>
+      <y1-m>0.00</y1-m>
+      <z1-m>-2.348</z1-m>
+      <x2-m>-4.649</x2-m>
+      <y2-m>0.00</y2-m>
+      <z2-m>-1.696</z2-m>
+    </axis>
+  </animation>
+
+  <!--<animation>
+  <type>rotate</type>
+  <path>taxilight.xml</path>
+   <property>controls/flight/rudder</property>
+  <factor>-45</factor>
+  <offset-deg>0</offset-deg>   
+		<axis>
+			<x1-m>-4.652</x1-m>
+			<y1-m>0.00</y1-m>
+			<z1-m>-2.348</z1-m>
+			<x2-m>-4.649</x2-m>
+			<y2-m>0.00</y2-m>
+			<z2-m>-1.696</z2-m>
+		</axis>
+ </animation>-->
+
+  <animation>
+    <type>translate</type>
+    <object-name>nlowerstrut</object-name>
+    <object-name>noseaxle</object-name>
+    <object-name>tyrern</object-name>
+    <object-name>tyreln</object-name>
+    <object-name>Cube</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+    <factor>0.2</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>mglhlowerstrut</object-name>
+    <object-name>mglhaxle</object-name>
+    <object-name>mglhtyrerh</object-name>
+    <object-name>mglhtyrelh</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <factor>0.3</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>mgrhlowerstrut</object-name>
+    <object-name>mgrhaxle</object-name>
+    <object-name>mgrhtyrerh</object-name>
+    <object-name>mgrhtyrelh</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <factor>0.3</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>nouterstrut</object-name>
+    <object-name>rhsteercyl</object-name>
+    <object-name>lhsteercyl</object-name>
+    <object-name>collar</object-name>
+    <object-name>nlinkupper</object-name>
+    <object-name>nlinklower</object-name>
+    <object-name>nlowerstrut</object-name>
+    <object-name>noseaxle</object-name>
+    <object-name>tyrern</object-name>
+    <object-name>tyreln</object-name>
+    <object-name>Cube</object-name>
+    <object-name>tlighthalo</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>110.0</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>110.0</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-4.65</x-m>
+      <y-m>0</y-m>
+      <z-m>-1.02</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rhngdoor</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>90.0</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>90.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>90.0</dep>
+      </entry>
+    </interpolation>
+    <axis>
+      <x1-m>-6.194</x1-m>
+      <y1-m>0.375</y1-m>
+      <z1-m>-1.114</z1-m>
+      <x2-m>-4.431</x2-m>
+      <y2-m>0.390</y2-m>
+      <z2-m>-1.331</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>lhngdoor</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>-90.0</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>-90.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>-90.0</dep>
+      </entry>
+    </interpolation>
+    <axis>
+      <x1-m>-6.194</x1-m>
+      <y1-m>-0.372</y1-m>
+      <z1-m>-1.112</z1-m>
+      <x2-m>-4.431</x2-m>
+      <y2-m>-0.395</y2-m>
+      <z2-m>-1.326</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>mgouterstrut</object-name>
+    <object-name>lhdragstrut</object-name>
+    <object-name>sidestrutl</object-name>
+    <object-name>sidestrutu</object-name>
+    <object-name>mglhlinkupper</object-name>
+    <object-name>mglhlinklower</object-name>
+    <object-name>mglhlowerstrut</object-name>
+    <object-name>mglhaxle</object-name>
+    <object-name>mglhtyrerh</object-name>
+    <object-name>mglhtyrelh</object-name>
+    <object-name>lhgdmid</object-name>
+    <object-name>geardoor</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>80</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>55.0</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>28.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>6.443</x-m>
+      <y-m>-2.59</y-m>
+      <z-m>-0.56</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>sidestrutl</object-name>
+    <object-name>sidestrutu</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>50</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>42.0</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>35.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-6.303</x-m>
+      <y-m>-2.57</y-m>
+      <z-m>-1.37</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>sidestrutu</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>-180</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>-150.0</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>-110.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-6.303</x-m>
+      <y-m>-2.08</y-m>
+      <z-m>-0.95</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>lhmgdouter</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <factor>110</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>7.497</x-m>
+      <y-m>-2.77</y-m>
+      <z-m>-0.70</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rhmgouterstrut</object-name>
+    <object-name>rhdragstrut</object-name>
+    <object-name>rhsidestrutl</object-name>
+    <object-name>rhsidestrutu</object-name>
+    <object-name>mgrhlinkupper</object-name>
+    <object-name>mgrhlinklower</object-name>
+    <object-name>mgrhlowerstrut</object-name>
+    <object-name>mgrhaxle</object-name>
+    <object-name>mgrhtyrerh</object-name>
+    <object-name>mgrhtyrelh</object-name>
+    <object-name>rhgdmid</object-name>
+    <object-name>rhgeardoor</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>-80</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>-55.0</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>-28.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>6.443</x-m>
+      <y-m>2.59</y-m>
+      <z-m>-0.56</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rhsidestrutl</object-name>
+    <object-name>rhsidestrutu</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>-50</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>-42.0</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>-35.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-6.303</x-m>
+      <y-m>2.57</y-m>
+      <z-m>-1.37</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rhsidestrutu</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>180</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>150.0</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>110.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-6.303</x-m>
+      <y-m>2.08</y-m>
+      <z-m>-0.95</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rhmgdouter</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <factor>-110</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>7.497</x-m>
+      <y-m>2.77</y-m>
+      <z-m>-0.70</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>lhaileron</object-name>
+    <object-name>ailerontablh</object-name>
+    <property>controls/flight/aileron</property>
+    <factor>18</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>11.547</x-m>
+      <y-m>-13.14</y-m>
+      <z-m>0.44</z-m>
+    </center>
+    <axis>
+      <x>-0.28</x>
+      <y>1</y>
+      <z>-0.1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ailerontablh</object-name>
+    <property>controls/flight/aileron</property>
+    <factor>-5</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>11.567</x-m>
+      <y-m>-12.02</y-m>
+      <z-m>0.32</z-m>
+    </center>
+    <axis>
+      <x>-0.3</x>
+      <y>1</y>
+      <z>-0.1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rhaileron</object-name>
+    <object-name>ailerontabrh</object-name>
+    <property>controls/flight/aileron</property>
+    <factor>-18</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>11.547</x-m>
+      <y-m>13.14</y-m>
+      <z-m>0.44</z-m>
+    </center>
+    <axis>
+      <x>0.28</x>
+      <y>1</y>
+      <z>0.1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ailerontabrh</object-name>
+    <property>controls/flight/aileron</property>
+    <factor>5</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>11.567</x-m>
+      <y-m>12.02</y-m>
+      <z-m>0.32</z-m>
+    </center>
+    <axis>
+      <x>0.3</x>
+      <y>1</y>
+      <z>0.1</z>
+    </axis>
+  </animation>
+
+<!-- Animation for the wheels -->
+
+       <animation>
+		<type>spin</type>
+		<object-name>tyreln</object-name>
+		<object-name>tyrern</object-name>
+		<property>gear/gear[0]/rollspeed-ms</property>
+		<factor>10</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-4.6504</x-m>
+			<y-m>0</y-m>
+			<z-m>-2.1221</z-m>
+		</center>
+	</animation>
+	
+	  	<animation>
+		<type>spin</type>
+		<object-name>mglhtyrelh</object-name>
+		<object-name>mglhtyrerh</object-name>
+		<property>gear/gear[1]/rollspeed-ms</property>
+		<factor>10</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>7.9712</x-m>
+			<y-m>0</y-m>
+			<z-m>-2.1989</z-m>
+		</center>
+	</animation>
+	
+		  	<animation>
+		<type>spin</type>
+		<object-name>mgrhtyrelh</object-name>
+		<object-name>mgrhtyrerh</object-name>
+		<property>gear/gear[2]/rollspeed-ms</property>
+		<factor>10</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>7.9712</x-m>
+			<y-m>0</y-m>
+			<z-m>-2.1989</z-m>
+		</center>
+	</animation>
+
+<!-- #################################################################################################### -->
+
+  <!--left stab trim-->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>hstab</object-name>
+    <object-name>lehstab</object-name>
+    <object-name>lhelevator</object-name>
+    <object-name>lhelevatortab</object-name>
+    <property>controls/flight/elevator-trim</property>
+    <factor>15</factor>
+    <offset-deg>0</offset-deg>
+
+    <axis>
+      <x1-m>23.643</x1-m>
+      <y1-m>-5</y1-m>
+      <z1-m>2.270</z1-m>
+      <x2-m>21.443</x2-m>
+      <y2-m>-0.871</y2-m>
+      <z2-m>1.492</z2-m>
+    </axis>
+  </animation>
+
+  <!-- left elevator-->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>lhelevator</object-name>
+    <object-name>lhelevatortab</object-name>
+    <property>controls/flight/elevator</property>
+    <factor>15</factor>
+    <offset-deg>0</offset-deg>
+
+    <axis>
+      <x1-m>23.74</x1-m>
+      <y1-m>-5</y1-m>
+      <z1-m>2.275</z1-m>
+      <x2-m>22.3</x2-m>
+      <y2-m>-0.673</y2-m>
+      <z2-m>1.468</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>lhelevatortab</object-name>
+    <property>controls/flight/elevator</property>
+    <factor>-15</factor>
+    <offset-deg>0</offset-deg>
+    <axis>
+      <x1-m>23.638</x1-m>
+      <y1-m>-2.974</y1-m>
+      <z1-m>1.893</z1-m>
+      <x2-m>23.056</x2-m>
+      <y2-m>-0.784</y2-m>
+      <z2-m>1.518</z2-m>
+    </axis>
+  </animation>
+
+  <!--right stab trim-->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>hstab.001</object-name>
+    <object-name>lehstab.001</object-name>
+    <object-name>rhelevator</object-name>
+    <object-name>rhelevatortab</object-name>
+    <property>controls/flight/elevator-trim</property>
+    <factor>15</factor>
+    <offset-deg>0</offset-deg>
+    <axis>
+      <x2-m>23.643</x2-m>
+      <y2-m>5</y2-m>
+      <z2-m>2.270</z2-m>
+      <x1-m>21.443</x1-m>
+      <y1-m>0.871</y1-m>
+      <z1-m>1.492</z1-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rhelevator</object-name>
+    <object-name>rhelevatortab</object-name>
+    <property>controls/flight/elevator</property>
+    <factor>15</factor>
+    <offset-deg>0</offset-deg>
+    <axis>
+      <x1-m>22.3</x1-m>
+      <y1-m>0.673</y1-m>
+      <z1-m>1.468</z1-m>
+      <x2-m>23.74</x2-m>
+      <y2-m>5</y2-m>
+      <z2-m>2.275</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rhelevatortab</object-name>
+    <property>controls/flight/elevator</property>
+    <factor>-15</factor>
+    <offset-deg>0</offset-deg>
+    <axis>
+      <x1-m>23.056</x1-m>
+      <y1-m>0.784</y1-m>
+      <z1-m>1.518</z1-m>
+      <x2-m>23.638</x2-m>
+      <y2-m>2.974</y2-m>
+      <z2-m>1.893</z2-m>
+    </axis>
+  </animation>
+
+<!-- ###################################################################################### -->	
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rudder</object-name>
+    <property>controls/flight/rudder</property>
+    <factor>15</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>21.422</x-m>
+      <y-m>0.0</y-m>
+      <z-m>2.23</z-m>
+    </center>
+    <axis>
+      <x>0.4</x>
+      <y> 0.0</y>
+      <z>1.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>lhmidflapib</object-name>
+    <object-name>lhforeflapib</object-name>
+    <object-name>lhaftflapib</object-name>
+    <object-name>lhexgateib</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>40</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>8.857</x-m>
+      <y-m>-1.77</y-m>
+      <z-m>-0.62</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>lhmidflapib</object-name>
+    <object-name>lhforeflapib</object-name>
+    <object-name>lhaftflapib</object-name>
+    <object-name>lhexgateib</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>0.2</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>0.2</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>0.2</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>8.507</x-m>
+      <y-m>-1.77</y-m>
+      <z-m>-0.85</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>lhforeflapib</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.01</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.125</ind>
+	<dep>-15.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>-15.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>8.677</x-m>
+      <y-m>-1.77</y-m>
+      <z-m>-0.63</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>lhforeflapib</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.1</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.125</ind>
+	<dep>-0.03</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>-0.03</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>7.657</x-m>
+      <y-m>-4.94</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>lhaftflapib</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>0.1</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>7.657</x-m>
+      <y-m>-1.77</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>lhexgateib</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>-30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>8.817</x-m>
+      <y-m>-4.53</y-m>
+      <z-m>-0.46</z-m>
+    </center>
+    <axis>
+      <x>0.6</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rhmidflapib</object-name>
+    <object-name>rhforeflapib</object-name>
+    <object-name>rhaftflapib</object-name>
+    <object-name>rhexgateib</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>40</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>8.857</x-m>
+      <y-m>1.77</y-m>
+      <z-m>-0.62</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>rhmidflapib</object-name>
+    <object-name>rhforeflapib</object-name>
+    <object-name>rhaftflapib</object-name>
+    <object-name>rhexgateib</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>0.2</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>0.2</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>0.2</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>8.507</x-m>
+      <y-m>1.77</y-m>
+      <z-m>-0.85</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rhforeflapib</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>-5.0</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>-10.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>-15.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>8.677</x-m>
+      <y-m>1.77</y-m>
+      <z-m>-0.63</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>rhforeflapib</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>-0.03</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>7.657</x-m>
+      <y-m>4.94</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>rhaftflapib</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>0.1</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>6.657</x-m>
+      <y-m>1.77</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rhexgateib</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>-30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>8.817</x-m>
+      <y-m>4.53</y-m>
+      <z-m>-0.46</z-m>
+    </center>
+    <axis>
+      <x>-0.6</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>lhmidflapob</object-name>
+    <object-name>lhforeflapob</object-name>
+    <object-name>lhaftflapob</object-name>
+    <object-name>lhexgateob</object-name>
+    <object-name>lhibflapfairaftob</object-name>
+    <object-name>lhobflapfairaftob</object-name>
+    <object-name>loutboardhalo</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>40</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>8.657</x-m>
+      <y-m>-4.94</y-m>
+      <z-m>-0.5</z-m>
+    </center>
+    <axis>
+      <x>-0.4</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>lhmidflapob</object-name>
+    <object-name>lhforeflapob</object-name>
+    <object-name>lhaftflapob</object-name>
+    <object-name>lhexgateob</object-name>
+    <object-name>lhibflapfairaftob</object-name>
+    <object-name>lhobflapfairaftob</object-name>
+    <object-name>loutboardhalo</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>0.2</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>0.2</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>0.2</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>7.657</x-m>
+      <y-m>-4.94</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>lhforeflapob</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>-0.05</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>7.657</x-m>
+      <y-m>-4.94</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>lhaftflapob</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>0.1</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>7.657</x-m>
+      <y-m>-4.94</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>lhexgateob</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>-30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>8.927</x-m>
+      <y-m>-4.93</y-m>
+      <z-m>-0.37</z-m>
+    </center>
+    <axis>
+      <x>-0.6</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rhmidflapob</object-name>
+    <object-name>rhforeflapob</object-name>
+    <object-name>rhaftflapob</object-name>
+    <object-name>rhexgateob</object-name>
+    <object-name>rhibflapfairaftob</object-name>
+    <object-name>rhobflapfairaftob</object-name>
+    <object-name>routboardhalo</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>40</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>8.657</x-m>
+      <y-m>4.94</y-m>
+      <z-m>-0.5</z-m>
+    </center>
+    <axis>
+      <x>0.4</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>translate</type>
+    <object-name>rhmidflapob</object-name>
+    <object-name>rhforeflapob</object-name>
+    <object-name>rhaftflapob</object-name>
+    <object-name>rhexgateob</object-name>
+    <object-name>rhibflapfairaftob</object-name>
+    <object-name>rhobflapfairaftob</object-name>
+    <object-name>routboardhalo</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>0.2</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>0.2</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>0.2</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>7.657</x-m>
+      <y-m>4.94</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>rhforeflapob</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>-0.05</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>7.657</x-m>
+      <y-m>4.94</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>rhaftflapob</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.25</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.75</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>0.1</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>7.657</x-m>
+      <y-m>4.94</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rhexgateob</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>-30</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>8.927</x-m>
+      <y-m>4.93</y-m>
+      <z-m>-0.37</z-m>
+    </center>
+    <axis>
+      <x>0.6</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flap1</object-name>
+    <object-name>flap2</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.125</ind>
+	<dep>110.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>110.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>3.587</x-m>
+      <y-m>-1.77</y-m>
+      <z-m>-0.68</z-m>
+    </center>
+    <axis>
+      <x>-0.7</x>
+      <y>1</y>
+      <z>-0.1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flap3</object-name>
+    <object-name>flap4</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.125</ind>
+	<dep>110.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>110.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>3.587</x-m>
+      <y-m>1.77</y-m>
+      <z-m>-0.68</z-m>
+    </center>
+    <axis>
+      <x>0.7</x>
+      <y>1</y>
+      <z>0.1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>slat3</object-name>
+    <object-name>slat2</object-name>
+    <object-name>slat1</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.125</ind>
+	<dep>-10.0</dep>
+      </entry>
+      <entry>
+	<ind>0.375</ind>
+	<dep>-10.0</dep>
+      </entry>
+      <entry>
+	<ind>0.5</ind>
+	<dep>-20.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>-20.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>6.427</x-m>
+      <y-m>-5.58</y-m>
+      <z-m>-1.0</z-m>
+    </center>
+    <axis>
+      <x>-0.55</x>
+      <y>1</y>
+      <z>-0.1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>slat4</object-name>
+    <object-name>slat5</object-name>
+    <object-name>slat6</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>0.125</ind>
+	<dep>-10.0</dep>
+      </entry>
+      <entry>
+	<ind>0.375</ind>
+	<dep>-10.0</dep>
+      </entry>
+      <entry>
+	<ind>0.5</ind>
+	<dep>-20.0</dep>
+      </entry>
+      <entry>
+	<ind>1.0</ind>
+	<dep>-20.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>6.427</x-m>
+      <y-m>5.58</y-m>
+      <z-m>-1.0</z-m>
+    </center>
+    <axis>
+      <x>0.55</x>
+      <y>1</y>
+      <z>0.1</z>
+    </axis>
+  </animation>
+
+  <!-- these are the left outboard ground spoilers -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>spoiler0</object-name>
+    <object-name>spoiler1</object-name>
+    <property>surface-positions/speedbrake-pos-norm</property>
+    <factor>-70</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>10.317</x-m>
+      <y-m>-10.41</y-m>
+      <z-m>0.24</z-m>
+    </center>
+    <axis>
+      <x>-0.375</x>
+      <y>1</y>
+      <z>-0.09</z>
+    </axis>
+  </animation>
+
+  <!-- these are the right outboard ground spoilers -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>spoiler9</object-name>
+    <object-name>spoiler8</object-name>
+    <property>surface-positions/speedbrake-pos-norm</property>
+    <factor>-70</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>10.317</x-m>
+      <y-m>10.41</y-m>
+      <z-m>0.24</z-m>
+    </center>
+    <axis>
+      <x>0.375</x>
+      <y>1</y>
+      <z>0.09</z>
+    </axis>
+  </animation>
+
+  <!-- these are the left flight spoilers -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>spoiler2</object-name>
+    <object-name>spoiler3</object-name>
+    <property>surface-positions/spoilers-pos-norm</property>
+
+    <factor>-40</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>9.367</x-m>
+      <y-m>-7.87</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>-0.375</x>
+      <y>1</y>
+      <z>-0.09</z>
+    </axis>
+  </animation>
+
+  <!-- these are the left flight spoilers -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>spoiler2</object-name>
+    <object-name>spoiler3</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor>40</factor>
+    <offset-deg>0</offset-deg>
+    <max-deg>0</max-deg>
+    <center>
+      <x-m>9.367</x-m>
+      <y-m>-7.87</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>-0.375</x>
+      <y>1</y>
+      <z>-0.09</z>
+    </axis>
+  </animation>
+
+  <!-- these are the right flight spoilers -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>spoiler6</object-name>
+    <object-name>spoiler7</object-name>
+    <property>surface-positions/spoilers-pos-norm</property>
+    <factor>-40</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>9.367</x-m>
+      <y-m>7.87</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>0.375</x>
+      <y>1</y>
+      <z>0.09</z>
+    </axis>
+  </animation>
+
+  <!-- these are the right flight spoilers -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>spoiler6</object-name>
+    <object-name>spoiler7</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor>40</factor>
+    <offset-deg>0</offset-deg>
+    <max-deg>0</max-deg>
+    <center>
+      <x-m>9.367</x-m>
+      <y-m>7.87</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>0.375</x>
+      <y>1</y>
+      <z>0.09</z>
+    </axis>
+  </animation>
+
+  <!-- these are the left inboard ground spoilers -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>spoiler4</object-name>
+    <property>surface-positions/speedbrake-pos-norm</property>
+    <factor>-70</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>8.427</x-m>
+      <y-m>-4.41</y-m>
+      <z-m>-0.39</z-m>
+    </center>
+    <axis>
+      <x>0.01</x>
+      <y>1</y>
+      <z>-0.09</z>
+    </axis>
+  </animation>
+
+  <!-- these are the right inboard ground spoilers -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>spoiler5</object-name>
+    <property>surface-positions/speedbrake-pos-norm</property>
+    <factor>-70</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>8.517</x-m>
+      <y-m>4.41</y-m>
+      <z-m>-0.39</z-m>
+    </center>
+    <axis>
+      <x>-0.01</x>
+      <y>1</y>
+      <z>0.09</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/737-400/Models/737-400/glass_shader.png</texture>
+    <object-name>glas</object-name>
+    <object-name>glas2</object-name>
+  </animation>
+
+  <model>
+    <path>Aircraft/737-400/Models/Effects/tire-smoke-nose.xml</path>
+    <name>tyre-smoke-n</name>
+    <offsets>
+      <x-m>-4.669</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.484</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/737-400/Models/Effects/tire-smoke-port.xml</path>
+    <name>tyre-smoke-p</name>
+    <offsets>
+      <x-m>7.962</x-m>
+      <y-m>-2.634</y-m>
+      <z-m>-2.784</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/737-400/Models/Effects/tire-smoke-stbd.xml</path>
+    <name>tyre-smoke-s</name>
+    <offsets>
+      <x-m>7.962</x-m>
+      <y-m>2.634</y-m>
+      <z-m>-2.784</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/737-400/Models/Lights/strobe/strobe10000.xml</path>
+    <name>strobe</name>
+    <offsets>
+      <x-m>11.513</x-m>
+      <y-m>-14.358</y-m>
+      <z-m>0.543</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/737-400/Models/Lights/strobe/strobe10000.xml</path>
+    <name>strobe</name>
+    <offsets>
+      <x-m>11.513</x-m>
+      <y-m>14.358</y-m>
+      <z-m>0.543</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/737-400/Models/Lights/strobe/strobe10000.xml</path>
+    <name>strobe</name>
+    <offsets>
+      <x-m>23.58642</x-m>
+      <y-m>0.0</y-m>
+      <z-m>2.0</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/737-400/Models/Lights/beacon/beacon.xml</path>
+    <name>strobe</name>
+    <offsets>
+      <x-m>4.092</x-m>
+      <y-m>0</y-m>
+      <z-m>2.6793</z-m>
+    </offsets>
+  </model>
+
+
+  <model>
+    <path>Aircraft/737-400/Models/Lights/beacon/beacon.xml</path>
+    <name>strobe</name>
+    <offsets>
+      <x-m>2.816</x-m>
+      <y-m>0</y-m>
+      <z-m>-1.534</z-m>
+    </offsets>
+  </model>
+
+
+  <animation>
+    <type>material</type>
+    <object-name>Fuselage</object-name>
+    <object-name>lengfanouterib</object-name>
+    <object-name>lreverserib</object-name>
+    <object-name>frontdoorleft</object-name>
+    <object-name>frontdoorright</object-name>
+    <object-name>backdoorleft</object-name>
+    <object-name>backdoorright</object-name>
+    <object-name>geardoor</object-name>
+    <object-name>rhgeardoor</object-name>
+    <object-name>rhngdoor</object-name>
+    <object-name>lhngdoor</object-name>
+    <object-name>vstab</object-name>
+    <object-name>rudder</object-name>
+    <object-name>antlo</object-name>
+    <object-name>tyreln</object-name>
+    <object-name>tyrern</object-name>
+    <object-name>mglhtyrelh</object-name>
+    <object-name>mglhtyrerh</object-name>
+    <object-name>mgrhtyrelh</object-name>
+    <object-name>mgrhtyrerh</object-name>
+    <object-name>Plane.011</object-name>
+    <object-name>removal</object-name>
+    <object-name>engcore</object-name>
+    <object-name>tailpipe</object-name>
+    <object-name>removal</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+  </animation>
+
+  <!--eyebrow variant animation-->
+  <animation>
+    <type>select</type>
+
+    <object-name>removal</object-name>
+    <condition>
+      <property>sim/model/Boeing-737-400/removalkit</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+
+    <object-name>eyebrowwindow</object-name>
+    <condition>
+      <property>sim/model/Boeing-737-400/eyebrowwindow</property>
+    </condition>
+  </animation>
+
+
+  <!-- Doors -->
+
+  <animation>
+    <name>PassLF</name>
+    <object-name>frontdoorleft</object-name>
+    <object-name>frontdoorleft2</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>PassLF</object-name>
+    <property>controls/groundservice/passengerdoor1</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep>    0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 185 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -4.09159 </x1-m>
+      <y1-m> -1.45868 </y1-m>
+      <z1-m> 1.30965 </z1-m>
+      <x2-m> -4.09159 </x2-m>
+      <y2-m> -1.5978 </y2-m>
+      <z2-m> 0.668841 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>PassLF</object-name>
+    <property>controls/groundservice/passengerdoor1</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> 0.08 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 0.08 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>PassRF</name>
+    <object-name>frontdoorright</object-name>
+    <object-name>frontdoorright2</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>PassRF</object-name>
+    <property>controls/groundservice/passengerdoor2</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep>    0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> -182 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -4.40533 </x1-m>
+      <y1-m> 1.31244 </y1-m>
+      <z1-m> 1.44448 </z1-m>
+      <x2-m> -4.40533 </x2-m>
+      <y2-m> 1.54437 </y2-m>
+      <z2-m> 0.773873 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>PassRF</object-name>
+    <property>controls/groundservice/passengerdoor2</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> 0.08 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 0.08 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> -1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>PassLR</name>
+    <object-name>backdoorleft</object-name>
+    <object-name>backdoorleft2</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>PassLR</object-name>
+    <property>controls/groundservice/passengerdoor3</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep>    0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 182 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> 17.0312 </x1-m>
+      <y1-m> -1.62903 </y1-m>
+      <z1-m> 1.33449 </z1-m>
+      <x2-m> 17.0312 </x2-m>
+      <y2-m> -1.62325 </y2-m>
+      <z2-m> 0.693148 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>PassLR</object-name>
+    <property>controls/groundservice/passengerdoor3</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> 0.08 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 0.08 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>PassRR</name>
+    <object-name>backdoorright</object-name>
+    <object-name>backdoorright2</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>PassRR</object-name>
+    <property>controls/groundservice/passengerdoor4</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep>    0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> -188 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> 17.0312 </x1-m>
+      <y1-m> 1.62903 </y1-m>
+      <z1-m> 1.33449 </z1-m>
+      <x2-m> 17.0312 </x2-m>
+      <y2-m> 1.62325 </y2-m>
+      <z2-m> 0.693148 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>PassRR</object-name>
+    <property>controls/groundservice/passengerdoor4</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> 0.08 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 0.08 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> -1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>navlight_left</object-name>
+    <object-name>navlight_back</object-name>
+    <object-name>navlight_right</object-name>
+    <condition>
+      <property>controls/lighting/nav-lights</property>
+    </condition>
+  </animation>
+
+
+  <!-- Contrail -->
+
+  <model>
+    <path>Aircraft/737-400/Models/Effects/contrail-new.xml</path>
+    <offsets>
+      <x-m>16.0</x-m>
+      <y-m>-4.98</y-m>
+      <z-m>0.0</z-m>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/737-400/Models/Effects/contrail-new.xml</path>
+    <offsets>
+      <x-m>16.0</x-m>
+      <y-m>4.98</y-m>
+      <z-m>0.0</z-m>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Landing-Lights</name>
+    <path>Aircraft/737-400/Models/Lights/landing-light/landing-light.xml</path>
+    <offsets>
+      <x-m>-5.10</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0</z-m>
+      <pitch-deg>1.0</pitch-deg>
+    </offsets>
+  </model>
+
+      <animation>
+        <type>select</type>
+        <object-name>Llightl</object-name>
+        <object-name>Llightr</object-name>
+        <condition>
+            <and>
+            	<!--or>
+	            	<equals>
+	                    <property>controls/switches/landing-lights</property>
+	                    <value>true</value>
+	            	</equals-->
+	            	<equals>
+	                    <property>controls/lighting/landing-lights-fixed-right</property>
+	                    <value>true</value>
+	            	</equals>
+            	<!--/or-->
+                
+                <greater-than>
+                    <property>/sim/time/sun-angle-rad</property>
+                    <value>1.55</value>
+                </greater-than>
+            </and>
+        </condition>
+    </animation>
+
+<!-- Lights -->
+
+	<animation>
+		<name>Tail logo light illumination</name>
+		<type>material</type>
+		<object-name>rudder</object-name>
+		<object-name>vstab</object-name>
+		<object-name>vstable</object-name>
+		<emission>
+			<red>0.25</red>
+			<green>0.25</green>
+			<blue>0.25</blue>
+			<factor-prop>controls/lighting/logo-lights</factor-prop>
+		</emission>
+	</animation>
+
+</PropertyList>
+
+

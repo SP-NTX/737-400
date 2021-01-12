@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>ABSelectorknob.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>knob1.006</object-name>
+    <emission>
+
+      <red>   0.3 </red>
+      <green> 0.3 </green>
+      <blue>  0.3 </blue>
+    </emission>
+    <condition>
+      <property>systems/electrical/on</property>
+    </condition>
+  </animation>
+
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>knob1.006</object-name>
+  <property>/controls/gear/autobrakes</property>
+  <factor>50</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+	<offset-deg>-100</offset-deg>
+ </animation>
+ 
+  <animation>
+  <type>pick</type>
+  <visible>true</visible>
+  <object-name>knob1.006</object-name>
+  <action>
+    <name>AutoBrake Selector</name>
+   <button>0</button>
+   <repeatable>false</repeatable>
+	 <binding>
+        	<command>property-cycle</command>
+        	<property>/controls/gear/autobrakes</property>
+        	<value>0</value>
+        	<value>1</value>
+        	<value>2</value>
+        	<value>3</value>
+        	<value>4</value>
+   </binding> 
+   <binding>
+    <command>nasal</command>
+          <script>
+          	var setting = getprop ("/controls/gear/autobrakes");
+		        var names = ["Off", "Level 1", "Level 2", "Level 3", "Maximum", "RTO (disused)"];
+						if (getprop("sim/co-pilot")) {
+		          setprop ("/sim/messages/copilot", "Autobrakes set to " ~ names[setting] ~ ".");
+            }
+	        </script>
+   </binding>
+  </action>
+ </animation>
+ 
+ </PropertyList>

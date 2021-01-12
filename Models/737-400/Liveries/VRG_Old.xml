@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <sim>
+  <model>
+   <livery>
+    <name type="string">Varig Old</name>
+    <texture>Varig_Old.png</texture>
+   </livery>
+  </model>
+ </sim>
+</PropertyList>

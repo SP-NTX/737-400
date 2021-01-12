@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+  File:     CFM56_5.xml
+  Author:   e-pilot, changes YV3399 
+
+  Inputs:
+    name:           CFM56
+    type:           turbine
+    thrust:         22000 lb MOST POPULAR (?) ENGINE FOR 737-400
+    augmented?      no
+    injected?       no
+-->
+
+<turbine_engine name="CFM56">
+  <milthrust> 22000.0 </milthrust>
+  <bypassratio>     4.0 </bypassratio>
+  <tsfc>            0.657 </tsfc>
+  <bleed>           0.05 </bleed>
+  <idlen1>         22.0 </idlen1>
+  <idlen2>         61.0 </idlen2>
+  <maxn1>         106.0 </maxn1>
+  <maxn2>         105.0 </maxn2>
+  <augmented>         0 </augmented>
+  <injected>          0 </injected>
+
+  <function name="IdleThrust">
+   <table>
+    <independentVar lookup="row">velocities/mach</independentVar>
+    <independentVar lookup="column">atmosphere/rho-slugs_ft3</independentVar>
+    <tableData>
+	0.0003957363	0.0006047429	0.0008892757	0.0012664297	0.0017552648	0.0023768479	0.0031542928
+0	0.1667045455	0.1344318182	0.1021590909	0.0788636364	0.06	0.0495454545	0.0477272727
+0.2	0.1525	0.1192045455	0.0905681818	0.0618181818	0.0380681818	0.0340909091	0.0568181818
+0.4	0.1367045455	0.10125	0.0676136364	0.0309090909	0.0090909091	0.0227272727	0.0045454545
+0.6	0.1219318182	0.0815909091	0.0313636364	0.0138636364	0.0077272727	0	0
+0.8	0.1022727273	0.0531818182	0.0197727273	0	0	0	0
+1	0.0795454545	0.0479545455	0	0	0	0	0
+    </tableData>
+   </table>
+  </function>
+
+  <function name="MilThrust">
+   <table>
+    <independentVar lookup="row">velocities/mach</independentVar>
+    <independentVar lookup="column">atmosphere/rho-slugs_ft3</independentVar>
+    <tableData>
+	0.0003957363	0.0006047429	0.0008892757	0.0012664297	0.0017552648	0.0023768479	0.0030691854
+0	0	0.0818181818	0.2727272727	0.5454545455	0.7727272727	1.3550909091	1.9155
+0.2	0	0.0727272727	0.2272727273	0.4090909091	0.6818181818	1.1227272727	1.4090909091
+0.4	0	0.0681818182	0.2181818182	0.3636363636	0.6454545455	0.8924545455	0.9545454545
+0.6	0	0.1727272727	0.3181818182	0.4636363636	0.6363636364	0.6613636364	0.6818181818
+0.8	0	0.2363636364	0.3863636364	0.4772727273	0.6136363636	0.4090909091	0.4545454545
+1	0	0.2727272727	0.4318181818	0.5	0.6397272727	0.1818181818	0.2272727273
+    </tableData>
+   </table>
+  </function>
+
+</turbine_engine>

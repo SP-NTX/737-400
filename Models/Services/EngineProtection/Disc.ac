@@ -1,0 +1,844 @@
+AC3Db
+MATERIAL "ac3dmat4" rgb 1 0.466667 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
+OBJECT world
+kids 90
+OBJECT group
+name "Curve.004"
+kids 1
+OBJECT group
+name "Curve.008_0.005"
+kids 1
+OBJECT group
+name "sky.002"
+kids 1
+OBJECT poly
+name "sky_0.002"
+data 10
+Mesh.16676
+crease 30.000000
+kids 0
+OBJECT group
+name "fuselage_eyebrow.003"
+kids 1
+OBJECT poly
+name "doom"
+data 10
+Mesh.16681
+crease 30.000000
+kids 0
+OBJECT poly
+name "Cylinder.044"
+data 12
+Cylinder.335
+crease 30.000000
+kids 0
+OBJECT poly
+name "Cylinder.163"
+data 12
+Cylinder.289
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.001"
+data 9
+Plane.330
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.002"
+data 9
+Plane.331
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.005"
+data 9
+Plane.333
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.006"
+data 9
+Plane.001
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.009"
+data 9
+Plane.336
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.018"
+data 9
+Plane.337
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.021"
+data 9
+Plane.003
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.025"
+data 9
+Plane.338
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.027"
+data 9
+Plane.339
+crease 30.000000
+kids 0
+OBJECT poly
+name "face"
+data 9
+Plane.342
+crease 30.000000
+kids 0
+OBJECT group
+name "Curve.003"
+kids 1
+OBJECT group
+name "Curve.008_0.003"
+kids 1
+OBJECT group
+name "sky"
+kids 1
+OBJECT poly
+name "sky_0"
+data 8
+Mesh.001
+crease 30.000000
+kids 0
+OBJECT group
+name "Curve.005"
+kids 1
+OBJECT group
+name "Curve.008_0.006"
+kids 1
+OBJECT poly
+name "Curve.008_0.010_0.002"
+data 8
+Mesh.005
+crease 30.000000
+kids 0
+OBJECT group
+name "Curve.006"
+kids 1
+OBJECT group
+name "Curve.008_0.007"
+kids 1
+OBJECT group
+name "sky.001"
+kids 1
+OBJECT poly
+name "sky_0.003"
+data 8
+Mesh.006
+crease 30.000000
+kids 0
+OBJECT group
+name "Curve.007"
+kids 1
+OBJECT group
+name "Curve.008_0.008"
+kids 1
+OBJECT group
+name "sky.003"
+kids 1
+OBJECT poly
+name "sky_0.001"
+data 8
+Mesh.007
+crease 30.000000
+kids 0
+OBJECT group
+name "Curve.009"
+kids 1
+OBJECT poly
+name "Curve.008_0.004"
+data 8
+Mesh.008
+crease 30.000000
+kids 0
+OBJECT group
+name "Plane.019"
+kids 1
+OBJECT group
+name "Plane.017"
+kids 1
+OBJECT group
+name "Plane.067"
+kids 1
+OBJECT group
+name "Plane.066"
+kids 1
+OBJECT group
+name "fuselage_eyebrow"
+kids 1
+OBJECT poly
+name "fuselage_eyebrow_0"
+data 8
+Mesh.011
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.006"
+data 9
+Plane.017
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.007"
+data 9
+Plane.018
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.008"
+data 9
+Plane.019
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.009"
+data 9
+Plane.020
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.012"
+data 9
+Plane.022
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.013"
+data 9
+Plane.023
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.014"
+data 9
+Plane.024
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.016"
+data 9
+Plane.252
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.026"
+data 9
+Plane.254
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.053"
+data 9
+Plane.257
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.058"
+data 9
+Plane.258
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.061"
+data 9
+Plane.260
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.062"
+data 9
+Plane.261
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.063"
+data 9
+Plane.262
+crease 30.000000
+kids 0
+OBJECT poly
+name "face.001"
+data 9
+Plane.265
+crease 30.000000
+kids 0
+OBJECT poly
+name "face.002"
+data 9
+Plane.266
+crease 30.000000
+kids 0
+OBJECT poly
+name "interior_0"
+data 10
+Mesh.16757
+crease 30.000000
+kids 0
+OBJECT poly
+name "lhfuselage.001"
+data 10
+Mesh.16773
+crease 30.000000
+kids 0
+OBJECT poly
+name "mglhtyrelh.003"
+data 10
+Mesh.16790
+crease 30.000000
+kids 0
+OBJECT poly
+name "mgrhtyrelh.003"
+data 10
+Mesh.16796
+crease 30.000000
+kids 0
+OBJECT poly
+name "mgrhtyrerh.003"
+data 10
+Mesh.16797
+crease 30.000000
+kids 0
+OBJECT poly
+name "rahmen"
+data 10
+Mesh.16815
+crease 30.000000
+kids 0
+OBJECT poly
+name "rhfan"
+data 10
+Mesh.16825
+crease 30.000000
+kids 0
+OBJECT poly
+name "rudder.002"
+data 10
+Mesh.16856
+crease 30.000000
+kids 0
+OBJECT group
+name "Curve.004"
+kids 1
+OBJECT group
+name "Curve.008_0.005"
+kids 1
+OBJECT group
+name "sky.002"
+kids 1
+OBJECT poly
+name "sky_0.002"
+data 10
+Mesh.16676
+crease 30.000000
+kids 0
+OBJECT group
+name "fuselage_eyebrow.003"
+kids 1
+OBJECT poly
+name "doom"
+data 10
+Mesh.16681
+crease 30.000000
+kids 0
+OBJECT poly
+name "Cylinder.044"
+data 12
+Cylinder.335
+crease 30.000000
+kids 0
+OBJECT poly
+name "Cylinder.163"
+data 12
+Cylinder.289
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.001"
+data 9
+Plane.330
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.002"
+data 9
+Plane.331
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.005"
+data 9
+Plane.333
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.006"
+data 9
+Plane.001
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.009"
+data 9
+Plane.336
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.018"
+data 9
+Plane.337
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.021"
+data 9
+Plane.003
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.025"
+data 9
+Plane.338
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.027"
+data 9
+Plane.339
+crease 30.000000
+kids 0
+OBJECT poly
+name "face"
+data 9
+Plane.342
+crease 30.000000
+kids 0
+OBJECT group
+name "Curve.003"
+kids 1
+OBJECT group
+name "Curve.008_0.003"
+kids 1
+OBJECT group
+name "sky"
+kids 1
+OBJECT poly
+name "sky_0"
+data 8
+Mesh.001
+crease 30.000000
+kids 0
+OBJECT group
+name "Curve.005"
+kids 1
+OBJECT group
+name "Curve.008_0.006"
+kids 1
+OBJECT poly
+name "Curve.008_0.010_0.002"
+data 8
+Mesh.005
+crease 30.000000
+kids 0
+OBJECT group
+name "Curve.006"
+kids 1
+OBJECT group
+name "Curve.008_0.007"
+kids 1
+OBJECT group
+name "sky.001"
+kids 1
+OBJECT poly
+name "sky_0.003"
+data 8
+Mesh.006
+crease 30.000000
+kids 0
+OBJECT group
+name "Curve.007"
+kids 1
+OBJECT group
+name "Curve.008_0.008"
+kids 1
+OBJECT group
+name "sky.003"
+kids 1
+OBJECT poly
+name "sky_0.001"
+data 8
+Mesh.007
+crease 30.000000
+kids 0
+OBJECT group
+name "Curve.009"
+kids 1
+OBJECT poly
+name "Curve.008_0.004"
+data 8
+Mesh.008
+crease 30.000000
+kids 0
+OBJECT group
+name "Plane.019"
+kids 1
+OBJECT group
+name "Plane.017"
+kids 1
+OBJECT group
+name "Plane.067"
+kids 1
+OBJECT group
+name "Plane.066"
+kids 1
+OBJECT group
+name "fuselage_eyebrow"
+kids 1
+OBJECT poly
+name "fuselage_eyebrow_0"
+data 8
+Mesh.011
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.006"
+data 9
+Plane.017
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.007"
+data 9
+Plane.018
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.008"
+data 9
+Plane.019
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.009"
+data 9
+Plane.020
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.012"
+data 9
+Plane.022
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.013"
+data 9
+Plane.023
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.014"
+data 9
+Plane.024
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.016"
+data 9
+Plane.252
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.026"
+data 9
+Plane.254
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.053"
+data 9
+Plane.257
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.058"
+data 9
+Plane.258
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.061"
+data 9
+Plane.260
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.062"
+data 9
+Plane.261
+crease 30.000000
+kids 0
+OBJECT poly
+name "Plane.063"
+data 9
+Plane.262
+crease 30.000000
+kids 0
+OBJECT poly
+name "face.001"
+data 9
+Plane.265
+crease 30.000000
+kids 0
+OBJECT poly
+name "face.002"
+data 9
+Plane.266
+crease 30.000000
+kids 0
+OBJECT poly
+name "interior_0"
+data 10
+Mesh.16757
+crease 30.000000
+kids 0
+OBJECT poly
+name "lhfuselage.001"
+data 10
+Mesh.16773
+crease 30.000000
+kids 0
+OBJECT poly
+name "mglhtyrelh.003"
+data 10
+Mesh.16790
+crease 30.000000
+kids 0
+OBJECT poly
+name "mgrhtyrelh.003"
+data 10
+Mesh.16796
+crease 30.000000
+kids 0
+OBJECT poly
+name "mgrhtyrerh.003"
+data 10
+Mesh.16797
+crease 30.000000
+kids 0
+OBJECT poly
+name "rahmen"
+data 10
+Mesh.16815
+crease 30.000000
+kids 0
+OBJECT poly
+name "rhfan"
+data 10
+Mesh.16825
+crease 30.000000
+kids 0
+OBJECT poly
+name "rudder.002"
+data 10
+Mesh.16856
+crease 30.000000
+kids 0
+OBJECT poly
+name "disk"
+loc 2.09097 -1.30959 4.94456
+texture "redlight.png"
+crease 45.000000
+numvert 13
+0 1.19209e-007 -9.53674e-007
+0.0296772 -0.391573 0.740594
+0.0514023 -0.678224 0.425324
+0.0593543 -0.777991 0
+0.0514023 -0.691615 -0.43275
+0.0296772 -0.399305 -0.76945
+0 0 -0.862713
+-0.0296774 0.395712 -0.733818
+-0.0514026 0.708988 -0.423671
+-0.0593543 0.82263 0
+-0.0514026 0.688709 0.420197
+-0.0296772 0.388995 0.727801
+0 0 0.844857
+numsurf 12
+SURF 0x30
+mat 0
+refs 3
+1 0.839974 0.349609
+12 0.894531 0.558594
+0 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+2 0.690918 0.196622
+1 0.839974 0.349609
+0 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+3 0.487305 0.140625
+2 0.690918 0.196622
+0 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+4 0.283691 0.196622
+3 0.487305 0.140625
+0 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+5 0.134636 0.349609
+4 0.283691 0.196622
+0 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+6 0.0800781 0.558594
+5 0.134636 0.349609
+0 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+7 0.134636 0.767578
+6 0.0800781 0.558594
+0 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+8 0.283691 0.920566
+7 0.134636 0.767578
+0 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+9 0.487305 0.976563
+8 0.283691 0.920566
+0 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+10 0.690918 0.920566
+9 0.487305 0.976563
+0 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+11 0.839974 0.767578
+10 0.690918 0.920566
+0 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+12 0.894531 0.558594
+11 0.839974 0.767578
+0 0.487305 0.558594
+kids 0
+OBJECT poly
+name "disk"
+loc 2.09097 -1.30626 -4.94252
+texture "redlight.png"
+crease 45.000000
+numvert 13
+0 0 0.857114
+-0.0296772 0.39066 0.730685
+-0.0514026 0.684223 0.421861
+-0.0593543 0.80364 0
+-0.0514026 0.703427 -0.424438
+-0.0296774 0.398392 -0.735148
+0 0 -0.861578
+0.0296772 -0.390661 -0.746149
+0.0514023 -0.676643 -0.421861
+0.0593543 -0.78132 0
+0.0514023 -0.694499 0.421861
+0.0296772 -0.40097 0.742283
+0 0.0133916 0
+numsurf 12
+SURF 0x30
+mat 0
+refs 3
+0 0.894531 0.558594
+1 0.839974 0.767578
+12 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+1 0.839974 0.767578
+2 0.690918 0.920566
+12 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+2 0.690918 0.920566
+3 0.487305 0.976563
+12 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+3 0.487305 0.976563
+4 0.283691 0.920566
+12 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+4 0.283691 0.920566
+5 0.134636 0.767578
+12 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+5 0.134636 0.767578
+6 0.0800781 0.558594
+12 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+6 0.0800781 0.558594
+7 0.134636 0.349609
+12 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+7 0.134636 0.349609
+8 0.283691 0.196622
+12 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+8 0.283691 0.196622
+9 0.487305 0.140625
+12 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+9 0.487305 0.140625
+10 0.690918 0.196622
+12 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+10 0.690918 0.196622
+11 0.839974 0.349609
+12 0.487305 0.558594
+SURF 0x30
+mat 0
+refs 3
+11 0.839974 0.349609
+0 0.894531 0.558594
+12 0.487305 0.558594
+kids 0

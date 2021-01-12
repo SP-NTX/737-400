@@ -1,0 +1,81 @@
+<PropertyList>
+
+  <!--Nose Gear Red Annun -->
+
+  <model>
+    <name>Nose Gear Red Annun</name>
+    <path>Aircraft/737-400/Models/Flightdeck/Instruments/GI/nose-gear-red.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+
+  <!--Nose Gear Green Annun -->  
+
+  <model>
+    <name>Nose Gear Green Annun</name>
+    <path>Aircraft/737-400/Models/Flightdeck/Instruments/GI/nose-gear-green.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>-0.010</z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Left Gear Red Annun -->
+
+  <model>
+    <name>Left Gear Red Annun</name>
+    <path>Aircraft/737-400/Models/Flightdeck/Instruments/GI/left-gear-red.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>-0.010</y-m>
+      <z-m>-0.020</z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Left Gear Green Annun -->  
+
+  <model>
+    <name>Left Gear Green Annun</name>
+    <path>Aircraft/737-400/Models/Flightdeck/Instruments/GI/left-gear-green.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>-0.010</y-m>
+      <z-m>-0.030</z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Right Gear Red Annun -->
+
+  <model>
+    <name>Right Gear Red Annun</name>
+    <path>Aircraft/737-400/Models/Flightdeck/Instruments/GI/right-gear-red.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.010</y-m>
+      <z-m>-0.020</z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Right Gear Green Annun -->  
+
+  <model>
+    <name>Right Gear Green Annun</name>
+    <path>Aircraft/737-400/Models/Flightdeck/Instruments/GI/right-gear-green.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.010</y-m>
+      <z-m>-0.030</z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+
+</PropertyList>

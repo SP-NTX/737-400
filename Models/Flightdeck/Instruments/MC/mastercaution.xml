@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+  <path>mastercaution.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>button</object-name>
+    <emission>
+      <red>   0.5 </red>
+      <green> 0.5 </green>
+      <blue>  0.5 </blue>
+    </emission>
+    <condition>
+      <property>systems/electrical/on</property>
+    </condition>
+  </animation>
+
+  <!-- Master Caution -->
+  <animation>
+    <name>Master Caution pick</name>
+    <type>pick</type>
+    <object-name>button</object-name>
+    <action>
+      <button>0</button>
+      <repeatable type="bool">false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>instrumentation/indicators/mastercaution</property>
+	<condition>
+    <property>systems/electrical/on</property>
+	</condition>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <name>Master Caution button textranslate</name>
+    <type>textranslate</type>
+    <object-name>button</object-name>
+    <property>instrumentation/indicators/mastercaution</property>
+    <factor>0.5</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+</PropertyList>
