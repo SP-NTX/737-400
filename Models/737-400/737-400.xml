@@ -13,10 +13,6 @@
     </unload>
   </nasal>
 
-     <model>
-	<name>winglets</name>
-	<path>Aircraft/737-400/Models/winglets.ac</path>
-    </model>
     <animation>
 	<type>select</type>
 	<object-name>winglets</object-name>
