@@ -38,7 +38,7 @@
     </item>
     <item>
       <name>Parking brake</name>
-      <value>Set, Pressure Normal</value>
+      <value>Set</value>
       <condition>
         <equals>
           <property>/controls/gear/brake-parking</property>
@@ -133,7 +133,7 @@
     </item>
     <item>
       <name>Engine start levers</name>
-      <value>IDLE detent</value>
+      <value>IDLE</value>
     </item>
     <item>
       <name>Flight controls</name>
