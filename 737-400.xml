@@ -6,7 +6,7 @@
     <author> Aeromatic </author>
 	<author> SP-NTX (737-300 to 737-400 and new autopilot, cockpit, ...) </author>
     <filecreationdate> 2006-01-04 </filecreationdate>
-    <version>$Revison: 1.0 $</version>
+    <version>$Revison: 1.1 $</version>
     <description> Models a 737. </description>
   </fileheader>
   <metrics>
