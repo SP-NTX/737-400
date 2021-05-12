@@ -1,7 +1,7 @@
 <PropertyList>
   <sim>
     <description type="string">Boeing 737-400</description>
-    <author type="string">SP-NTX (733 to 734, cockpit, new autopilot), Orginal by:e-pilot variant - Original by David Culp (FDM), Innis Cunningham(3d), Heiko Schulz (3D and Panel), Emmanuel Baranger(3d), Gabriel Hernandez</author>
+    <author type="string">SP-NTX (737-300 to 737-400, cockpit, new autopilot), Orginal by:e-pilot variant - Original by David Culp (FDM), Innis Cunningham(3d), Heiko Schulz (3D and Panel), Emmanuel Baranger(3d), Gabriel Hernandez</author>
     <status type="string">Heavy Development</status>
 
     <rating>
