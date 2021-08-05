@@ -1,6 +1,6 @@
 Boeing 737-400
 =================================================
-It is a Boeing 737-400, based on 737-300
+It is a Boeing 737-400, based on 737-300.
 Orginal 733: https://github.com/YV3399/737-300-CHT
 This is the 737-400 in Progress and under GNU GPL v3.0
 
