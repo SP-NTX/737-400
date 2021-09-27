@@ -15,7 +15,7 @@
 
     <aero>737-400</aero>
     <allow-toggle-cockpit>true</allow-toggle-cockpit>
-    <chase-distance-m>-40</chase-distance-m>
+    <chase-distance-m>-50</chase-distance-m>
     <co-pilot type="bool">true</co-pilot>
     <virtual-cockpit archive="y">true</virtual-cockpit>
    
