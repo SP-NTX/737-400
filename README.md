@@ -6,12 +6,11 @@ This is the 737-400 in Progress and under GNU GPL v3.0
 
 
 Download tutorial:
-
-1 option: Latest release, click the latest version on the right side of the screen. Download the source code, extract the zip file
-rename the extracted folder to 737-400, without -master or -version number. Paste the folder into $FG-ROOT/Aircraft/
+Option 1: Latest release, click the latest version on the right side of the screen. Download the source code, extract the zip file
+rename the extracted folder to 737-400, without -master or -version number. Create custom aircraft folder anywhere, for example on desktop, turn on FlightGear, and add Custom Aircraft Folder in the Addons tab. Paste the folder with arcraft into your custom aircraft folder.
 
 Option 2: Click Code >> Download zip. extract the zip file
-rename the extracted folder to 737-400, without -master or -version-number. Paste the folder into $FG-ROOT/Aircraft/
+rename the extracted folder to 737-400, without -master or -version-number. then do the same things as in Option 1
 
 This work is based on the work of Gabriel Hernandez (YV3399), David Culp (FDM) and Innis Cunningham (3d-model).
 
