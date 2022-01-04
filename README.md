@@ -4,6 +4,7 @@ It is a Boeing 737-400, based on 737-300.
 Orginal 733: https://github.com/YV3399/737-300-CHT
 This is the 737-400 in Progress and under GNU GPL v3.0
 
+NOTE: the exterior 3D model is still 737-300!!! 
 
 Download tutorial:
 Option 1: Latest release, click the latest version on the right side of the screen. Download the source code, extract the zip file
