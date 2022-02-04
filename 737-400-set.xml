@@ -10,7 +10,7 @@
       <cockpit type="int">4</cockpit>
       <model type="int">4</model>
     </rating>
-
+<minimum-fg-version>2020.4</minimum-fg-version>
     <flight-model>jsb</flight-model>
 
     <aero>737-400</aero>
