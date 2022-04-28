@@ -10,7 +10,6 @@
       <cockpit type="int">4</cockpit>
       <model type="int">4</model>
     </rating>
-<minimum-fg-version>2020.4</minimum-fg-version>
     <flight-model>jsb</flight-model>
 
     <aero>737-400</aero>
@@ -127,7 +126,7 @@
 				<y-offset-m archive="y">0.91</y-offset-m>
 				<z-offset-m archive="y">18.19</z-offset-m>
 
-			</config>
+     </config>
     </view>
 
     <view n="102">
